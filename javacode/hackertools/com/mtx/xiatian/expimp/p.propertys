@@ -1,0 +1,28 @@
+# Properties file for controlling db2sql.java
+# Driver information (make sure the appropriate classes/jars are on the classpath)
+# These are mandatory, you must provide appropriate values
+driver.url=jdbc:mysql://localhost/testdb
+driver.class=com.mysql.jdbc.Driver
+
+# Information passed to DriverManger.getConnection
+# Put any information here that you want to pass to the DriverManager, for example:
+user=<username>
+password=<password>
+
+# Configuration information
+# Optional information that you can set to control which tables are output etc.
+# See target="_BLANK">DatabaseMetaData.getTables(...) for information on how to use these.
+# Leave these blank to get all tables (note that only normal tables are returned, not
+# views, system tables, temporary tables, synonyms or aliases)
+# catalog=
+# schemaPattern=
+# tableName=
+#
+# You can also specify a quote character that is used to surround column names. This is
+# useful if your tables contain any SQL-unfriendly characters such as hyphens. This is
+# configurable so that you can set it up for your target database rather than the source
+# database. Note however that if you do specify a quote character then the case of the
+# table will probably become significant and this may not be what you want. Note also
+# that this is not the same as the quote character for data values. For that a single
+# quote is used always. Leave this blank for no quote character.
+# columnName.quoteChar="

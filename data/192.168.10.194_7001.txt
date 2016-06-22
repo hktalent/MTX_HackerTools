@@ -1,0 +1,2226 @@
+1、系统版本信息：
+
+Microsoft Windows [版本 6.1.7601]
+
+2、服务器时间
+date /t
+Cannot run program "date": CreateProcess error=2, ϵͳÕҲ»µ½ָ¶
+4、当前目录
+cmd.exe /c echo %cd%
+C:\Oracle\Middleware\user_projects\domains\base_domain
+
+6、网络ip配置
+cmd.exe /c ipconfig  /all
+
+Windows IP 配置
+
+   主机名  . . . . . . . . . . . . . : WIN-MSU6P1JIB37
+   主 DNS 后缀 . . . . . . . . . . . : 
+   节点类型  . . . . . . . . . . . . : 混合
+   IP 路由已启用 . . . . . . . . . . : 否
+   WINS 代理已启用 . . . . . . . . . : 否
+
+以太网适配器 本地连接 5:
+
+   连接特定的 DNS 后缀 . . . . . . . : 
+   描述. . . . . . . . . . . . . . . : Citrix PV Network Adapter #0
+   物理地址. . . . . . . . . . . . . : D6-19-68-43-BA-10
+   DHCP 已启用 . . . . . . . . . . . : 否
+   自动配置已启用. . . . . . . . . . : 是
+   本地链接 IPv6 地址. . . . . . . . : fe80::2415:6ced:94a3:36f4%11(首选) 
+   IPv4 地址 . . . . . . . . . . . . : 192.168.10.194(首选) 
+   子网掩码  . . . . . . . . . . . . : 255.255.255.0
+   默认网关. . . . . . . . . . . . . : 192.168.10.1
+   DHCPv6 IAID . . . . . . . . . . . : 251306447
+   DHCPv6 客户端 DUID  . . . . . . . : 00-01-00-01-1C-6D-BF-0E-D6-19-68-43-BA-10
+   DNS 服务器  . . . . . . . . . . . : 61.139.2.69
+   TCPIP 上的 NetBIOS  . . . . . . . : 已启用
+
+隧道适配器 isatap.{A3206C9E-DCC4-4FAB-BC19-FFA674C01823}:
+
+   媒体状态  . . . . . . . . . . . . : 媒体已断开
+   连接特定的 DNS 后缀 . . . . . . . : 
+   描述. . . . . . . . . . . . . . . : Microsoft ISATAP Adapter
+   物理地址. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP 已启用 . . . . . . . . . . . : 否
+   自动配置已启用. . . . . . . . . . : 是
+
+隧道适配器 Teredo Tunneling Pseudo-Interface:
+
+   媒体状态  . . . . . . . . . . . . : 媒体已断开
+   连接特定的 DNS 后缀 . . . . . . . : 
+   描述. . . . . . . . . . . . . . . : Teredo Tunneling Pseudo-Interface
+   物理地址. . . . . . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP 已启用 . . . . . . . . . . . : 否
+   自动配置已启用. . . . . . . . . . : 是
+
+8、arp信息
+cmd.exe /c arp -a
+
+接口: 192.168.10.194 --- 0xb
+  Internet 地址         物理地址              类型
+  169.254.164.12        ae-53-fb-72-fc-9f     动态        
+  192.168.10.1          84-5b-12-4a-bc-3b     动态        
+  192.168.10.20         44-87-fc-fd-08-fa     动态        
+  192.168.10.28         72-b8-8e-3c-5a-91     动态        
+  192.168.10.30         84-2b-2b-59-4e-22     动态        
+  192.168.10.50         00-24-e8-7a-1a-5e     动态        
+  192.168.10.70         00-50-56-97-ff-28     动态        
+  192.168.10.95         00-50-56-97-81-4e     动态        
+  192.168.10.101        aa-01-b9-8a-cb-68     动态        
+  192.168.10.102        c6-cf-6c-d9-69-6f     动态        
+  192.168.10.103        fa-05-52-fe-f8-f0     动态        
+  192.168.10.104        4a-57-66-6d-66-80     动态        
+  192.168.10.110        6a-60-6d-ba-44-52     动态        
+  192.168.10.114        36-7f-e0-03-ed-91     动态        
+  192.168.10.115        d6-1d-b9-22-69-d5     动态        
+  192.168.10.116        2a-de-d2-a3-d2-47     动态        
+  192.168.10.117        b6-6b-67-05-2a-50     动态        
+  192.168.10.119        ce-24-cb-34-19-a5     动态        
+  192.168.10.120        aa-65-8e-aa-ec-e1     动态        
+  192.168.10.126        d2-de-08-fb-99-d1     动态        
+  192.168.10.129        00-50-56-97-e1-f4     动态        
+  192.168.10.132        1a-af-dc-ec-fc-dc     动态        
+  192.168.10.133        ae-25-e6-5e-ef-a3     动态        
+  192.168.10.134        f2-39-a4-02-ea-b5     动态        
+  192.168.10.135        72-71-22-b9-ea-d6     动态        
+  192.168.10.136        ee-33-7c-c3-c9-89     动态        
+  192.168.10.139        7e-14-c4-91-40-b3     动态        
+  192.168.10.140        82-47-9a-bd-75-88     动态        
+  192.168.10.141        f2-4a-25-38-dd-28     动态        
+  192.168.10.143        de-83-43-a6-ea-f8     动态        
+  192.168.10.147        16-20-22-9d-8e-90     动态        
+  192.168.10.148        76-54-ac-c0-26-24     动态        
+  192.168.10.149        ba-eb-b7-a9-51-6b     动态        
+  192.168.10.151        72-1e-b1-70-aa-a0     动态        
+  192.168.10.157        7a-89-9f-e1-99-a3     动态        
+  192.168.10.158        aa-df-84-2b-39-a5     动态        
+  192.168.10.163        e2-b0-7b-28-1a-f1     动态        
+  192.168.10.165        5a-d9-74-fc-8c-a3     动态        
+  192.168.10.166        2e-17-f2-13-dc-f4     动态        
+  192.168.10.169        ea-fc-7e-7c-25-0c     动态        
+  192.168.10.173        ce-1b-be-91-41-95     动态        
+  192.168.10.174        42-bb-b6-69-8b-3f     动态        
+  192.168.10.175        b6-4a-ae-2b-78-26     动态        
+  192.168.10.177        6a-3b-89-f5-7d-f4     动态        
+  192.168.10.180        6e-c1-34-9e-4c-3b     动态        
+  192.168.10.186        c2-de-db-c0-4a-02     动态        
+  192.168.10.187        12-41-f0-88-ab-84     动态        
+  192.168.10.192        82-49-2b-4c-49-20     动态        
+  192.168.10.193        ba-44-8a-d7-b7-6d     动态        
+  192.168.10.200        82-94-a8-40-2d-20     动态        
+  192.168.10.201        00-50-56-97-5e-85     动态        
+  192.168.10.207        d6-5f-64-6a-99-01     动态        
+  192.168.10.210        ba-b3-24-44-16-b9     动态        
+  192.168.10.211        2a-3b-12-9f-84-d2     动态        
+  192.168.10.214        76-19-4a-d7-31-e9     动态        
+  192.168.10.215        be-6f-46-64-68-db     动态        
+  192.168.10.216        ee-2a-ae-a3-16-b9     动态        
+  192.168.10.217        2a-3a-94-bc-a7-5d     动态        
+  192.168.10.218        22-a3-8b-6a-39-ac     动态        
+  192.168.10.219        8e-59-77-d0-50-07     动态        
+  192.168.10.220        f4-6d-04-1a-93-c8     动态        
+  192.168.10.225        ca-6c-f4-04-3c-64     动态        
+  192.168.10.226        08-57-00-a9-c0-77     动态        
+  192.168.10.234        06-38-2a-47-76-1e     动态        
+  192.168.10.253        f2-39-a4-02-ea-b5     动态        
+  192.168.10.255        ff-ff-ff-ff-ff-ff     静态        
+  224.0.0.22            01-00-5e-00-00-16     静态        
+  224.0.0.252           01-00-5e-00-00-fc     静态        
+  230.0.0.1             01-00-5e-00-00-01     静态        
+  255.255.255.255       ff-ff-ff-ff-ff-ff     静态        
+
+10、主机信息1
+systeminfo.exe
+
+主机名:           WIN-MSU6P1JIB37
+OS 名称:          Microsoft Windows Server 2008 R2 Enterprise 
+OS 版本:          6.1.7601 Service Pack 1 Build 7601
+OS 制造商:        Microsoft Corporation
+OS 配置:          独立服务器
+OS 构件类型:      Multiprocessor Free
+注册的所有人:     Windows 用户
+注册的组织:       
+产品 ID:          55041-314-7982835-84252
+初始安装日期:     2013/5/23, 2:16:33
+系统启动时间:     2016/1/17, 0:25:41
+系统制造商:       Xen
+系统型号:         HVM domU
+系统类型:         x64-based PC
+处理器:           安装了 2 个处理器。
+                  [01]: Intel64 Family 6 Model 45 Stepping 7 GenuineIntel ~2000 Mhz
+                  [02]: Intel64 Family 6 Model 45 Stepping 7 GenuineIntel ~2000 Mhz
+BIOS 版本:        Xen 4.1.5, 2013/11/28
+Windows 目录:     C:\Windows
+系统目录:         C:\Windows\system32
+启动设备:         \Device\HarddiskVolume1
+系统区域设置:     zh-cn;中文(中国)
+输入法区域设置:   zh-cn;中文(中国)
+时区:             (UTC+08:00)北京，重庆，香港特别行政区，乌鲁木齐
+物理内存总量:     8,092 MB
+可用的物理内存:   4,569 MB
+虚拟内存: 最大值: 16,181 MB
+虚拟内存: 可用:   11,537 MB
+虚拟内存: 使用中: 4,644 MB
+页面文件位置:     C:\pagefile.sys
+域:               WORKGROUP
+登录服务器:       \\WIN-MSU6P1JIB37
+修补程序:         安装了 107 个修补程序。
+                  [01]: KB981391
+                  [02]: KB981392
+                  [03]: KB977236
+                  [04]: KB981111
+                  [05]: KB977238
+                  [06]: KB977239
+                  [07]: KB981390
+                  [08]: KB2425227
+                  [09]: KB2506014
+                  [10]: KB2506212
+                  [11]: KB2506928
+                  [12]: KB2509553
+                  [13]: KB2511455
+                  [14]: KB2515325
+                  [15]: KB2533552
+                  [16]: KB2536275
+                  [17]: KB2536276
+                  [18]: KB2541014
+                  [19]: KB2544893
+                  [20]: KB2545698
+                  [21]: KB2547666
+                  [22]: KB2552343
+                  [23]: KB2560656
+                  [24]: KB2563227
+                  [25]: KB2564958
+                  [26]: KB2570947
+                  [27]: KB2584146
+                  [28]: KB2585542
+                  [29]: KB2598845
+                  [30]: KB2603229
+                  [31]: KB2604115
+                  [32]: KB2607047
+                  [33]: KB2608658
+                  [34]: KB2618451
+                  [35]: KB2620704
+                  [36]: KB2621440
+                  [37]: KB2631813
+                  [38]: KB2640148
+                  [39]: KB2643719
+                  [40]: KB2644615
+                  [41]: KB2645640
+                  [42]: KB2647753
+                  [43]: KB2653956
+                  [44]: KB2654428
+                  [45]: KB2655992
+                  [46]: KB2656356
+                  [47]: KB2656411
+                  [48]: KB2658846
+                  [49]: KB2659262
+                  [50]: KB2660075
+                  [51]: KB2661254
+                  [52]: KB2667402
+                  [53]: KB2676562
+                  [54]: KB2685811
+                  [55]: KB2685813
+                  [56]: KB2685939
+                  [57]: KB2690533
+                  [58]: KB2691442
+                  [59]: KB2698365
+                  [60]: KB2699779
+                  [61]: KB2705219
+                  [62]: KB2706045
+                  [63]: KB2709630
+                  [64]: KB2712808
+                  [65]: KB2718704
+                  [66]: KB2719033
+                  [67]: KB2719857
+                  [68]: KB2726535
+                  [69]: KB2729094
+                  [70]: KB2729452
+                  [71]: KB2732059
+                  [72]: KB2736422
+                  [73]: KB2742599
+                  [74]: KB2743555
+                  [75]: KB2749655
+                  [76]: KB2750841
+                  [77]: KB2753842
+                  [78]: KB2756921
+                  [79]: KB2757638
+                  [80]: KB2758857
+                  [81]: KB2761217
+                  [82]: KB2763523
+                  [83]: KB2765809
+                  [84]: KB2769369
+                  [85]: KB2770660
+                  [86]: KB2779562
+                  [87]: KB2785220
+                  [88]: KB2786081
+                  [89]: KB2786400
+                  [90]: KB2789645
+                  [91]: KB2790113
+                  [92]: KB2790655
+                  [93]: KB2791765
+                  [94]: KB2798162
+                  [95]: KB2804579
+                  [96]: KB2807986
+                  [97]: KB2813170
+                  [98]: KB2813347
+                  [99]: KB2820197
+                  [100]: KB2820331
+                  [101]: KB2829361
+                  [102]: KB2829530
+                  [103]: KB2830290
+                  [104]: KB2840149
+                  [105]: KB2847204
+                  [106]: KB958488
+                  [107]: KB976902
+网卡:             安装了 1 个 NIC。
+                  [01]: Citrix PV Network Adapter
+                      连接名:      本地连接 5
+                      启用 DHCP:   否
+                      IP 地址
+                        [01]: 192.168.10.194
+                        [02]: fe80::2415:6ced:94a3:36f4
+
+12、主机信息2
+cmd.exe /c SYSTEMINFO
+
+主机名:           WIN-MSU6P1JIB37
+OS 名称:          Microsoft Windows Server 2008 R2 Enterprise 
+OS 版本:          6.1.7601 Service Pack 1 Build 7601
+OS 制造商:        Microsoft Corporation
+OS 配置:          独立服务器
+OS 构件类型:      Multiprocessor Free
+注册的所有人:     Windows 用户
+注册的组织:       
+产品 ID:          55041-314-7982835-84252
+初始安装日期:     2013/5/23, 2:16:33
+系统启动时间:     2016/1/17, 0:25:41
+系统制造商:       Xen
+系统型号:         HVM domU
+系统类型:         x64-based PC
+处理器:           安装了 2 个处理器。
+                  [01]: Intel64 Family 6 Model 45 Stepping 7 GenuineIntel ~2000 Mhz
+                  [02]: Intel64 Family 6 Model 45 Stepping 7 GenuineIntel ~2000 Mhz
+BIOS 版本:        Xen 4.1.5, 2013/11/28
+Windows 目录:     C:\Windows
+系统目录:         C:\Windows\system32
+启动设备:         \Device\HarddiskVolume1
+系统区域设置:     zh-cn;中文(中国)
+输入法区域设置:   zh-cn;中文(中国)
+时区:             (UTC+08:00)北京，重庆，香港特别行政区，乌鲁木齐
+物理内存总量:     8,092 MB
+可用的物理内存:   4,568 MB
+虚拟内存: 最大值: 16,181 MB
+虚拟内存: 可用:   11,531 MB
+虚拟内存: 使用中: 4,650 MB
+页面文件位置:     C:\pagefile.sys
+域:               WORKGROUP
+登录服务器:       \\WIN-MSU6P1JIB37
+修补程序:         安装了 107 个修补程序。
+                  [01]: KB981391
+                  [02]: KB981392
+                  [03]: KB977236
+                  [04]: KB981111
+                  [05]: KB977238
+                  [06]: KB977239
+                  [07]: KB981390
+                  [08]: KB2425227
+                  [09]: KB2506014
+                  [10]: KB2506212
+                  [11]: KB2506928
+                  [12]: KB2509553
+                  [13]: KB2511455
+                  [14]: KB2515325
+                  [15]: KB2533552
+                  [16]: KB2536275
+                  [17]: KB2536276
+                  [18]: KB2541014
+                  [19]: KB2544893
+                  [20]: KB2545698
+                  [21]: KB2547666
+                  [22]: KB2552343
+                  [23]: KB2560656
+                  [24]: KB2563227
+                  [25]: KB2564958
+                  [26]: KB2570947
+                  [27]: KB2584146
+                  [28]: KB2585542
+                  [29]: KB2598845
+                  [30]: KB2603229
+                  [31]: KB2604115
+                  [32]: KB2607047
+                  [33]: KB2608658
+                  [34]: KB2618451
+                  [35]: KB2620704
+                  [36]: KB2621440
+                  [37]: KB2631813
+                  [38]: KB2640148
+                  [39]: KB2643719
+                  [40]: KB2644615
+                  [41]: KB2645640
+                  [42]: KB2647753
+                  [43]: KB2653956
+                  [44]: KB2654428
+                  [45]: KB2655992
+                  [46]: KB2656356
+                  [47]: KB2656411
+                  [48]: KB2658846
+                  [49]: KB2659262
+                  [50]: KB2660075
+                  [51]: KB2661254
+                  [52]: KB2667402
+                  [53]: KB2676562
+                  [54]: KB2685811
+                  [55]: KB2685813
+                  [56]: KB2685939
+                  [57]: KB2690533
+                  [58]: KB2691442
+                  [59]: KB2698365
+                  [60]: KB2699779
+                  [61]: KB2705219
+                  [62]: KB2706045
+                  [63]: KB2709630
+                  [64]: KB2712808
+                  [65]: KB2718704
+                  [66]: KB2719033
+                  [67]: KB2719857
+                  [68]: KB2726535
+                  [69]: KB2729094
+                  [70]: KB2729452
+                  [71]: KB2732059
+                  [72]: KB2736422
+                  [73]: KB2742599
+                  [74]: KB2743555
+                  [75]: KB2749655
+                  [76]: KB2750841
+                  [77]: KB2753842
+                  [78]: KB2756921
+                  [79]: KB2757638
+                  [80]: KB2758857
+                  [81]: KB2761217
+                  [82]: KB2763523
+                  [83]: KB2765809
+                  [84]: KB2769369
+                  [85]: KB2770660
+                  [86]: KB2779562
+                  [87]: KB2785220
+                  [88]: KB2786081
+                  [89]: KB2786400
+                  [90]: KB2789645
+                  [91]: KB2790113
+                  [92]: KB2790655
+                  [93]: KB2791765
+                  [94]: KB2798162
+                  [95]: KB2804579
+                  [96]: KB2807986
+                  [97]: KB2813170
+                  [98]: KB2813347
+                  [99]: KB2820197
+                  [100]: KB2820331
+                  [101]: KB2829361
+                  [102]: KB2829530
+                  [103]: KB2830290
+                  [104]: KB2840149
+                  [105]: KB2847204
+                  [106]: KB958488
+                  [107]: KB976902
+网卡:             安装了 1 个 NIC。
+                  [01]: Citrix PV Network Adapter
+                      连接名:      本地连接 5
+                      启用 DHCP:   否
+                      IP 地址
+                        [01]: 192.168.10.194
+                        [02]: fe80::2415:6ced:94a3:36f4
+
+14、进程信息
+cmd.exe /c TASKLIST /V
+
+映像名称                       PID 会话名              会话#       内存使用  状态            用户名                                                 CPU 时间 窗口标题                                                                
+========================= ======== ================ =========== ============ =============== ================================================== ============ ========================================================================
+System Idle Process              0 Services                   0         24 K Unknown         NT AUTHORITY\SYSTEM                                  7083:29:00 暂缺                                                                    
+System                           4 Services                   0        364 K Unknown         暂缺                                                    0:31:30 暂缺                                                                    
+smss.exe                       380 Services                   0      1,168 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+csrss.exe                      512 Services                   0      7,212 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:27 暂缺                                                                    
+wininit.exe                    568 Services                   0      5,032 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+csrss.exe                      576 Console                    1      8,200 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:03 暂缺                                                                    
+winlogon.exe                   616 Console                    1      4,864 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+services.exe                   664 Services                   0      8,960 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:12 暂缺                                                                    
+lsass.exe                      672 Services                   0     13,304 K Unknown         NT AUTHORITY\SYSTEM                                     0:02:48 暂缺                                                                    
+lsm.exe                        680 Services                   0      6,460 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:02 暂缺                                                                    
+svchost.exe                    772 Services                   0      9,304 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:43 暂缺                                                                    
+svchost.exe                    852 Services                   0      8,564 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:00:48 暂缺                                                                    
+LogonUI.exe                    936 Console                    1     16,228 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+svchost.exe                    944 Services                   0     12,364 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:22 暂缺                                                                    
+svchost.exe                    988 Services                   0     48,504 K Unknown         NT AUTHORITY\SYSTEM                                     2:23:31 暂缺                                                                    
+svchost.exe                    424 Services                   0     14,148 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:36 暂缺                                                                    
+svchost.exe                    528 Services                   0     17,764 K Unknown         NT AUTHORITY\SYSTEM                                     0:03:05 暂缺                                                                    
+svchost.exe                    652 Services                   0     21,472 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:12:30 暂缺                                                                    
+KSafeSvc.exe                  1028 Services                   0      6,268 K Unknown         NT AUTHORITY\SYSTEM                                     0:52:52 暂缺                                                                    
+svchost.exe                   1244 Services                   0     11,412 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:04 暂缺                                                                    
+spoolsv.exe                   1384 Services                   0     14,512 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:19 暂缺                                                                    
+svchost.exe                   1416 Services                   0      9,164 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+mysqld.exe                    1452 Services                   0    109,856 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:28 暂缺                                                                    
+mysqld.exe                    1540 Services                   0     49,708 K Unknown         NT AUTHORITY\SYSTEM                                     0:07:42 暂缺                                                                    
+SMSvcHost.exe                 1596 Services                   0     22,080 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
+beasvc.exe                    1820 Services                   0     56,544 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:44 暂缺                                                                    
+conhost.exe                   1876 Services                   0      3,908 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:02 暂缺                                                                    
+svchost.exe                   1892 Services                   0      2,832 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
+svchost.exe                   1940 Services                   0     10,204 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+XenGuestAgent.Exe             2028 Services                   0     82,564 K Unknown         NT AUTHORITY\SYSTEM                                     0:17:11 暂缺                                                                    
+svchost.exe                   2236 Services                   0      9,236 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:01:07 暂缺                                                                    
+svchost.exe                   2312 Services                   0      5,532 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:00:00 暂缺                                                                    
+WmiPrvSE.exe                  2420 Services                   0      7,960 K Unknown         NT AUTHORITY\SYSTEM                                     1:08:04 暂缺                                                                    
+WmiPrvSE.exe                  2588 Services                   0     14,240 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:23:47 暂缺                                                                    
+VSSVC.exe                     2836 Services                   0      6,732 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+XenDPriv.exe                  2932 Services                   0     22,868 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+svchost.exe                   2076 Services                   0      5,272 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
+msdtc.exe                      500 Services                   0      7,584 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:00:00 暂缺                                                                    
+sppsvc.exe                    1324 Services                   0     13,492 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:11:15 暂缺                                                                    
+csrss.exe                      592 RDP-Tcp#0                  2     26,896 K Running         NT AUTHORITY\SYSTEM                                     0:00:24 暂缺                                                                    
+winlogon.exe                   392 RDP-Tcp#0                  2      5,892 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+taskhost.exe                  2080 RDP-Tcp#0                  2      8,496 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:02 Task Host Window                                                        
+rdpclip.exe                   2484 RDP-Tcp#0                  2      8,696 K Running         WIN-MSU6P1JIB37\Administrator                           0:02:16 暂缺                                                                    
+dwm.exe                       3244 RDP-Tcp#0                  2      6,972 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 DWM Notification Window                                                 
+explorer.exe                  3276 RDP-Tcp#0                  2     76,660 K Running         WIN-MSU6P1JIB37\Administrator                           0:09:37 暂缺                                                                    
+FeiQ.exe                      3404 RDP-Tcp#0                  2     15,872 K Running         WIN-MSU6P1JIB37\Administrator                           0:01:49 暂缺                                                                    
+magentproc.exe                3440 RDP-Tcp#0                  2      6,652 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:04 LoadRunner Agent Process                                                
+jusched.exe                   3484 RDP-Tcp#0                  2     13,764 K Not Responding  WIN-MSU6P1JIB37\Administrator                           0:00:01 OleMainThreadWndName                                                    
+jucheck.exe                   9712 RDP-Tcp#0                  2      9,780 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 JavaUpdate SysTray Icon                                                 
+notepad.exe                  11992 RDP-Tcp#0                  2      6,600 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 IBM_Security_AppScan_Glass_Box_Agent_(Java)_安装_03_24_2016_16_52_04.log
+cmd.exe                      14268 Services                   0      3,832 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+conhost.exe                   9816 Services                   0      2,720 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+java.exe                     13052 Services                   0    364,096 K Unknown         NT AUTHORITY\SYSTEM                                     0:16:25 暂缺                                                                    
+xigui32.exe                  10248 RDP-Tcp#0                  2      7,056 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:35 Xitami Web Server Properties                                            
+java.exe                     10100 RDP-Tcp#0                  2    227,116 K Running         WIN-MSU6P1JIB37\Administrator                           0:02:12 Tomcat                                                                  
+conhost.exe                  16168 RDP-Tcp#0                  2      4,488 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:03 CicMarshalWnd                                                           
+AppScan.exe                   9212 RDP-Tcp#0                  2    186,384 K Running         WIN-MSU6P1JIB37\Administrator                           0:22:07 未命名 - IBM Security AppScan Standard                                  
+FlashBrowser.exe              4176 RDP-Tcp#0                  2     35,420 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:03 Flash 浏览器 － AppScanFlash                                            
+iexplore.exe                  9396 RDP-Tcp#0                  2     19,352 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:02 YINHAI SOFTWARE用户登录 - Windows Internet Explorer                     
+iexplore.exe                  4192 RDP-Tcp#0                  2     27,968 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:01 SysFader                                                                
+cmd.exe                       8140 RDP-Tcp#0                  2      3,484 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 C:\Windows\system32\cmd.exe                                             
+conhost.exe                   8200 RDP-Tcp#0                  2      5,168 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 CicMarshalWnd                                                           
+java.exe                     14772 RDP-Tcp#0                  2    497,316 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:10:01 暂缺                                                                    
+iexplore.exe                 10748 RDP-Tcp#0                  2     35,044 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:17 SysFader                                                                
+iexplore.exe                 11284 RDP-Tcp#0                  2     54,628 K Running         WIN-MSU6P1JIB37\Administrator                           0:01:54 SysFader                                                                
+java.exe                     10828 RDP-Tcp#0                  2     59,700 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:04 Tomcat                                                                  
+conhost.exe                   8748 RDP-Tcp#0                  2      4,576 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 CicMarshalWnd                                                           
+cmd.exe                      11680 RDP-Tcp#0                  2      3,876 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+conhost.exe                  10232 RDP-Tcp#0                  2      2,940 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+java.exe                      7364 RDP-Tcp#0                  2    294,736 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:40 暂缺                                                                    
+cmd.exe                       8352 RDP-Tcp#0                  2      3,184 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 C:\Windows\system32\cmd.exe                                             
+conhost.exe                  15528 RDP-Tcp#0                  2      4,468 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 CicMarshalWnd                                                           
+java.exe                     14844 RDP-Tcp#0                  2     26,308 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+cmd.exe                       7776 RDP-Tcp#0                  2      3,916 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+conhost.exe                  14760 RDP-Tcp#0                  2      2,912 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+java.exe                     13864 RDP-Tcp#0                  2    222,776 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:16 暂缺                                                                    
+WmiPrvSE.exe                  4424 Services                   0      5,836 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
+TrustedInstaller.exe          7564 Services                   0     12,736 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:05 暂缺                                                                    
+cmd.exe                       2664 RDP-Tcp#0                  2      3,644 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+conhost.exe                   4824 RDP-Tcp#0                  2      2,932 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+tasklist.exe                  5072 RDP-Tcp#0                  2      6,904 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+
+16、服务信息
+cmd.exe /c sc query
+
+SERVICE_NAME: AeLookupSvc
+DISPLAY_NAME: Application Experience
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: AppHostSvc
+DISPLAY_NAME: Application Host Helper Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: AppMgmt
+DISPLAY_NAME: Application Management
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: BFE
+DISPLAY_NAME: Base Filtering Engine
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: BITS
+DISPLAY_NAME: Background Intelligent Transfer Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: CertPropSvc
+DISPLAY_NAME: Certificate Propagation
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: CryptSvc
+DISPLAY_NAME: Cryptographic Services
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: DcomLaunch
+DISPLAY_NAME: DCOM Server Process Launcher
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: Dhcp
+DISPLAY_NAME: DHCP Client
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: Dnscache
+DISPLAY_NAME: DNS Client
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: DPS
+DISPLAY_NAME: Diagnostic Policy Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: eventlog
+DISPLAY_NAME: Windows Event Log
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: EventSystem
+DISPLAY_NAME: COM+ Event System
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: FontCache
+DISPLAY_NAME: Windows Font Cache Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: gpsvc
+DISPLAY_NAME: Group Policy Client
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_PRESHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: IKEEXT
+DISPLAY_NAME: IKE and AuthIP IPsec Keying Modules
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: iphlpsvc
+DISPLAY_NAME: IP Helper
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: KSafeSvc
+DISPLAY_NAME: KSafe service
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: LanmanServer
+DISPLAY_NAME: Server
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: LanmanWorkstation
+DISPLAY_NAME: Workstation
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: lmhosts
+DISPLAY_NAME: TCP/IP NetBIOS Helper
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: MariaDB
+DISPLAY_NAME: MariaDB
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: MpsSvc
+DISPLAY_NAME: Windows Firewall
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: MSDTC
+DISPLAY_NAME: Distributed Transaction Coordinator
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: MySQL
+DISPLAY_NAME: MySQL
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: Netman
+DISPLAY_NAME: Network Connections
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: NetPipeActivator
+DISPLAY_NAME: Net.Pipe Listener Adapter
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: netprofm
+DISPLAY_NAME: Network List Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: NetTcpActivator
+DISPLAY_NAME: Net.Tcp Listener Adapter
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: NetTcpPortSharing
+DISPLAY_NAME: Net.Tcp Port Sharing Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: NlaSvc
+DISPLAY_NAME: Network Location Awareness
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: nsi
+DISPLAY_NAME: Network Store Interface Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: Oracle WebLogic NodeManager (C_Oracle_Middleware_wlserver_10.3)
+DISPLAY_NAME: Oracle WebLogic NodeManager (C_Oracle_Middleware_wlserver_10.3)
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: PlugPlay
+DISPLAY_NAME: Plug and Play
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: PolicyAgent
+DISPLAY_NAME: IPsec Policy Agent
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: Power
+DISPLAY_NAME: Power
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: ProfSvc
+DISPLAY_NAME: User Profile Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: RemoteRegistry
+DISPLAY_NAME: Remote Registry
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: RpcEptMapper
+DISPLAY_NAME: RPC Endpoint Mapper
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: RpcSs
+DISPLAY_NAME: Remote Procedure Call (RPC)
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: SamSs
+DISPLAY_NAME: Security Accounts Manager
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (NOT_STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: Schedule
+DISPLAY_NAME: Task Scheduler
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: SENS
+DISPLAY_NAME: System Event Notification Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: SessionEnv
+DISPLAY_NAME: Remote Desktop Configuration
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: ShellHWDetection
+DISPLAY_NAME: Shell Hardware Detection
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: Spooler
+DISPLAY_NAME: Print Spooler
+        TYPE               : 110  WIN32_OWN_PROCESS  (interactive)
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, IGNORES_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: sppsvc
+DISPLAY_NAME: Software Protection
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: sppuinotify
+DISPLAY_NAME: SPP Notification Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: TermService
+DISPLAY_NAME: Remote Desktop Services
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: TrkWks
+DISPLAY_NAME: Distributed Link Tracking Client
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: TrustedInstaller
+DISPLAY_NAME: Windows Modules Installer
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: UmRdpService
+DISPLAY_NAME: Remote Desktop Services UserMode Port Redirector
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: UxSms
+DISPLAY_NAME: Desktop Window Manager Session Manager
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: VSS
+DISPLAY_NAME: Volume Shadow Copy
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: W32Time
+DISPLAY_NAME: Windows Time
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: W3SVC
+DISPLAY_NAME: World Wide Web Publishing Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: WAS
+DISPLAY_NAME: Windows Process Activation Service
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: Winmgmt
+DISPLAY_NAME: Windows Management Instrumentation
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: WinRM
+DISPLAY_NAME: Windows Remote Management (WS-Management)
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: wuauserv
+DISPLAY_NAME: Windows Update
+        TYPE               : 20  WIN32_SHARE_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_PRESHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+SERVICE_NAME: XenSvc
+DISPLAY_NAME: Citrix Xen Guest Agent
+        TYPE               : 10  WIN32_OWN_PROCESS  
+        STATE              : 4  RUNNING 
+                                (STOPPABLE, NOT_PAUSABLE, ACCEPTS_SHUTDOWN)
+        WIN32_EXIT_CODE    : 0  (0x0)
+        SERVICE_EXIT_CODE  : 0  (0x0)
+        CHECKPOINT         : 0x0
+        WAIT_HINT          : 0x0
+
+18、网络信息
+netstat -ano
+
+活动连接
+
+  协议  本地地址          外部地址        状态           PID
+  TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:81             0.0.0.0:0              LISTENING       10248
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       852
+  TCP    0.0.0.0:443            0.0.0.0:0              LISTENING       3440
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:1021           0.0.0.0:0              LISTENING       10248
+  TCP    0.0.0.0:1025           0.0.0.0:0              LISTENING       568
+  TCP    0.0.0.0:1026           0.0.0.0:0              LISTENING       944
+  TCP    0.0.0.0:1027           0.0.0.0:0              LISTENING       988
+  TCP    0.0.0.0:1028           0.0.0.0:0              LISTENING       672
+  TCP    0.0.0.0:1029           0.0.0.0:0              LISTENING       664
+  TCP    0.0.0.0:1030           0.0.0.0:0              LISTENING       2312
+  TCP    0.0.0.0:1080           0.0.0.0:0              LISTENING       10248
+  TCP    0.0.0.0:1688           0.0.0.0:0              LISTENING       1324
+  TCP    0.0.0.0:2425           0.0.0.0:0              LISTENING       3404
+  TCP    0.0.0.0:3306           0.0.0.0:0              LISTENING       1452
+  TCP    0.0.0.0:3310           0.0.0.0:0              LISTENING       1540
+  TCP    0.0.0.0:3389           0.0.0.0:0              LISTENING       2236
+  TCP    0.0.0.0:5003           0.0.0.0:0              LISTENING       3440
+  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       14772
+  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       14772
+  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       14772
+  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       14772
+  TCP    0.0.0.0:8001           0.0.0.0:0              LISTENING       14844
+  TCP    0.0.0.0:8010           0.0.0.0:0              LISTENING       10828
+  TCP    0.0.0.0:8029           0.0.0.0:0              LISTENING       10100
+  TCP    0.0.0.0:8081           0.0.0.0:0              LISTENING       10828
+  TCP    0.0.0.0:8097           0.0.0.0:0              LISTENING       10100
+  TCP    0.0.0.0:30985          0.0.0.0:0              LISTENING       3404
+  TCP    0.0.0.0:47001          0.0.0.0:0              LISTENING       4
+  TCP    0.0.0.0:50500          0.0.0.0:0              LISTENING       3440
+  TCP    0.0.0.0:54345          0.0.0.0:0              LISTENING       3440
+  TCP    127.0.0.1:5556         0.0.0.0:0              LISTENING       1820
+  TCP    127.0.0.1:7001         0.0.0.0:0              LISTENING       14772
+  TCP    127.0.0.1:8006         0.0.0.0:0              LISTENING       10828
+  TCP    127.0.0.1:8025         0.0.0.0:0              LISTENING       10100
+  TCP    127.0.0.1:54226        127.0.0.1:54227        ESTABLISHED     7364
+  TCP    127.0.0.1:54227        127.0.0.1:54226        ESTABLISHED     7364
+  TCP    127.0.0.1:54452        127.0.0.1:54453        ESTABLISHED     13864
+  TCP    127.0.0.1:54453        127.0.0.1:54452        ESTABLISHED     13864
+  TCP    127.0.0.1:54616        0.0.0.0:0              LISTENING       9212
+  TCP    127.0.0.1:54621        0.0.0.0:0              LISTENING       9212
+  TCP    192.168.10.194:139     0.0.0.0:0              LISTENING       4
+  TCP    192.168.10.194:3389    192.168.24.12:53758    ESTABLISHED     2236
+  TCP    192.168.10.194:7001    0.0.0.0:0              LISTENING       14772
+  TCP    192.168.10.194:7001    192.168.10.115:53937   TIME_WAIT       0
+  TCP    192.168.10.194:7001    192.168.10.115:53956   FIN_WAIT_2      14772
+  TCP    192.168.10.194:7001    192.168.10.194:35481   ESTABLISHED     14772
+  TCP    192.168.10.194:7001    192.168.10.194:54207   ESTABLISHED     14772
+  TCP    192.168.10.194:7001    192.168.10.194:54447   ESTABLISHED     14772
+  TCP    192.168.10.194:7001    192.168.28.28:57295    ESTABLISHED     14772
+  TCP    192.168.10.194:7101    0.0.0.0:0              LISTENING       13052
+  TCP    192.168.10.194:7101    192.168.10.115:65471   TIME_WAIT       0
+  TCP    192.168.10.194:7101    192.168.10.115:65490   FIN_WAIT_2      13052
+  TCP    192.168.10.194:7101    192.168.10.194:35477   ESTABLISHED     13052
+  TCP    192.168.10.194:7102    0.0.0.0:0              LISTENING       7364
+  TCP    192.168.10.194:7102    192.168.10.115:56910   TIME_WAIT       0
+  TCP    192.168.10.194:7102    192.168.10.115:56929   FIN_WAIT_2      7364
+  TCP    192.168.10.194:7102    192.168.10.194:54232   ESTABLISHED     7364
+  TCP    192.168.10.194:7103    0.0.0.0:0              LISTENING       13864
+  TCP    192.168.10.194:7103    192.168.10.115:25905   TIME_WAIT       0
+  TCP    192.168.10.194:7103    192.168.10.115:25924   FIN_WAIT_2      13864
+  TCP    192.168.10.194:8081    192.168.10.115:23846   FIN_WAIT_2      10828
+  TCP    192.168.10.194:27568   192.168.12.2:808       CLOSE_WAIT      9712
+  TCP    192.168.10.194:35477   192.168.10.194:7101    ESTABLISHED     14772
+  TCP    192.168.10.194:35481   192.168.10.194:7001    ESTABLISHED     13052
+  TCP    192.168.10.194:51201   192.168.10.217:1521    ESTABLISHED     13052
+  TCP    192.168.10.194:54207   192.168.10.194:7001    ESTABLISHED     7364
+  TCP    192.168.10.194:54210   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54211   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54212   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54213   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54214   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54215   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54216   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54217   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54218   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54219   192.168.10.217:1521    ESTABLISHED     7364
+  TCP    192.168.10.194:54232   192.168.10.194:7102    ESTABLISHED     14772
+  TCP    192.168.10.194:54447   192.168.10.194:7001    ESTABLISHED     13864
+  TCP    192.168.10.194:54449   192.168.10.115:1521    ESTABLISHED     13864
+  TCP    192.168.10.194:54450   192.168.10.115:1521    ESTABLISHED     13864
+  TCP    [::]:80                [::]:0                 LISTENING       4
+  TCP    [::]:135               [::]:0                 LISTENING       852
+  TCP    [::]:445               [::]:0                 LISTENING       4
+  TCP    [::]:1025              [::]:0                 LISTENING       568
+  TCP    [::]:1026              [::]:0                 LISTENING       944
+  TCP    [::]:1027              [::]:0                 LISTENING       988
+  TCP    [::]:1028              [::]:0                 LISTENING       672
+  TCP    [::]:1029              [::]:0                 LISTENING       664
+  TCP    [::]:1030              [::]:0                 LISTENING       2312
+  TCP    [::]:1688              [::]:0                 LISTENING       1324
+  TCP    [::]:3306              [::]:0                 LISTENING       1452
+  TCP    [::]:3310              [::]:0                 LISTENING       1540
+  TCP    [::]:3389              [::]:0                 LISTENING       2236
+  TCP    [::]:8001              [::]:0                 LISTENING       14844
+  TCP    [::]:8010              [::]:0                 LISTENING       10828
+  TCP    [::]:8081              [::]:0                 LISTENING       10828
+  TCP    [::]:47001             [::]:0                 LISTENING       4
+  TCP    [::1]:7001             [::]:0                 LISTENING       14772
+  TCP    [fe80::100:7f:fffe%19]:7001  [::]:0                 LISTENING       14772
+  TCP    [fe80::5efe:192.168.10.194%15]:7001  [::]:0                 LISTENING       14772
+  TCP    [fe80::2415:6ced:94a3:36f4%11]:7001  [::]:0                 LISTENING       14772
+  UDP    0.0.0.0:123            *:*                                    424
+  UDP    0.0.0.0:500            *:*                                    988
+  UDP    0.0.0.0:2425           *:*                                    3404
+  UDP    0.0.0.0:4500           *:*                                    988
+  UDP    0.0.0.0:5355           *:*                                    652
+  UDP    127.0.0.1:51515        *:*                                    10748
+  UDP    127.0.0.1:58639        *:*                                    4192
+  UDP    127.0.0.1:59915        *:*                                    9212
+  UDP    127.0.0.1:60540        *:*                                    11284
+  UDP    192.168.10.194:137     *:*                                    4
+  UDP    192.168.10.194:138     *:*                                    4
+  UDP    [::]:123               *:*                                    424
+  UDP    [::]:500               *:*                                    988
+  UDP    [::]:4500              *:*                                    988
+  UDP    [::]:5355              *:*                                    652
+
+20、系统环境信息
+cmd.exe /c set
+ALLUSERSPROFILE=C:\ProgramData
+ANALYSIS_PATH=E:\Program Files (x86)\HP\LoadRunner\
+ANT_CONTRIB=C:\Oracle\MIDDLE~1\modules\NETSFA~1.0_1
+ANT_HOME=C:\Oracle\MIDDLE~1\modules\ORGAPA~1.1
+APPDATA=C:\Users\Administrator\AppData\Roaming
+ARDIR=C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib
+BEA_HOME=C:\Oracle\MIDDLE~1
+CLASSPATH=C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\antlr-2.7.6.jar ;C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\sys_manifest_classpath\weblogic_patch.jar;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\sys_manifest_classpath\weblogic_patch.jar;E:\Java\JDK17~1.0_1\lib\tools.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\weblogic_sp.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\weblogic.jar;C:\Oracle\MIDDLE~1\modules\features\weblogic.server.modules_10.3.6.0.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\webservices.jar;C:\Oracle\MIDDLE~1\modules\ORGAPA~1.1/lib/ant-all.jar;C:\Oracle\MIDDLE~1\modules\NETSFA~1.0_1/lib/ant-contrib.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\lib\derbyclient.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\xqrl.jar;.;E:\Java\jdk1.7.0_13\lib\dt.jar;E:\Java\jdk1.7.0_13\lib\tools.jar;  
+CLIENTNAME=DESKTOP-K84D4GJ
+CLUSTER_PROPERTIES=-Dweblogic.management.discover=true
+COHERENCE_HOME=C:\Oracle\MIDDLE~1\COHERE~1.7
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+CommonProgramW6432=C:\Program Files\Common Files
+COMPUTERNAME=WIN-MSU6P1JIB37
+ComSpec=C:\Windows\system32\cmd.exe
+CURR_DIR=E:\Program Files (x86)\HP\LoadRunner\dat\Setup\LoadRunner\MSBuild\..\..\..\..
+DATABASE_CLASSPATH=C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\lib\derbyclient.jar
+DEBUG_PORT=8453
+DERBY_CLASSPATH=C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\lib\derbynet.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\lib\derbyclient.jar
+DERBY_CLIENT_CLASSPATH=C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\lib\derbyclient.jar
+DERBY_DEBUG_LEVEL=0
+DERBY_FLAG=false
+DERBY_HOME=C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby
+DERBY_OPTS="-Dderby.system.home=C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\demo\databases"
+DERBY_SYSTEM_HOME=C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\demo\databases
+DERBY_TOOLS=C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\lib\derbytools.jar
+doExitFlag=false
+DOMAIN_HOME=C:\Oracle\MIDDLE~1\USER_P~1\domains\BASE_D~1
+FEATURES_DIR=C:\Oracle\MIDDLE~1\modules\features
+FMWCONFIG_CLASSPATH=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\sys_manifest_classpath\weblogic_patch.jar;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\sys_manifest_classpath\weblogic_patch.jar;E:\Java\JDK17~1.0_1\lib\tools.jar;C:\Oracle\MIDDLE~1\utils\config\10.3\config-launch.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\weblogic_sp.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\weblogic.jar;C:\Oracle\MIDDLE~1\modules\features\weblogic.server.modules_10.3.6.0.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\webservices.jar;C:\Oracle\MIDDLE~1\modules\ORGAPA~1.1/lib/ant-all.jar;C:\Oracle\MIDDLE~1\modules\NETSFA~1.0_1/lib/ant-contrib.jar
+FMWLAUNCH_CLASSPATH=C:\Oracle\MIDDLE~1\utils\config\10.3\config-launch.jar
+FP_NO_HOST_CHECK=NO
+FTP_PASSIVE=1
+HOMEDRIVE=C:
+HOMEPATH=\Users\Administrator
+JAVA_HOME=E:\Java\JDK17~1.0_1
+JAVA_OPTIONS= -Xverify:none  -da -Dplatform.home=C:\Oracle\MIDDLE~1\WLSERV~1.3 -Dwls.home=C:\Oracle\MIDDLE~1\WLSERV~1.3\server -Dweblogic.home=C:\Oracle\MIDDLE~1\WLSERV~1.3\server   -Dweblogic.management.discover=true  -XX:+PrintGCDetails -XX:+PrintGCTimeStamps  -XX:+HeapDumpOnOutOfMemoryError -Dwlw.iterativeDev= -Dwlw.testConsole= -Dwlw.logErrorsToConsole= -Dweblogic.ext.dirs=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\sysext_manifest_classpath;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\sysext_manifest_classpath
+JAVA_PROPERTIES=-Dplatform.home=C:\Oracle\MIDDLE~1\WLSERV~1.3 -Dwls.home=C:\Oracle\MIDDLE~1\WLSERV~1.3\server -Dweblogic.home=C:\Oracle\MIDDLE~1\WLSERV~1.3\server   -Dweblogic.management.discover=true 
+JAVA_USE_64BIT=false
+JAVA_VENDOR=Sun
+JAVA_VM=-client  
+LG_PATH=E:\Program Files (x86)\HP\LoadRunner\
+LOCALAPPDATA=C:\Users\Administrator\AppData\Local
+LOGGER_CONFIG_PATH=E:\Program Files (x86)\HP\LoadRunner\dat\ltlogconf.xml
+LOGONSERVER=\\WIN-MSU6P1JIB37
+LOG_FILE=C:\Users\ADMINI~1\AppData\Local\Temp\1\ihp_custom_batches.log
+LONG_DOMAIN_HOME=C:\Oracle\Middleware\user_projects\domains\base_domain
+LR_PATH=E:\Program Files (x86)\HP\LoadRunner\
+LR_ROOT=E:\Program Files (x86)\HP\LoadRunner\
+MEM_ARGS=-Xms256m -Xmx512m -XX:CompileThreshold=8000 -XX:PermSize=48m  -XX:MaxPermSize=128m
+MEM_ARGS_32BIT=-Xms256m -Xmx512m
+MEM_ARGS_64BIT=-Xms256m -Xmx512m
+MEM_DEV_ARGS=-XX:CompileThreshold=8000 -XX:PermSize=48m 
+MEM_MAX_PERM_SIZE=-XX:MaxPermSize=128m
+MEM_MAX_PERM_SIZE_32BIT=-XX:MaxPermSize=128m
+MEM_MAX_PERM_SIZE_64BIT=-XX:MaxPermSize=256m
+MEM_PERM_SIZE=-XX:PermSize=48m
+MEM_PERM_SIZE_32BIT=-XX:PermSize=48m
+MEM_PERM_SIZE_64BIT=-XX:PermSize=128m
+MODULES_DIR=C:\Oracle\MIDDLE~1\modules
+MW_HOME=C:\Oracle\MIDDLE~1
+NUMBER_OF_PROCESSORS=2
+OCP371_PATCH_CLASSPATH=C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\sys_manifest_classpath\weblogic_patch.jar
+OCP371_PATCH_EXT_DIR=C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\sysext_manifest_classpath
+OCP371_PATCH_LIBPATH=C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\native
+OCP371_PATCH_PATH=C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\native
+OS=Windows_NT
+PATCH_CLASSPATH=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\sys_manifest_classpath\weblogic_patch.jar;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\sys_manifest_classpath\weblogic_patch.jar
+PATCH_LIBPATH=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\native;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\native
+PATCH_PATH=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\native;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\native
+Path=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\native;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\native;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\native\win\32;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\bin;C:\Oracle\MIDDLE~1\modules\ORGAPA~1.1\bin;E:\Java\JDK17~1.0_1\jre\bin;E:\Java\JDK17~1.0_1\bin;E:\Java\jdk1.7.0_13\bin;E:\Java\jdk1.7.0_13\jre\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\strawberry\c\bin;C:\strawberry\perl\bin;C:\Program Files\mariadb-10.1.7-winx64\bin;E:\MySQL\MySQL Server 5.5\bin;E:\apache-ant-1.9.5\bin;;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\native\win\32\oci920_8
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+POST_CLASSPATH=C:\Oracle\MIDDLE~1\WLSERV~1.3\common\derby\lib\derbyclient.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\xqrl.jar
+PRE_CLASSPATH=C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\antlr-2.7.6.jar 
+PROCESSOR_ARCHITECTURE=x86
+PROCESSOR_ARCHITEW6432=AMD64
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 45 Stepping 7, GenuineIntel
+PROCESSOR_LEVEL=6
+PROCESSOR_REVISION=2d07
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files (x86)
+ProgramFiles(x86)=C:\Program Files (x86)
+ProgramW6432=C:\Program Files
+PROMPT=$P$G
+PSModulePath=C:\Windows\system32\WindowsPowerShell\v1.0\Modules\
+PUBLIC=C:\Users\Public
+SAMPLES_HOME=C:\Oracle\MIDDLE~1\WLSERV~1.3\samples
+SERVER_CLASS=weblogic.Server
+SERVER_NAME=AdminServer
+SESSIONNAME=RDP-Tcp#0
+SUN_JAVA_HOME=E:\Java\jdk1.7.0_13
+SystemDrive=C:
+SystemRoot=C:\Windows
+TARGETDIR=E:\Program Files (x86)\HP\LoadRunner\dat\Setup\LoadRunner\MSBuild\..\..\..\..
+TEMP=C:\Users\ADMINI~1\AppData\Local\Temp\2
+TERM=dumb
+TMP=C:\Users\ADMINI~1\AppData\Local\Temp\2
+USERDOMAIN=WIN-MSU6P1JIB37
+USERNAME=Administrator
+USERPROFILE=C:\Users\Administrator
+verboseLoggingFlag=false
+VUGEN_PATH=E:\Program Files (x86)\HP\LoadRunner\
+WEBLOGIC_CLASSPATH=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\sys_manifest_classpath\weblogic_patch.jar;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\sys_manifest_classpath\weblogic_patch.jar;E:\Java\JDK17~1.0_1\lib\tools.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\weblogic_sp.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\weblogic.jar;C:\Oracle\MIDDLE~1\modules\features\weblogic.server.modules_10.3.6.0.jar;C:\Oracle\MIDDLE~1\WLSERV~1.3\server\lib\webservices.jar;C:\Oracle\MIDDLE~1\modules\ORGAPA~1.1/lib/ant-all.jar;C:\Oracle\MIDDLE~1\modules\NETSFA~1.0_1/lib/ant-contrib.jar
+WEBLOGIC_EXTENSION_DIRS=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\sysext_manifest_classpath;C:\Oracle\MIDDLE~1\patch_ocp371\profiles\default\sysext_manifest_classpath
+windir=C:\Windows
+windows_tracing_flags=3
+windows_tracing_logfile=C:\BVTBin\Tests\installpackage\csilogfile.log
+WLS1036_PATCH_CLASSPATH=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\sys_manifest_classpath\weblogic_patch.jar
+WLS1036_PATCH_EXT_DIR=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\sysext_manifest_classpath
+WLS1036_PATCH_LIBPATH=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\native
+WLS1036_PATCH_PATH=C:\Oracle\MIDDLE~1\patch_wls1036\profiles\default\native
+WLS_DISPLAY_MODE=Development
+WLS_HOME=C:\Oracle\MIDDLE~1\WLSERV~1.3\server
+WLS_MEM_ARGS_32BIT=-Xms256m -Xmx512m
+WLS_MEM_ARGS_64BIT=-Xms256m -Xmx512m
+WL_HOME=C:\Oracle\MIDDLE~1\WLSERV~1.3
+WL_USE_AMD64DLL=false
+WL_USE_IA64DLL=false
+WL_USE_X86DLL=true
+
+22、当前目录下所有登录文件
+cmd.exe /c dir /s /b  .\*ogin.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\_WL_user\GBootStrap\oqeeic\war\login.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\_WL_user\zcsb\y1hvdl\war\login.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\_WL_user\zcsb\y1hvdl\war\admin\login.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\_WL_user\zcgl\m2bt08\war\login.jsp
+
+24、当前目录下所有logout.jsp文件
+cmd.exe /c dir /s /b  .\logout.jsp
+
+26、当前目录下所有index.jsp文件
+cmd.exe /c dir /s /b  .\index.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\_WL_user\GBootStrap\oqeeic\war\index.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\_WL_user\zcsb\y1hvdl\war\index.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\_WL_user\zcsb\y1hvdl\war\cms\page\index.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\_WL_user\zcsb\y1hvdl\war\workspace\index.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\_WL_user\zcgl\m2bt08\war\index.jsp
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\_WL_user\zcgl\m2bt08\war\workspace\oa\index.jsp
+
+28、当前目录下所有war文件
+cmd.exe /c dir /s /b  .\*.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\config\deployments\yhomsmp_all.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\.internal\bea_wls9_async_response.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\.internal\bea_wls_deployment_internal.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\.internal\bea_wls_diagnostics.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\.internal\bea_wls_internal.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\.internal\uddi.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\.internal\uddiexplorer.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\.internal\wls-cat.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\AdminServer\tmp\.internal\wls-wsat.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\.internal\bea_wls9_async_response.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\.internal\bea_wls_deployment_internal.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\.internal\bea_wls_diagnostics.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\.internal\bea_wls_internal.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\.internal\uddi.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\.internal\uddiexplorer.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\.internal\wls-cat.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\.internal\wls-wsat.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\_WL_user\zcsb\nabzrk\zcsb.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\.internal\bea_wls9_async_response.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\.internal\bea_wls_deployment_internal.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\.internal\bea_wls_diagnostics.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\.internal\bea_wls_internal.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\.internal\uddi.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\.internal\uddiexplorer.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\.internal\wls-cat.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\.internal\wls-wsat.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\_WL_user\zcgl\mtadnf\zcgl.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\server3\tmp\.internal\bea_wls9_async_response.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\server3\tmp\.internal\bea_wls_deployment_internal.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\server3\tmp\.internal\bea_wls_diagnostics.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\server3\tmp\.internal\bea_wls_internal.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\server3\tmp\.internal\uddi.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\server3\tmp\.internal\uddiexplorer.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\server3\tmp\.internal\wls-cat.war
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\server3\tmp\.internal\wls-wsat.war
+
+30、当前目录下所有jdbc.pro*文件
+cmd.exe /c dir /s /b  .\jdbc.pro*
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\_WL_user\zcsb\nabzrk\APP-INF\classes\jdbc.properties
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\_WL_user\zcgl\mtadnf\APP-INF\classes\jdbc.properties
+
+32、当前目录下所有spring-datasource.xml文件
+cmd.exe /c dir /s /b  .\spring-datasource.xml
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-1\tmp\_WL_user\zcsb\nabzrk\APP-INF\classes\spring-datasource.xml
+C:\Oracle\Middleware\user_projects\domains\base_domain\servers\Server-2\tmp\_WL_user\zcgl\mtadnf\APP-INF\classes\spring-datasource.xml
+
+2、数据库连接文件信息
+cmd.exe /c findstr /S /I /M /c:".jdbc.driver."  *jdbc*.*
+servers\Server-1\tmp\_WL_user\zcsb\nabzrk\APP-INF\classes\jdbc.properties
+jdbc.driverClassName=oracle.jdbc.driver.OracleDriver
+
+jdbc.url=jdbc\:oracle\:thin\:@192.168.10.220\:1521\:yhdb
+jdbc.username=zcww
+jdbc.password=zcww
+测试关联：<html>
+<head>
+<title>AppScan Digest Authentication Script</title>
+
+<style type="text/css">
+<%@ include file="style.css" %>
+</style>
+</head>
+
+<script>
+<%@ include file="digest.js" %>
+</script>
+
+<body style="background:AliceBlue">
+<div id="login">
+<div style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoIAAACCCAIAAABdDT5rAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAIFqSURBVHja7L1rrC3JdR5Wq7p7v8/zPufJ4ZAaU6JEUEOJkUSLFDlUAAG0JUQQQwXIn0CEgiQIkIcMBEES+F8iAQkCIxEEOQgMBDZt/wgQEMgfw4xkB5BtiUrkCBzO887c17n3nvd+7+6ularurqpV1dX77HPnztWQ7IXN4T379O7u3Xuf/upbj++D177yFdZGG2200UYbbfxVRCz/97/8b/+79yzUtgMIvx4YNO4bLvfy4DYAG+z9gj1svIvibDiXrwD5X/n/UQQRV/8WyLIcc4Exl4/AbumPTUdcdybNv/ogseFuV2m+TPNeJ0riqP2TaKONNtp4avHV115TMIwCvds11sANMYxhWGzrvbwCV/IS+3L/QPbloUOA9yQ5UP0czR6cY6B5FnyI8g9Y/CyxFuQlEQrCcqEwOOacR9CJACNIc5xnQiKxxGMgQFceBaprhUEgJGfio+OaX32Q2HC3nSSKIj5fZkKof384S4I22mijjTYa2LBAhYaNN98SYGrUEQmwVXd7u4sAHmq8ClBh/fI6m8PQuQQRjr4ag8y4eh81iKIboz5D+Yx8CAnJHHKJv7nCY4lVEqQkZmUCF5kEZUWOORBcJ2C8Bgjrmz0dPF6zT0n6h714ucrny1Ry4qSk/G200UYbbTwNGC7YcBPCNSFicXeHANBRPHSR8gImXUPoOj92wNaluegx3dD5AmviqQHcguokmICKHEe5kEgcRYofxxwkGK9yuRnG8lfcnA+w0FHq+NpEmjf57YcBxvL5XjfOMjFfZfKN9jptgrqNNtpo46nAMMUhnd3FCxC3ei5EKJFQZwykjj3IRAwWdXENmXaoOYTQmiFrgBq2Bntr2FyQY4XHQq0oQK5XcoE8h4ijAuPIgLGQWyQqU+2DXRP6eli4HiCfLEVef6w45qMomS8lLc46sVxztLS4jTbaaOPDZ8MGpEgRFygFxRCwAWNryG79h+CNHxqAFMBFa9rM5ZSdwwhbQTU0UkzyEiBvH+tnq59DRYklDAPkXIFxxkUFxonkyZjmCo8lEks8dimxzVezWv14w+LxJgj6GGAcXH/Ifw968SrNJ/O014m7LS1uo4022vhwYVjf3BEDuAo1aumUhEOQwAFd/FxXA0aGwQ4vN0nu/BzsuXLLwzqLbtgzBKHIYfre28H6QVCBF0LR0yZYDqDBWLHGXsLl8xKMp6lIOCYRMz1cFF+b8JitzWA3IeiTzVfTfZZ9W7NFKlcYvU7Eedu41UYbbbTx4cBweQeuJ6K9mivYruAwOprXCHQI5ZoaMKu3Q4PDvGkLNDAIoqiT6wYH8u0JYGAZQREXyJHCLF93Vhf/V2SqAUFAAcYYRUIiVRxBN+YSsyQtnqcYSTBu7uHaJF99IeI+QX5c32fEYdRPlqv8fLqS/FgCc/sH00YbbbTxYcBwHYADHVKByR+swYMLY1iDUg8DvXQ31Kg3BWC7pc+efQ5s9hYsEbv57SDgsQD4Ge5cnrbGZDVmLIrRJhCZmjOWYKyQuBNhOd0UgUpTB3u4KB5fSIU3mXdiH0I/V68bxzGfztMsF/1uDO08UxtttNHGk4Vh4ZUJGWBDsdbgURNjCzNOitZu8dVtbw5nuddDtUemEbB2XJ98N9ex7ZD0enhGA3jI8hKuVJ4aIgXGmClmDBK6EjXgFGdCLDMJ1BKMlfSHKcB7Ceo6lK7H46dQPzZ7kwuL7WFnvsxPxsthL2mrxW200UYbTxSGCwjxYbPGNx3wWpvjDc4LlSNANcxzINTH6fIJr1nMa+r26XNjH7W3fXAmyvDnIABiUO/DXJIi5CtyoaS4smK6KS4eg47q4VpmqoerLBvXLte6Bq4PUj9+gv1cKi8d88k8zUVLi9too402nhwMq7ajhsmiIK1UBJRhM2irX4ewuZ7l9jZoKAnX2qIDqlsQ7qN2WaQLzwzXn2HJm7FhqeHtHm32HHMGnGNZM065KJAYCjDmuVBl48VKdCOWRJUOF6tx4gunjTevHz/BfLXcVRTBzqgzW2bjWdpNopYWt9FGG208GTYc/B3nPmpW5MwTkqwhk2mJCqSm3f4nv6wMQVKLbrE2JHvpQnWDvBfSU6wvO6oxJ5t5DsK5nXIKTDeVcmSAea4auJjS3mJ5LtJCgUsicRLzfsK7MV9lYrKSzJglXGWw15Nj1lA/bgLdD3v+eNCNsxwnRbVYUuSWFrfRRhttfEA2jB4w8bLhWdTJYqiq6kImayCsbk7YYp0DsQ5hxSaEtmyVQAxZNIA/vOTmw+vzTmZ7bwEBbt+1kxnAer6AOSnk4qIKUQwZa2acZlCmqSUSKzDOxSzDGERH9XbpDwIxCGwbDjuxDcrDHxyPJb/fHXWmi+x8uup14k7CWzBuo4022nhcNozoAZvwcewSkOnSUH97g2tBOh10eoBq9tZ/hVflJYsGpChJu76dnmp3hsnznjBDXGFDCAznvb0Ws+I0EBUvxlIxNM8h06NNcRwVDdUszfk8y+W28t9Kh0vz/aYerk3oMtssHf0B8XjYi1NJ6+dpmkfy3+xDs4pqo4022vhhhuFcGPAjwNagTsXq40MaixyQrmFnka+tFV9rUBcoIRcKHx4vpzvBGr8t2TPxPgq9HAlENWiV+Cfj1HGdt26f9DPm+qliESPXN4VrE0rYjTKRSmYcq0x10VCNy0wsc7TSH84J+gPHmzdzsY31uR4DR+XJ7251p/P0bLLqd6PCoKlF4jbaaKONS7FhDcNAS5whuldug3WTwSoN6/PaAo1dPh3ivhjmxuHysLc9MqQpbgOQQEaX3OYvaJqHdsDVnZy2uWmg0KqPCWsSBnWhUOS8EP0Aphq4Mp4qZiz5cTQsGqoXmVgshWTGnUjwCtgvQLY1/Jh9+HqZctNRP5G0+Hy26uXY0uI22mijjcvBsC5JQtgiUINAOaGLDf3MGoeBefoeLpFFVkt3h3Ld/jASnTsKMGOvIO2Qdb//GQPGwx7dp3BVijgieTldb1QXhmS0vSUChFS9ivSDWlhwAbmqGStmHEeiHDUedCJEvix6uGLOuhGqsrG+nODi7oX8mK01k2BPbt5J0uL9rd6kosWqWtyCcRtttNHGhmzYY5wNPIkRlWYIyT672+jNam3V9fGnWu6aoSfOVSCij811qQ2f+9bfjpfg9rRK6gjttJE7XWnOyQFR/nQuo1uURsLy5W+EZMalIqZgas5YM+NEKVRH8rHKxCwTXJWNC+kPFkwghAnxE+nnuhQ5llttDZJVmo9nq24nkhT5w9DabKONNj5q8dXXXtt849/9vd979dVXL/WSMn7j61/f2dn5la/9zZ3R4DFO4H/+/d9/5ZVXgr86m8x+/Vf/xoZn/uHAsFagRJcSAi15unfwoHIWCyR1sT6BDBxqHDqQu8aaskaODcKZriGi181dR1ki6AHeVBK6nV2Iblu280Ln3GrDS1WXGLpX0llWlMy4YOcShkHpYqKSw8zESnVT50kcSYrZieM0F8tUzDMhwbgTeZ5Vl8Zjtraf64ObSXSSaH87krT4+Hw56MU9Re5bMG6jjTY+aPzjf/SP5H//7h/+4W9985vf+MY3Lvvy73znO00w/M/+r3/6V/i+4LWvfOW/+u/+1/qtPEAn64ocDNbwyCBIA8DFuwUIMlkIl40Zg4tf658hhBS9as/CmoVGVSlvOHPv/wEufhf6+shVCldzxhBzXtSMeZLwCHiGuExzyY97MZPQxp0zBm8BxGrehes+34b5qLXE92JMTTNxNl11k2jYj3ldo7RF5Tba+GGJ7373u5tv/IlXPiXp7KVeUo8bz7343I2rlzqB0WjUBMNvvPHGZDLZ8MyfeCKhZMMB+hPAP6zVF0mC1/Qjmw7l+g3Xk+tq3C05Olp26dFcUg/GEM8EovzsMV1Wt0WsM2dLeYE2QxMqjch8d2bTTeVNFyMG3R5pAbsqvRfnkBcN1RnHKFfiHklWNlSrHq5+Ei0zMVbSHypTHXG9JwZrIHOTfPUTLx5LKn9lpzedpw9P5tuDzqBo3Qoy7BaV22jjBzoeI1X7ZLO7H3BvTfD8dKIYWMoFhAwVWKgJi1Y+PRELCsBu8zPW/X7d+ibW+JmDrA6QMK8pys/3govNBagD1kiz1wUdkLymK4w6WqDTzlZKjNF3DhDIfoPTU+20hnmld/ljLjAr3AbTXMSpRGKRRDxOlLGxfEgwnqXyg8NuhAn3Lyvt4drE7TjoLbE5HkOz2ueon/Q60dlkJd/FsBdLct9wkZ+8SVQbbbTxdOJv/c7vbL7xb33zmxL2LvWS9bva/ARe/dzn6tlsyaS/9Q/+waUO9+RhuOhCUjdBXjO9Z4SMmvulbpVyKqmMOa1WNRlLC7RQI4X1SrCXvqYei8gaLZuq4LXysINwFpuddwo130ZvoJlR4qgJd7PdhYPBplEL7UqCaoOBk0xWR9FvU+lwyWcyUMx4xUHicVKMGnfiqBvzNMdFms8zBcYdyYw5XRas48TrCfH6YSd2SdMnCb2KFi/Sw9PFaJBIYF7/pWxryW208YMVl8owl+nfD5iULsOUezfcm9ysDsMSgzd8+SaJ68eEYXN7zRFZvVtao5f5RV5nh+ixzRoSG5bm/RYJU/SBG+s9YogBJucfLncg32/UtnvwR6kchPbanGvNXPbK6BmtkN1FRd3BOxVwnJxKGo1kEtnzdSocjbHMWUSRWFWKmLkC4yTa6inpj0UqZkvRi7Abl2XjCuPX4PEaQryh+XFTHjuI1sOepMXx2WR5nIphP+4m0YVg3CJxG238QISkiZtvfOO5Fy/7kqYYjUaXPYG7Dw5pUbmkyPKx+Zk/8VAtWv/Z3/5DH2A8YAs0NDX0VzX0W0GDH2ITAw61DDmstI70TU1h3hGhieWHjuuRcsYCq5S6nzFA4xl4emGhWgB45wGkF1zlIUAlLVQPl2TGhXGTaqhO1IyTQCaZ8TJVZWMJxjF33uGa1q01HVsfvJmrvsF8mZ1NVoNevD3sbPQdbcG4jTba+CEN3aLV6LBE0rM+sw0bDtPELDdki87ueFnfmgJlEBRprZc2TCFVgnZGhoDzgJ0wLQA7SWbKYsF1dDDv3dB35uicoFfldQabHfFLpxxeFqf9Cwv1/Dnl0eV0kyj+pWrGmSLHkgsnZaY6UdIfZQ/XJM0jpsBYQrKROKm3igf7pNYUjC+brA5S53437nais/Hq8HQhabH88UJa3IJxG238oMS3v/3tP/6jP/Ke/N3f+701L/mDP/iDt996iz7ziU9+8rd/+7e9zYIF4Pqe63vz4r/8b/62aXi+cOP1Z/5EwmpKM7ctSz2f44UUE9xss9OMzFnAx0GrcFS/cbPG0DASCwSuvQo01c0gL8RcoE8x/UM09IXpJYNmijR/TCrNxS/AK4qD+x8vTY2Bi4YuBtMT1U5NGBTIlIsnzuV/ISu8m6IMCjBW08adhHeTZJWJ+SqfoSobS6QDdPD4wpRvk/lx0yzyhZBJXyKXaHvb3eUqPxkvV6nYGib8IpRtwbiNNn4gYjKZXLbuK4Fwk5dsuNsL9/b2G6+XndV3HxyWs8h/tVGyYVGSV2S+/EVwconyv3WtVcJ1+9WRUwAIKXJYhCY4ak7LLbBCvS8spJjRYOiEvuExEK5d3fcJi+TgmC+azjIid2JEPvxqN9iKc5Uh8M7RdnRXO7OKmfUZpxL9c8FyudoRmAPjGaRR2VCdJyvJjKNOHO0MEgnS8zSfzkU/xl5ctNddrFEdaLRuqhY/9rCT/JXkxDf2++fT1b1H092t7oWtWy0Yt9HGRz9eeeWVy9Z9v/ilL3nVWVP0pVHfbXCz+t68uHfvXgnDD+6+/0RK1B8wVG34P/wvfj/ka98shdFQTw0WO4O/aiyehorQgfLpZrsK8m96nEalD9o07m9a28AeDZx/e0VeCJPy+nmErz/df+18oLhMUCiUyROLtSJmR2Wqo7JsLMF4sco7kVL/iMpr2FA2vlAAZPNa8ponaaQ5Hp8tVLvZIElivul3twXjNtpo4wc8qtqwTUr7foVNeUuHRHLrIew4BtZumhekuMEtRQKhpF71FcIKWg5CU5ac0wO5Y068fElNN1oYUl0yZnQAjzkmzfq9G1Zc0Fqg6tqlL1XDaRuzCs/1GKmhE91/PYtg+GdBqXMBaeGiuIwgSfNO0VA97ESDTrRI8/Eq54A9pYsZLhuvz1dvmKxmG7Rbm0gikLR4Ms8Ojmfbg87OaKPWrZYZt9HGRzC++93vvvHGG96T67Unv/3tbz/GLJCk3UHVjk32Jl8rmfQmWe7HUM28bDgDS1WTFJnDMS1J3r2O5qVze5MlhkI1sClBOsRX6zfrmh2hHlamO6/jGSfzxxQkAYgRsGsYLBhQIQ7wc9p+8xqSNjSg7k46v10hMDoaXtqOMdgKB77hI1rJ6sqz0dk/Q/phkYsA1dQUilzNLOUi57nC45Ukx6sKjLtJ1cM1W+WzrBxw8svG66E3qArCnoRy9agfD3rRyXj14Hg2GiTDXrLJN7gF4zba+EiFxOC/+4d/eCkw++M/+qPHGCP+e3//Hz723iR+f+KTn9ykMPyUYNhhwzXXwupX3Kc4lPgSCopNZLecf0WfQTrElOy4dgcPpc2Zm3DOMaC3WQJGPY1uRoNtwdsVLXHsGsmENASzAva9oWOrXFBjh4G7+G4outOeTImyJsvot5ojuC9A4uYkCloMSoeLZTnnXKwynmQiWalp424n2lVlYzFP88lc9CNVNlbyVpoIb9jGxS7j7LSJrZNcPVzZ7i7T/Ph8uVzlW4POhjnqFozbaOMjEpJlXlZaUiLiZY/yW9/8pjf+u2Zvr37uc2dnZ15HtPzRO88vfulL9R7vpxCqNvzv/ad/J4hwQRi2v4JAbRWay8Z0gyYfiDXy/2tGhKE2AQy1lzC3wkslqxoOGDht7xShflDwPSfMu206SdY8PM1C48mkcED/Vz+gc95QTBtHkXokUaXD1e3ESQSqbCyZsYRnjn014ORUiJuqxevrx+urxZvMIss4n65OJ6udUWd31L3cd7oF4zbaaOMHJJy54WIoyBu0tZVNEA4Ao2f7i27fbJ3CIhkjrmFSk+MvSREbKgkh70KPdQWapaFgveiSp6rZmi4j6MAuoaWcUYmrik1T6SvQ48TErQEMqSSkzUcLYI6tJPruihpWkXBisKVir06MBUFHJBdFp7LlhywpcpZDJpmxaqgGSTc7SaTKxl31UDpcq1wI0VM91Yzrb8BmvdUXqFivSU03Zaq3h51hP5G0+OB4trVxjrplxm208VcbT6c2HHQdbtqbJOhf+9rXvvWtb63f4dtvvH7ZM38i4Selm9zf1W+4udUHuRc6bFBXNQMlZKZ7qZolMEP9Pg6Oge6VQvTT44gsyHQD1Bnt3LKp4QLntIqsS8jO4gT8CjrDKhdtTk6fPJKVSoFoNWFOspbR23NbUUZX9KNaBFX7qYAe6OQVagVvM5hsVgKiWFrkAjjkaQ4rLpZpXspTdxJVOe4NklTgbJkfzvOBBOOIRbxMTK9zcGIbOEkE2WrTKJR5MuJwbbc3X+bH54vFMpfMuMkZogXjNtr4iMTTqQ1/98/+rElYo763V199VcKwfMmao8gzfIwzf2Iw7DT9YsgLqbzh54ygNRhAppO1trpsS63kbuiQTiKR4RyOgDoRwvQtCBGZ61lUAg+E2rcgoErtv0UrDS2EA3muBUVFkutIj+TKoL9BQWErNu6WlqFairgTzB7qk7WNlbYGm21AmpAw7xN0WVmvj4z/EwqlxaXauFLVw4XLqNDhikpyzLf78Qjj+So/WeYJF/1YdKLiPZenqxMSmyPcGhVrtsHkcb8bPXtteDZZ3n4w2dvqSjDe/NCtnWIbbTzleDq14ZL1SnDdZG/lM9/4zd9s2tUXv/SlxzvzJxKqNvzv/Ef/wxrKQoCK1WkmNMy5+sTXgUV343q7b4OmNIeL1aTXVZ1De3ZqsTXZapoeAH9MCvzLQrcCRnMD9enhposWLFpD/TC1i023Aecsah+ZW9hXdhGcS5IZlQrVEe8mVU+1/G2Rqc6EKNU/9J7Jf4Mzx5cqGG8uW53l4vBsIf+xM+yUEpiPDastHrfRRhsfhajNDbtEws0Pe78KimNgAKEJ8XV+1yBEbPfmoR56rdsEckJWS6G0NpkEsizNOZMK6YFMPSEl23QzJETTgCPaGWoiTok1amvfpcvOTRUWnfeKZLa4/C2WDJvVrBtLqorepbAJdkBawC5/RJELBjlEHItMNSSxGnDqFpXj/WGnyFRnj2b5IMF+kamuEhRlFzp4wmRwgQnxxhbIHqmVq4Sb+4PpIntUiFHvjroRf0xYbVPWbbTxIcUTqQ2X1Vxvs3pxN7jZmr0Fz239b59SUvpjz2zffTBOc+EldN18rIcW9i6W19x/jagkEDSgYMm5h8hEasMMH6NtRUZzUOISbO7aYZktXXg2UIToF5vpuyj/K0hB16CqB+jyx5ziaPlOQTdomc14BXLu4qDaE9LXMJpSRggsidxcNHPA1S5UXAAjg8hoSbBOjOuOMONrrDbPc6VTnWZVplpS4Y7E40QVj3f6yVYvmS3z42XWUZlq7EQWdKGGx022EGsw+MJkdfnMoBv1rw9Px6v3Dsb7273dQuvj8WC1BeM22nji8URqw2U119usvlsZ9c3W7E0ibn0nv/H1rz/2mT8xGP7xH7v6b3zm5niaHp3NHxxO7zyYLNPclahknqBzSBIa64lid2CWkLnctxBi7uEYc0rLVoWDmvqa+rGb+DVSz+BYRyAjgl9+sZn7+l+lH7HTIUU4b03ti6pB62dy5M45+e7HnmYZIPPGi+3lIS5PQNm5BW6s78pvAUMry1UehrRh25SCyNUzmcijHFaZWCrpD96JMpWm7kTDXjTqRUqkepmPV2WmWpR5DnDVP4IsOciJ66B7oYeE/NfeVmdrEEtavFhm26POoBu3YNxGGx+FeCK14WC1eMPdrtlbUHjry1/+8mOf+RMJVRv+2n/+P3Vjfm2789xe/7nd/s4gmczSo9P5g6Pp7YPJcpVbLAklAP3CZSjDvFEFtPnlrC4uHVLTtJjq02MrQnmxb7EpTzurA3WUC7yK3XqwO/XMoPGNAz1EYIfryqgh82Bvr+5przkB3+8ZSr9IVolUF9PG3UL6o5tEnEOaq0z1fKV6qvsJOjrVzWVjtsEsMrvM5PF0kR2dLQY9laP2tD4eA1lbMG6jjTaeZpi5YTFfifePsvePZvI+2on51VHn+f3+j7189fM/+cx0kT46kZA8u3Mwni+zkp05nc++IDOapKigRVECEm6J1u+xsk6L6PcV14FTPpl7lsC5Y6jHzDCur8OFzrgQEGFnrLLFdJhIACGpWCOUtAcbXbJO3RLB20ZtxqHKFudobZjANTq01kxEksNYOTOSo6Yz0+XboPPUYHSqXeHRctqYqFhXB9TkGKMcNTnODRjLFdtWP5FgfLzIEsBBonSqy1NE0lb9GFi4Jlnt8ddhLx70RmeT1XsPxnuj7pWd3gehuS0zbqONx4hLjRt94pVP7YwGj6FeGWTekuBeeAJmMxlnk9nbb7xufnXjuReNGtfdB4cP7r5/4Zl/KGz4V/6TvxO6Far/JhqSn98b7A07EoYfHc8eHM/vHpxP5mmAiTa4LnAI6lA5L4OQD1JTFzTtNoYafQx3cgGrkVyfIzIyvFSnvBxqZDqQh3d6tpyjhLhgaBVSF8xy9sV56JqDrfh6Cw7wrJ9YQPUMwJUxYaG+a1DkOOJlQzUkRQ+XfPRUlZgVmWrVU63IcYzms1v/38v+Yw05zgUeni2WqdgdBswhWmbcRhsfKqXbfOPf/b3fe/XVVy/1kqb4ja9//bd/+7cvPAF5ODpkTDf+e3//HxoY/ta3vhUsP3tnblYepp9LPmlg/jHZcNWb5YzGVhxK3tTunizunSz+JTuRt90rEpL3+i9/bPdnP31DQvKhZMnH0zsHk8lsFYBYtCAtiFlQILmqeVxNhBExKLXsdv9apS3m94KVkiOuwIXjuVBN8xI1Zit9raUxGG1GsxNHTmsVaMJtFUGgvAIW2NDhWzQ7YI7uVkNZRVt1MkAnCXIk40nAtW0Ems3QZshVY5pj3FRaDtt3a/8frOwZgHU7ttJoSodLfltYluepBGNJjlORRFm3KBsr04hON83EdJk/mGUSjAeJiDnU27g2aeliDeofa8ixXB/c2Osv0/zR6WK6SHdGXUmUW2bcRhs/xPHcc889xqt+65vfLOFWwmeTMPWF7P/evXtnZ2c7OzuSan/nO9+58ezzj02UFRv+6n/8P16k+2vv4uUvJBnaH3ae2++/uD+4utVZLPOjs8XB4eT9++PxdOVTmVq9tqlQ2lh1biC+zeQp7M3rgp97GuAKNbO6QLOnMgb1PVju2EDc3dyAQ5o9tW0vPwA1S+NQZdrxcmyaFXYSCZ4eNbjK2DXWDeToMiIoyLHS4eKlg5NkxnK5hoJNV9lUZapFkan27Y03ocWPoV9tfpzM0kdni1E/2R11OsUAdEuO22ijjScVkjd/4xvfkP/9la/9zf/z2/9H+d/H66mu2DBiXQASg5KQZgZphXggcfds8d13T+II9oaqvevF53c/9xM3JCQ/Op3ffzS5fX88LRLXyGy9tgQho49sZpOYW1f2tTAbiG91hpYzoWOSWE0coacu5XRfF0+pNC9WvwIiy2l0p1h9fro0PzI71dCF2qrJGivpl5lkstCOkkAWN+UV1/aFRR0XiERltU6wlpSm48xMOttu72LHnDsDaOW0cMX00daDDbiXg9moP2ZPrRps+3n1jqBQ48oEpvKRiUXEk1U+Xyr1j24nHnXVY77KJ8tMlG1cMZa1+ooHF++5Tos3RMT6+BP9cdiPh/3RyWR162C8t9W9utNrUunaHGJbctxGG2vY4eYbP5HaMK3pssvUhst44403JpOJ1xd92drwd//sz+R/FSf+YAXjMiktyESwPyIMnkmgY2evQt6IK0i+dapYclFL/vjH9j7/kzfny/zh8ez+o+n7985ni1SndqkRINbqsozun3r0UqEorxuaUzMGM7uMNkmrgdU2R3FuE8V5bhQ4SwCr2rooG0fib0B2Dta00XFsrIadnB4zQfvA0M2Po0uLUctjMNIvheQnDclaXNLm5PXlywVQl0lO9EfNUsbXqyYOFuXb0Nhr5q2sqQToVHiu7BQhyjHlIDF3nkJnmfeKNLXKVHdVplqC8dksG6pMNdpMtYvEF844XUhVvXz13qizM0gOz5bfv312Y6+/qwvG9d2uN0JuwbiNNtbH3/qd39l847LCeqmXePEbX//6N1751OYn4NWGS9iWIOrB8D/7zj/ZsDYscV0C+auf+1zJiWX84pe/+oFgGJmvkuXSPje/GtJk1oYEbJnh/dOFfPzpuydJVNSS9/uf/Pj+z33m5nSu2rvuHU7v3B9LSEYvvUzQjGZsMXh0iTElFHBwzxZNK5a1UEKyM9L0VEhHI/Omiwp6aFWlmUV0AIeMWmxm1Mew2DPBM1qWBdst7thMobNuAPqBAFk3VGnqSpoLDclXrJfUpIG8l2onnCqTkMEtZK4DMjrFAUHVW5zRaVOBN1ZOWIQC/lylqVeRkHiclNPGRaZ6b9DZ6SfTZX60SItMNetGopIBB1hfNm6qIgf/4YEl53B9r7cz6jw4mU/n6e6WKhivgdINUbYF4zbaePohIfATn/zk137t1x+voEtDoqaE0sd+eenXJPdQsnD5jw9ySqo2/Iv/gaMpHTDrbcjdQbPBsFdblPfiK6Pkhf3BC1cGV4ed6SJ9cDw7eDS9dfd8mQp3h87xDNOtqyrTLLf7Knu2PNS5TUq/YWXmutGypaDmoOR5qAlV+wPTRIM6fPXC5WG/su3VRn116FrOANzZZbfGDg63hsCHTgsEPFyXJR81mHwGFDrVoB5FQ3Un5r2Ed5NY4rHcap7m43kqhMpUD2JWfkhe8Zh9sBbr4JPjWfroVBWM97a7HTJhvEZ0c3Mi3kYbbfyoRZnE/oCKH1997TUFw1/49/97clcNGizVsY+t6epaB88KktUQlMTjF68M9oedySx9eDK7/3By6954ucrBAdHGUwEHBigmO1JZzF8WhFucgKpx0UatGg6yhoYyOysFzGsCC3Wi1W7f3liR/hUHCF9q7oOftybwD+o0cAVb0SyI+v8Gf+3SdFB64PIK89I3QoJxBIVINS/IcRxLxpyLySKbLbNhrMixhEVP/YNd1Mx1YUtXHY8liT0ZLw/PlnvbnWu7fdgMTVs8bqONNj6k0PIdSDztmW+TQHq1wOv5cbf07OqRghzlUos0v3Myl48/eeuoG0dXtzofuzr4iVeufeGnnzubLA/lrw4m794/yzMhXO4GDgMuc4P6vA1ZFKT8CT7AoJWqqLqaLDI5Tsauo7IphBbVYjSZbLTODgU5BioSYkq8jvMFxV3Ck4H6FRODDPTGeUE7LYrqIlPVbvPuwPswXLlKZhKqOgfONTNEdKwbwU1Ig24cY2j74GivgL2MwHhxvXLVOiB4zlYclqmYryQY590kqzLVw87uoDNZpIfzLOFimGCZqa7KxlWvWGOy2ovgb+uJ672tzs6w8/B08fp7pzf2+vvbXfNy1maq22ijjacepYoWhoHWFV52pKHrtxtyB6+XkHOKCqQ/WkHy8Vw+GDvqJdGN3e6L+4NXf+rmL/7sc2fj1eHx/PaD8Tu3zwzQGCInXFaqa6HMaYxGWwxG3VFlTxVJrzLQUSBkRA8LTOcSKdz6KVxQ/VCmcM3JJC6iw9adYWX6P2A14UsDLfbJSt9L2zeR+WDng+DcyQKg0y5uzSqYvlpqvWM78iiWEEkuPdldSZZpbS+k+yQNBbkZ1Mbiw6rauAqd6pTHUV40cHEJxqO+kuJSPdWL9HSZSzAexCLiVdnYKx5TxG2qGa/Rr2ZahOTmfm9/SxWMz6erve3u9iBZI2HdgnEbbbTx1GDYSflis6QzEhmKOkxz17bPNW4C47PH3ZSvvBHfejiTD4Cjfoff3O29eGXw8z/97C/9zPMn58uHJ7P37p3dPpiYPiy0IhkuFFn5CygByXgCkp4igPJ/JllJHSC4nU2yrgWmdA0aCM1LCvivwA/L3ibDvdXzbrubFR4Bb8VgBorItedVP7KZg1LFVKQJDHCusdxrLhActS/Td239MtDMW6HuDLf7qz5cTlyY9PAXqwRAyjk3/Qk49pBOxqC66OrFksMjZnkpjal6qpMV7ywrctzvRNe2e5I6j+fZw3nW4+XAcaWlAvqKm/xzHZXXMOAgHncS/sL1YWmbqMB4q5L7aPJ3oih7IdC2YNxGG21cBoY9GkgYLdTniL2CKfoETvkAYs2Vz9YW7X4EeuYN9h42XYp3Hk7l44+/92jQjW7u9l+6Ovjqz31M/lJC8sHRVFLkh8cz/4WV3qSRccZcuDTUTPYA9RKu5o6qWzwnWXr3qpDhJGZNlKvssz2W2gc3lBqE8JyVEaCWAQaNeeXMLkGxnGYgysSwoPnzskvZ4fJAGq1Rc2d/PVSsEspiAT3D4kyqjy4vJ6orKEZDvAXdj1Ydq4CHVxfMHJlR2l/+IpdgrPa8ylCC8aKwN54uFTPuJ1WmerrMzhYpK8hxIY1ZVY7LnfJaIhobELopQW2+0hJ6hzdH59P0/tFM/luCsdLmXOvvtDnQbj4H1UYbbfxIw7C8rbsWfETFg2Ed6vx7G3PwG6ktMbkjVXOrhHBzl6w45gcmX8qYpEeTxfitg7G8cW/14mckJF8b/Oonr64ycXy2uPdw8u69s6OTRXnQHBktFXO6jKBNTcSl2Lobl9vkZnFQkjibzCXIXeG9M6asFwCSrApB+LczbUymw7R8BmjMq9YEZecwc4hyJUupfssYXdNo1sfsKDD9MMrLjjrZrBdNUJWdczvrbHRAKpQnY11maklTYuIwXQlpGsAV6Btd2FHv6hd5uTAQKIp1UpbzYrqJL1b5LIm6cYHHnWjUi+Xzk3l6Ms1GiSLHCa84ca6XTY83bexhtvzH9jDZGibKw/jBZGfY2Set1C05bqONNj58NkzAoHZ30Qjk6TkzmnFkzdlpINwXyWhskdYmyMtdvShK6Qx8SHg4naby8b175zHnW/34ub3+x6+PXv3x68tVfng6f//g/Nbd8/PpqnImxmK8mAzS2Bsi82UsoJxNKjanWWXTGoZuCTZHv/NZXwwUJfzrpDk4E8yGL4NxBUbNHy2S0Ro3EP0sdXImlW6rBzr5r68v2tWMYOi9XV7l4EvVrGoXgjg5c2vZrPPwJuuMQBL8NgkNLKC6pvW6q2cFc3IMWhAEcqHasrI8X3JIMjHn0FnxThz1OryfxFe2unujzmSeHS3SmEkwFv3YcXDibgNX+Y/188dBtWoZu6NkZ5Qcny/funu+v9W9ttuLOATNj+t/CJuT4xaM22ijjRobRmqRx7wicHkvpbOowVsYqZ5CiCuQbVxoL/cv6F0c/QFiB0GLDVIUx5OVfPx/t8+iCHYHnReu9F9+ce/nP/PMbJkfHE5v3x+/e+9cmSXro1CdEKJxQfwPcptz54BOlxnY9m9zYpwuO0DXaAvGKEjhGtz+Z5NYtnZHxk3DsEwio2kg0Wt4BkLN9SIDTWG5pPEl1gIQ2Abt5GG6zUtYEiQx4KhpIZAqMu2dJn6LurBNKuKmbxzsF8mxVjSFgQqOc/UlyHMluLHMMI7ETOliZj01bcxH/Xh7oNu4FDnGYSJ4UfwXbtk4yIY3FOQqT/DKdndvq3t4plqpJRLLR10epAlW20x1G2208VhsWKDff0V/cppmfRXJWv9tGKQR6wpHBOndHw2QEIaMTmaYMO5IEqkMD88X8vH/KDVNfmUr+djV4U9+6voXf+b50/Plg+OZZMnv3Dk36o+MOcVdWgPX2WAU7kKkhCbb8GXOVOMoL1AHrcglJ8rX7inrAxqkr1qYNJYjIkM6j2v1n5mV7Sqz12jP0UhfAh08szrcVa84t0sBUTZZWXmv6mMSzO+XB7cXwDOEYmSSilzLqsmLfHJo5DYR9aQTWFOskjFDMbLElRqXWKYwi/PusuipTiL5KNq4cDxPD2Zpl4tRIrqxMcq0Q8YbzjgZOPS+tJJhX9/tSUL88HTxl7dOb+73JTYHzZ2CsNpmqttoo43NQ8l3/OS/+9+SGxBrSruF7l/uj0FJqeaNg3JR9ZfzNWbAtUPQ1Hq/E93c7b50bfjxa8NuHB2fL+4/mr75/unD41ldIsN7y45Sh6OUQZiTK2BlNuZWXMNiO3nLAbuoKiteE4Gqdknrwf5ezNFdORDbctaoyOG9yrE6ZvT6kKPz+mftCHF5RzQ5a3JS9v1B2N7Ypg0kM5bLrFL9Q9kbx1UbV+lwPF1mEo/zXJHjQaLO0wiAeKIfl5Ll8n5cpvnD0+UqFfvbHQnMrFknpOnJDYl4ezNqo40fwdDyHcIylty/NWAzjtJan2MbwEJOfMTSl5kZHA/7KT45XsUO4iCQUin4hr5WQlrept95KB9TuathL35uryfx+N967RNpJg5PF7fuq0Ly6XiJzEmxgqGoZY7ZThcjHexhTr1c9f2aHHJecGlwB36hMnugRhMafpDwRGu6SESihb0y3IiEaCoFPivTUtuoXZwJleXAaM80J/Qa0M6N0wy8IANbHGnvHphP0nEG0T5c3GhVo8066JQAcscYGi0j124iqmVdYK74MUtziDKx4DBb5YUUlyoby2WW/FhXmZBgfG+aDmMxTETCNe7WMtV1ZryJhHUn5s9f7S9W4uBkfjpZSVq8M+ywBufjxybHbaa6jTZ+tJPSOgXrix64lV1EzzTXu515txWqS+XNNzFP8BEdNSync9iXV0R9zyKDMIaZAUkXU19CeY8fz9LX5ePeWELy3jB5/kr/E8/v/PxPKQ8oSZHvPJy8fedssczJRC/TAzdkvSFYjeRVhxbGCIGjbcY2/V9gEtCMUa8IsO4KlXiXRil6Nai1UU46rji4U0/GM5FWGfS0kn0HaNvWdDcYI4Bq08vV0W2dW6XOa74bUA1CV+hVtPthaSZh3xqaQ+i3L8iHrUee6FqhmssqdymUbwSmAKscF2kuoVElq2OVrB50ItPGdTxPAfNRIvoJcuLgVDdV3GT+mK5Hex3+0o3hdJE/OJmfTVMJxvUhY3ZRnbht42qjjTbCMGwA0avq0lkiz2aguIM79ymfsrKGXdU3RlcaGhhRhCRFxGpgxm35YZb/epPNrm+TmVNS1cej8Uo+/t9bZ0msPKBeujb89I9d/eKrz51Olg+OZrcPxm/dPi/bd0t4qYZ5StCyCwJdCqYtbKo7y/RG2x4r45lYWghj1c5MeCRCofKhC/Cu5AgniwFu9Uqg+giQSGZaW2BbJyYVZSjMlZlRo0TreQxIKLTOqhvFyvJjQmtNXWYstApnmb1A6w2FWuPT6a2rUgxIl1wUe6qvmREkBfJ7US0wWK7IsVimYhGJJIbZsigbFwNO24NkscrP5+nRJNtKVOWYSlUHB5wuBX7DXvTyMyMJw7cfTeXhJBj3u7GTENqACrfkuI022vBhOC/gpd6ZTH9G6o/rQi04+VDmjyDXcBmJ9SBzZTQioH1UDqMt7qNIvfkc8Sx0eDMZbq3AkSbMhd5ylYn7p8op+U/eUlKaN3d6L10f/MJnn/3yz7xwPF4cHM4kRb77aFr04hY+Tr75sVahqnqTrEaYSWWXrNrQXrBZc6y6uCrmjsZdUZUGNAgah2bblqw1rZiTgdC6VQXeExEPIH7R1TkVBwKdNwbiEUnIvWtGzAk9r5ydyhEyZn0eBTJf50R3ZWs6ShdLVQIcyYrBLL+AeC8iWWAU001Y1E0w45DmeZTDIhWzlVAOx0lVOb6+05ObTRbpo1kasbyoHKMRxTTMONjGtcZv0WShd4bJ9iA+maTv3J9IFi7BuNuJgk6LLOS9WMfaNXDbkuM22vjRYMOI6CpGA/hyWkFUDtxBkEFDdm5NdtpE7qbBgd4fDUUzBFfTLkZnYQlIg02rIyd6VVg5DVfl5zKvO19l7z6a3Ho0/WN+OOhEz+71Pn599Ku/9HKWiqPzxfsH4zdvn56OV+Yt05qosG9Jk/TS1d72SpsEu16omPEivWIAe6pABJ6p34OBXgPyZv4JOVVcQcMszUlWVFQPH1X5Z0FUM5Gqc4Az5iQYBjkfMzpoYFwmzCoASVO6lhBxV1f6BBGMVHXVX03WaWi1S9GkzQuAF8o3AlcAMUdFjlNIlnnZxiUXVVv9zs6gIz/W8Sw9HGfbHZR4LLc0OtV1irz+v95fzt4o2R0mx+PVm3fHu6NEgnEpv7We+zbR3PX0tyXHbbTxw86GkXk+dVSLoQbB9YQeAWxwpnP8Pi1kvq6jk9l2s9iaLhmGlBMarW+mFZ7niLUuYEefwr5Hks0W6Ljal/sUOY4X2ffvT964P/kn//qh5D3P7/c/cXPr85++MV9mavzpweSt22fy32Y1wbmbrCYJgrK12Iowox2wLekhGI1I/YZEhUjWAokRnWc6h1QINVcwllcjwoxKbmkuy32Eru2wfMKW17UlhckwgyWLeiFSLkG0hQUYvDdT6FDRaJp+p9Jp5BWajqNJtldNXsj0BFc1z83QCIDzSsVMCEWOV8WM0zyCblE8VnhcSFVf3+1fEXg+Sx8u0oQV1hFJtYxDV6e6CQI9IS2KyldU+3TneLJ6+/5EonIJxsHurSBdvmx6vCXHbbTxw8qGnf5f9+++trp3B4N9W2H3V2s2ts1J4MN5xVNJ3xZxJihocdU/5akqaqtAXXw1+Wm3O9iqYQCFNaeEWeVJM1GJhPzF+2dmIvlTL1/54mefPZuuDo5mkiW/8f65oxrNXeeG4le5JdFaoMveyk2yGrh+zwWu02yxaaqqZn5oedVcT8fekNsFh3B9G9S74wjoLq0KPo00B0w6tmgLnvV7qJYTTFtaGNcIZqh4Dg6E23FmxqzhpJfMJiAnzOevoTpHO97E0fazoShNFTFVJk5K/SOOoKN8nHi/GDjeHXb2Rp3ZMjufp8djpY456khybNu4kGRfmjydmv6Krmx19kcdyYwlGG8PkquqZhzVN6vDc0uO22ijjVJFSzCrVOVAJjqcwGXDjuMv4wBNEF7nzTTTjcQs2IRgROtYb2vuPsIbEEY0t2YyFWUx1TRUE7dECtXVu7Mmwq5iSXl6aS4OTpfy8S/eOlaejDvdj10b/vxnnnntZ54/niwPDmdv3D6992jGHFdfBG6nk83KQ7sgMLNuKM/UNGIrO2FNDTkpn1f8XlMiINoqSFRILE6Txm9Dqc2RKlDXDDhntLerat6iDs3AwH40Wn1TiY9p8I5YTYqclaKitsUPibWTV5gwvW6Ed5Zn44ho6vK76tUCI61ims6g8HESwDNYcVSV4zjvRmUbl4LkGzt9ecKSHD+YrxJQbVylOmbQVJETz8gL09T7W4l8qJrxQQnGnX43dorhNV3Mlhy30UYb5cCS7zTsgWjVqEumitx2pZCrkk+TWc2emNyC3dQ3HYUy2WZ3AKciX+BgLoKGGqsTiQ6Pd+2UqwNB/XyqWSOqR+Gkuxdp/t7hTD7++euHg64qJL90dfRrX/x4nuPR2eL9B5M375wen6/AiFaWhJgbpli8I4Fm/hnookAjdHXrBnqrBaCpUZujZ1pMGWxJnNooMlsn5rYlyup+le+Xc52pdgUsqeOhVeFAKojmLFzAnUkDi2GGvtoTJ1Tb7btG2hbmvISR4TTy2Zn1gfpk5apCgXHO4gyWXMxS0VlCL6naqhU5Hnamq+x8ujpeKAEQiceRO3NcDqKxmqzHeo9FVTMeKTB+92A66sclMw56L7bkuI022tBJ6bqPoY/IQNuSISAr7TZPMdd3yKXCTveWqQg6txXwMtvUVwHRtnqZpihyOzamemUDM6MpaNoiVIyu2o4wF2lceEY7yAukpF2knHG6wDfvT+Tjn/4lbPWT5/f7L18ffv4nri9W+cHx/L2D8dt3zybzrOhh8ruomB7MRYIspcKzqdGTlYHJ4mq5ZmIAQd++yerrlK8eFaomjytQNr3fFUBqr8byLXJ7ZOtjwXXVG7X5hF4VFbl3/Vlw3SNHuuLtwq1sAEegVsYaR9E0hZFlGTNZhGqMmoxbOxaPphAhNPbLQ8n3myqHY1xFqq06UeqYlTRmvxM9sz/Icjyfr+5P0y7PRx3lq1ishHiTlVNdvNrzW5SxP0rk43iS3nowHfbiqzvdgZum3gSPW3LcRhs/MmzYMcR1K45uJxV6ueX6TcTdQxB6Ad3D1fdGsdBNkldn49pImFkgb285dZJAhxxq8Uh7Rrnfzm1Pg4Nj30tcCqkVkbLRPZ2uzqarv7x9Fsd8d5i8dHXw4y/vf+mzz5xMlvcPZ7fuj9+6OwZupDgq9ucViYEsZ4DaJSHhoXqdAWD7oRgRBvHsjAyQs7LwjE7mH8ylBlu3zslwGDcmkGjIb8WXrbhH6RqF+sornSxzoYwaCrNeFagHqe3kN+gmAEYtlHNCl8uWLQhoZZKMOj1Wcd6qpxokGKszjDI25xKMRTfOurEEYyUAsj/s7o+6k0V2PivJsRgmeVxeX82MIaQBsmbqSaWpCzA+KcB41IskMx5o0Y9NktUtOW6jjR8hNkz+hh02jLTrpy6zxXxYRup45wAfBmGekpk6L+fO1FOFl0BHj7AyEgp0dIN/dpUwBRibRTIj5EiCMXS5TtVQDYzOBVk2T7rL7bEy8ehseXi+/NN3TnpJfGOn8/Hro9d+9vl/8/NMPv/u/fM3b5+dzzKSLQeawNXp2qLYyU16GN1xYTJHxKo6MbWG1OVYM9pr8qxGGoP2PwMymutFY63hNHlZXykw/oxGUUSY1HGVdGd6uYBoM8lowJIBWZVZnRaguW5wdT5MYp7UiStizcnb95sBdRpAFApjSpArx2UKnUjMYj5ZZv1OgcdJPNobpEKcTdOD2arDxVaCvViYTDXWkHgNBpt/7w7j3VFyKsH44XTQja9ud0b9pI7Bj52sXk+OWzxuo40fGDZMDX8JD6aQ45gjueU5S8UoRHk1Sm9CydjWV3dh95ZRpnzd/Xv2fzplbVDH6ExR0Q8iEcXM1BPtCzMqEwb7iZ6UxQLKIIGITpjaKtiVh0B7VvNVdutR9t7h7I+/92irl7xwtf+JZ7Z+4dM3povszuH0vfvjN+6MzXiR6TYDpieQhG4as8SLzGZZhDYCmUC1N8r/cGsoqFu4kXmDaU69GS3PL2l3tR3X4Mr0igSrfq/yKJXWGZqevrKrqwJDTtYu1egWMUNEymudM2xyedL2juVqidE6N3Ffpn2FRfN2XlxLLkDy4zjHOIXZShQDTkoDpJ9EV7e6V7a606Uix0eTsq1axKXHRake3qwBEvRblP9SYDwcnU2z24/m/e5KgnEph7k5OW7C3Qvhtk1Wt9HGRx2GdVeOZ5OAtLEZPMbspo699HKT6zA2YHaQN3thtTiMUpbLvM0Lc527Nk7JVEqiMtYz81QEZtDgNIFz5twiCRBYZ0D9D6wfyOlrkhB+Ml2ezpRHchzxa9vdj18b/sJnbr72M88dnS0lJL/+3tnh2aK6MpW6BdFwrhrH0F4uYZcE3DSKW/dfnVIuS61EYAP1EoaTDLju3wamZ8HMxy7M51oKrvFK55kYUZjN0JU+RdJlXeCf/nbpMm71TfKa/txvI7mQxgGTZAic74Xt5ELTPG8TDUY6BZlkxlyico4rYIXJsZitoFOAsYTkfiHI9ez+IM3F+Sy9P0s7UApy5Z70hydYbcrDlBAbVN4ZxvJxOk3vHM67Cb+y3dnqJxTCL0WO2UWuEi05bqONHxAYdrPLEHIUdgWkWWODlqY13uBT3fsNa8lw5tglecoe4ApcU0IEwLwRZLA1bKz0ncy7QOMjZMUjCsUMx5qwciYAkgYHk8omV8RZCpCFhaMfZd6OJtkSF9NM3Duey8efvHk06MbP7fdevj76za++vFjm945UFfnte+NFmhPCB15OAPQCosR+Y/lgfAlNyVy9EQ46hazfUXHewmXDrBjA1QlqW25FNJ10wLiR57C6ZqbXytZmLeISaLT2S37zOTJHm4UOPVnha/16d8S84sPqJLmudFh9LpoboRXkSmC8/Fnkqj1N8txlpmackgi6y7wwOVbk+Iohx9PV4bhQq+64Vk61Ni6PHFMsLNLUSoHrbJYVYLy6JsF4kIRXn2vxeD0/bpPVbbTxEY/yjzFmVrbJErtGfQ4iZOk0XRGg5gH1S4YexrmN2X5Ll3t7oI3ZVVeP4wxhhSp9LNcc0j09QwWJSDJzlEBI/ZUKeZkCMbnHEdhzCqhm3sZ2OdnFi7CeD6pOOZ6nr9+Vj3ES8/1R8tLV0U//tatfefXZo7Fq7Pre7bOD47k1bLCp8qp9iZo1UcsN0FIiCJXbEZgOZbTeDJZ9cqRKaGDZI7FIAlVfNTqapTYZmG4rpLnx8tCo574qjWubxqfHAuuUVX01AaC2wqPiW2ArF14e21JkICPIYPse7MLAbFNeWFHsLRMSjNkiE0nKO5Hkx1Wmup/wm/sDyZ7l5/VwuopYvtXBQSxKIAbzf83Jao8ib/ejnYFKU98/Xtw/WVzd7u5vdZr+XDdJVgcRusXjNtr4qOFugA1Xky1GLcFBYGShbmdGmrlcZuvwYBeRkWQGAyDvtWPZbDi6G9WYuCBuPI7elj1DsoiwJ0+YEvipd3Q6q61tsCNAUpWBWVUoJScmKIFj1XAUUI9hQtrMZlmGj85Wj86O/9Xbx/1O/MxeV1Lk3/jSS6tUPDxbvHtv/Na98WSeMVdhGxx9DyPVpU42r+RD0JoXotHxAoLZqL2EkZkOcIbcXfEwI2HGjGiWOgB1lUCzTpILFK4NqEAvhipRMzCd07ovuqrfW7utaiRL641UiWiD91ZbjSzCkOQqyIibAVrSNk9dq5kpw5uGeSh9nPIlQBypZHU3LtWqFR7vVIJc+flsdThJCysn7ESVlKgRrOah1q06bd0eRNuDwWwlDs9WBwqMOxKPiWoI2zxZ3USF2+JxG2181KDX+QN/7Stfufk3/uv60tsjIvUW6frfrPcaimrB1HT9zz7YiE0p5trt3Q3A+REC9MIwUs10yUZEJjqwaHCvDHjvznuJ9yJ3x1Cn71ZVqkDaiMPOMHlhf/CJG6Pru72zyere0fzWweSt+2O7FzPNBZa1a5kr+9EU4EDPxG1T1xtzJ5mq54BdM0pzXPoGOHWR5kC/ErT8D85xrfKX98Wjb809HfeTBX9X5gVAT4HsGtwTcz8CoF/X8sOVH0HMWRJxlaxWxeNCrTrhnZgLgefzdDxbMaEqx8NEcIB6spq5/wj+yArLr8Pz9HiSXttRYCz3X7tiUP/zCT55qWcuu0EbbbTxRABYxi9/9atxEKIYFf1njPvTxE7HMvN6lyiTdqgzeJMkgdkkJxuO63NofvIbnEW9FlEklsMeKhsFZCR9W+ZY2vahFBjxTg+1ZwMjXr5osJwmx5FR98XyUnDH+4hkvb1CvFCnJPnZ8fnq5Hz1r9877SoXv+5L14evvfrML8OzR+eLdw6mb947P5+mVWJdGxAR+yJm2pLLySgj2SGohrZVHwOB1HawLCHbC8PB6odU70UnzIWjpumVY5GaOTFrsqQz0EhdIcwHYnIGVk2rbB4nneo2N4PWWqqqrVgzaERaG7bFBrAvty0IujhS0nqJtTlXJscSj5U6pkpW5yUeS3K8PVCCXPJ5SY7vTFfDSAzVmFNRO+fckGCjWb2mk0vC/LP73Ru7ncNx+v3b451RoYjZidbnqNckq9ljGR635LiNNp4CAHtJaWjijHUBrAbfwxoXbCgve8ob9Ty0ZYSejIiXG9VnHfJVJA3AaMqGzggNqyfDwev6osnoMqVsCRk9vVpnFrNtY87oFJCWab34IG+I6nyZgSVmeoaLly/S/P3DmXz8368fbvXj5yRFvjn6+Z+4Nltkd45m7x1M3rg3RkYkKtX6htsqOKfpXKutDXZN4Vxi2qVtjBwE0hbrSu6qhEMthelZJ4HdBaPT3I5YBxmTA/OlYqTh2alH2K5wMv2sYduUo7VwGZbLhaCxkyOliWjaypxLpDy51ZR2Xlk55UsO80h0VlwlqzU5vrbTu7rdG8/T09kqX2RbHRzGrkDmZp1c8tpe306ubScnk+zWg5ncvwTj7VAP14earG4rx2208WEDMIFhQBZyMGykyaE/TgyR4DWZZ2TYtB8wg7Ab5a41mSA/CipoDHb8xToU14rSlrUCFc9E2jeEOjFgdCl9PRP91ip2pW/ojnEQuidG1zeuFZJzemhPu6SDZ7PsfHb+vTvnnVjNvXzs6vALn77+2k/fPBqrrPXrt88Oz5fyRXkltW2RDbwet1IaDE23tMNBoRIErfyRSwELI+ttuGx5YQW9hFZdEomqB82hEB7MrEd0tYjAqi5gkLJml8wMlqKVD2Pmt7Y4TSa5g5VjpifJtUymLVqThRWW/f+iGNkqBEBgyXGessQlx8NesjNIlpkix/dmaS9SyWoqkGkhOeQVQZPV+6P4ylZyPssenC7vnyyvbnX2tzvgAm0TMLO1ndUtHrfRxkcEgx02jE7t02e0QaXpGihSPQ5NmPxhYY86u7yZ7M7enN3GMdYg1FU/N313JibzuoDqdG+5XJZ7TBnRNatHZ5rGo+OuCqfJJaDnCGUOROd1kFQuK89dZieANRwyrWppqOYqE/ePFwcni3/11vGgGz2z13/p+vAbX3pJUmeJx+89mLx9MFmkgumzALReDiaTX5BFa7FlAMx0aJu0Nmd20NfLcKB1fKoGqLkvM+KaV4FtD6SSI6T3zXUK0dkNO+ftJpfRSnFVWXczcgZGkkWLa7oLrRKKywFrpm0f6SqsOlCpPpoXw06gxpyU9daKwyJSyepuicedqB/za9u9q1u9UiDzaJGOYhx1KoFMCHVyNSWrt/rRVr+/WIlH56s7h/Obe92rO92Iw4YYvHmyusXjNtp4+hjssGGXEa5D4LpXEjQ8T3cRTmfXf0A6c2vugaQhyHmNY5YXvDkYbEBToiRNxR6c1ueRiKUEoYZ22sY4WRRzU26RXJRpZ6hdXb13QJ9HUykzA04MaOWgSolbVwxdKZDAMF1kb90fy0cU8f1h8uL14Wc/uf9Ln7l5PFlKqP7+3fP7Jwunx9h6VDCjyFJIZVUAVna6UdmqcrwNPFNno4VpuDQSHbSin5rVCBl3pDjKtZFWZdEHqHr4Szcq8071qsq0bfvOg/aT1biLTgccgk2RGCstwWzpQaDbSg1kDBrtEHnZAK/IsWDLDJcRRFx0V3mhVg1qzKkbb/XjNEcJxgezVcxEIViNBTEutLtDatX1ZHWvw1+42ru5hxKM//L98dWt5Mp2p5tE6znx4yWrWTt53EYbTwuDDRv22BqFwnqrlC/eERKODuCru08DkQ2ZZ9MfRMQVqcRDbXOrmVVHeXTXAbRzCyn1B4ekWaloklhmNLnLSNKg6nBC05NMSZTewLEHptViAhq0fmolqKhECRKrZq7tDRlpY5aRCfFovJSP7759IsnZzd3eS9eGv/6FF1apJFXLdw8URZZETcMht0yUm4xydUUEczLnpQRK+VwU0VUIOG1ZVvkZqnK4hnY9jVMwfuv0DESYjCpJQ63yUZ0ZGYcOVTXobBWjw1HU1MuAsh2nMy0ElTUy6Hlx5ho7Wv0WpQ4mBBRS4iziuMphnoqkrBzHVeV4f6srH7NlPp6vjifpIFZjTr1YZ/kZW9PJZZLVMWfP7nVv7HSOJ9mb96bb/ViCsfFuCrogf3jJ6haP22jjiURc+xOqeS2YJHPoj5sF6S2upc7g9CTXkZ0HE2IM3bttbY4IHWAHKiRNsROc07Ap4sDEtDvF5DVaa51paoJLcRe8ASck7597lwlqR7a7M4IXUHNyrjeoM7LKMB/rYpXfejR979H0n79+uD1QjV2vPL/11z997XSaHhzP3304fefB1Iwvgx7nZaEEsvNtKYZry6vI3Sy69zLm6m8LNNYOFeD6NXunLxo1OTa/qPqtTDuzya6DIebFt4XUqhnNd+tPtmqExjIJb4v1ZHFmDCyYHUtDrc/l6tCorXKGImdZrju5MjV23FmJTgy9mPeLZq4buwOxg1PdyVWMOdlkNdsgWS2/q1e3Yvk4neW3D+dxxCU53hkmXs14E058KVmuFo/baOOJU2HDhp0dmvIe8zOmNdBo0LYNQjLBDL8nGUJzR2zjaah6p7duDPJuDV75Fumiw60WU9UF5gk0ujnPinWRZt9KMQOJByA6k9OovOSNFBXtEwbCscygD6J7hoGNzVfBZNrRimGZpLWiyMeT1clEWTFKlnZ9p/vC1eFXP3ND3vElRX7rYPrWwXi6yEs5LQ42D8+M76PuxjJ1duNsCIBUO8VePV3eN7YRxt0KiEFDBW+mtQsCiRnD9p2BJQQEmjdxZ5D0FwTpx4/2DZVrPiGq1EvkopGe/2K6i61a2nHygXNrDV0tl7AceFOCXIznuOIYpaqzeqLGjnPTybU16CjB6qlKVivBamV1XLg5NVsde+R4dxDtDQeTRf7obHVwury6rXRFuFtGuZATB02cHs9jkbXDTm20cXn8jimyBTQu6nTtAj7MLl4U13aKTS/x67MXd01DkLkyfwCHzA0TEkTTlFRcEcBj8/6tjRyIiiY6AhSEqZqjg6ui5TpG+DdAYA15CgQnH017u0hPnNdKtkyFJFJ3jub/4o2jUT967srgledGv/gTV06m6b3jxRt3x3dP5rpmaaDR3sSxoPSENKN2SzJd7gRcjc1DlaFwljja24HRHnmTm7VdZabPq0hro7GxADOpVDF5C+O0/8t14eS6s5oieqWipcfSud5FVTHndgBO6C8KVD3YoLcnWq9FDVsUbdVyl6ucSco7TzFZ5aqzWoEx76su9558TJfp+TR9NE63Oqp4XI4Kb9hZPezy4fXeIsWjcXr36FyC8ZWtjtz/mj/+JqLMNvN0Ym0zVxttfDAqTF8Vuyk7kvp0X8GapLOwAY/XEGUMoLp7Do3TUFgj6ZSjB2h6YHWBFE3rqwriB2AVE93Wbqs/Tfk1RejKx96Zbbb7x/ogNKLPhhHRsSqy8h82McuYmXc2zcDebkHDGJ2FJVNYCnjK2afX75xLonZ1p/fStdGv/dyzaSruny1vPZi+cX+cZmhQB8BYX6DBSNBQibQwrGsECk1MZaGwsKZiXmbkidsJZds7UDpXOIV/Kl9qB5acdioqzUFWN0aTSxW8uUF3QtyBfEWMH1Q18iSMhlfJ7p0kByAzaXmv5bvcWuSFQCaoTHUS4bw0dIpAVY5V/Th+Zj+RgD2Zr44KTa5hockVGaXqGjn2KHI3Zs/td27udU4m6TsHZto4ZmtrxuuJ8oXkuMXjNtr44LAd1zehvK0xCw2BOWNejYiwpn0G/xTrsG9Hc7xXoQPJdQlsZI4S4XqCXs9/UnAqOoSdbWv7tDVLMNzIqT+Dy3cZ6epi9UvnnRunOpS0ugwaB0kJlpsSKxl5IusOdJ8BOiRNawWLFd49nMvHn7xxtDOIn7vS/8xLO7/4E1ePJ6u7R/PX742Pxivj/ktkusBqdBMTaLNaEQKdMWhgQRUrYa8Y0hEpRnXcwH41kZhE1Jqn/Nlf0nytT8Hmxe3wElK3icoXBK0RdeU5XVXEiflmdek5I6VuU0fQ56DGnIoPMhMY5WyhZLP4LJXcl5fJ6l7Mt4ednWF3mebj2er+NO1yhceDBM2Mkzde7NWP5Ule3UrkY7LID8+X944X+1vJ/iiJI74eels8bqONp0CFG60dRv0knBJWVarmxC81SWpMTbPGjSqG4VsHeCncUi3BvETkTjkUBQqrgqQ8clAYJuqikW/TZJSwwDJWTilMOcNjf6aN08xORSPl1+ZAjm8EI8BDwJRyeYF+BltUypQadMz7KN4GLcGauSDaYGy6sqHqMSeFakSTZLau0dTciEGWiaPzoor83lmvG93c6X3s2ujf/oUX5qv87sn8vQezNx9OhXFlrniwaZQmqw3DgxGt1zNaVRNE0rsOxC65kgrRn3sFzMQy2axgOM1om0S3nfcuUZjr4jTRCXHaDoBCtW7o4yTd4V9kRiTa9AcrbLM8KQ+gUUmrTipX1orq2uRCLDOWcJxHIlFux9Bb8qKZK7q207+y058t0vNZ2VmNWwkm2kDCSVaHKPKwy0e93ipD+drX70zlourKdtKX7Btg8xz1h4rHLSS30QK2heHIXSkH9KGCmedAJbdxeLeJBgdVCJxXuYORkNQQPbhE0CEEZTbmR8nPBEW76t95BRncKiNTIoXWKaEmtemNGRO1TRc2kJrYg0WtwKS2ozqCBKlqHXPgGfgRZStDB932NiPNAf68Fv1AyoXIbJm/+3B269EsiWB32Hnh6uDnP7X/Sz959XCSvv9o/sb987N5zj0lEtJ3TbyiCxkykzJGZxxcC3lRSLTDS6AnpbHWTC6qlrGKIJPWay1gacRAihUXIPXK9Dw7HWEvPU7NTGmZkSkybieszGAWlQmvJrPp27JLteIKSTDOy7FjyWIFRBmLM9XJJSlyN6rI8aATj3pJptwwV4fTFUOlyTWoJ6v1R+4lq2PObuwk13eSs1l+53ApV9WSHO8Mkogz9rgDTk8Kj1uK3MaPDhUObmmerFk7gJPJvDiZTGDaGPvWvZUwAMk+7sB6PHYOh9YqGBsHhRkxSio3lj/q9C/3XmKlIivwxgrFi5tuid+mXuuReJvtBGtLoMux4MEGoce64m7HVkkak5Q6EeydHIB5iiXkarh44gJDxZKNuJVeYaBRu0Tr78Dc0aGyB3iVs0fnS/n483dPh73omd3+x64Nf/YTL44X2b2TxTsPp7cezU3Kt+TBVRGVZN2FUVEpNKitByJUGV1GlhGG1HK6vAFGpMyq4S/U6GPTAAyELlAbkNYZCaWeYcaNkLnzwVbvGs1qhk6vlc8I8OVWyoNxUmUR+uKB05dfvndjbaE2K5u5MsEkf405LiKYFWNOKlldyGTuDLt7w+4izc5n6b1p2uNlZzVSQa66DIj5RuwOIvmYr8TxJLt7uFSZ6q2kp9u4LovHl2qubvG4jRat1z8ZO+SrEWkvyCNxf0OihNU44HsZSK7TcXASg6xuoNSg7cVY8x+8xkCujf2iyOkmqxFvLKueophOEYUrU6F2obLjZvDU3uF0dY81+Tk6dgumq9t6GHhrEQBGjAm0knWVDHaksJlbfhZUaNpSN6NX4VprmCkg8sWZzLO3FuO3DsadSClav3hl+NWfvCafV9ogh7O3HkzlHZ8R/epct4YBWL8NPSVUvVtBBMu5Ox+XmxQFTe0XSCqQ1KSR6lbTliuH+dsMc9Vn5+hU08wGIu3sJlNttumsuoJAK8f6e2+WC1gzLBH620HeYymiaQSrIZb8WJFj6KricdYvZECu7/Sv7vSni3QyT48mq0GMwwS7kSMDYrPWbvG4l4Bq49plkhy/92geAUgw3h0ma2acLkxct3jcRguuH/CFMQuVdgPg6LE5F1rXlInJCDDgBWnqi/uqgpuGup0dwQxWsxN2krohbwnK42n/s9tjxcvkHi/HSyByEwCK4KjEZonOiJUKo3w+R5vLRnPj1k1AQD4qSnAZwpqqAHqN1oy5Y2j1uS/3Gc+IAd1FjzOUxZgt4ipF65PlwcnyT9853uolz17p/7Wboy+8cuVonN47Xbx+f3I0XupPH1An332dSESvE1+nIWw/GrWlMmIeJao7uKsRD6uhJ9sKgCTJz0xrlc4vGJ1qWzuvZfTNJSjFNaslipa+MukZ8sVD1yIT0YiRIXVprDYDrUAuVJq6FKzGFVceEnHEpivRjSUeG43MJBP9yWx1Mk/FPCs7q2NOktV67g1qbVx7Q74/6ilyPM3uHS/3RvH+KAk6Kq6tGbV43EYblwPdxhat+rSSc4MOUGKvq9iHVggjuvcnegEC+/v39TabX4tOsyu5dwboNrruTMGKeDXkA67odX1J4jaJK4bBCVZXZVengZkx69hjPiKRIdHJBNP5ZXCCjvPQZ4hYJtBRGYPHRAqj9okj9WZwLZgY0RIhatJApq5VpTOXHCs9n6Wv3znvJvzGTu/Fa8Pf+Pwzs1V+93h569H07UcznZsFrShJc8WU3JtscMXPAey7Es7sL5Ho0goaZmYadcty4cxoe5tNhzySuniOJHmOLjWESq+DkZFu2nzn2h47nhaCJMl1mp0sDfWfkmHn+nvCdBlE9VdLMOYZW0VsrtqqYRKLrpp0Kjuru7uj7ioV5/PVg1kas3zYwUEseJml5tzQYajJckly/OxucnMnOZuLO4dLeW4SjHeHsdG7/kjhcQvJbfzwYbCV74Aw0tqMJcA6wloHamTNTVmOkHSQPweeciaWoGEr9Laj875UCBOwAZIZgWQ/xW3TmoHbgVfNxaow6XsNCI2Q5r5clqtV9ls35dIzUUXTovM7L+UT5Q+SHxUOB7zKeyKxNqYpT3RbgJ2xbHQ8MxylLZOL9eZsjTiUpzvOAQKLJmTLlXj/cHbnaPYv3zzaHSYvXB1+8cevfPnHrz4Yr959NHvzwWSZlgCJ3tw4ANGCJosALctRTSHr1LoukLtfQG1ghcZoukA1MKIf5HqgKbAz3XNeF1uFMmNhu/PId4GYQ5DrUNkw0xH5ssRPF0ZIjCKAOExrps2MFne5HslRdWatcogznHNIVgqSu3HWi1Wy+sq2cjueLbOx5MfTtB8pA4l+nNOyMQvhsSLHA7436CxSPJHk+GQpkVjisZGqvjA1/XTwuKXIbfwwYXCtNuzC3RrKCWvbkhltWkG8OLlcLySHDBab6sRUZRrq3dON7smu6K7323rJObQooPddH4nAB8KaTojj7lx165CJniq3We1YYU5CNbJEmROtgLnsGqsan5itdrpHUL/nQIU4zbwt8TMGi7imF4qZiSndfIwhlkzXQCZPIOFklYnD86V8/MWt41EveWa//+lnR1/4sb2jaXrnePH6vfFZaS8BqBvEyvI6MCKiwoB0imuLp4pfgp0DKx0YQecchBbe4tW8NmoaXRaeKf66RBntKDGnrdS08GxsQgRoyRdbtAFXjgWROTUA0+eFup8LrL4K1UUtSLwWDzEz2rkaO5bPq85qDnEESaTIcVeS40hNOt3YG8jXTxbpZJYeTdJhLAaJ3ID5eEwsTMpjSHL8zG5yYyc5n4t7x0t5lL1hvDdKOjF31qnNAplPH49bSG7jowCxHxCS4xCdC0Iyc3OZoXoq4SL1l+MGfzbo2SEE1uJNeTEHuDG0AQbWDE2HBg+36yTYaTFrdk4k+V56hyJO9Qy8Lmqr+OGtAKxIkxrn9gweSsaUm45ugWXjmG4N19TZkcFAMytlKSAEVkH2V262gI79uClrCsZq41yws3l6fjf9/r3zfhJfL1LWn/25Z8eL/P7p8s2HU4nK1LbBrAxKckoawm3fOad0s2j4ogbJxreqJM1Azkro1nTOiG9zKMEhjCmTS5oRyVrPGSN2y/Ho/iUgeks7gXaSGxy/CrNBtUBx5MfL5mrOJFJCrmyXFpIcp2rSqaMnnXTxGCUYn8xX4eKx/iApRQbVVs13ld41O5tl7zyYJxHsDOPdQRzUAHlSeMwur1/dUuQ2fhBxuqFFC9aAWkhXusYpN5w1qrW6boqs/g0vOKBM7rPrXloTeWa1ljRr5Uv7myCk7YWBlm8noR1KAjipVAhPsOpcp8uj6vaJGj7LK5LE4OlnsWJauhzBkv8nRLWlTo5byRFL38D/xtCWJcKKmD9ZRSUn6X4QkSyP5mn23uFEPjqRahR64crgV37qmgSMB+erdx9O33w0zwV6q6cyVcBJRbYQjyx9jKsUM9hpYPXuOAt4Q0IN5Jwma+JSDI7BZ9VcRhIGdkYJS+Nku+YCV3TNtqCZfnO6yjOrKDMoZYS4GennMuPWRvIzF9V7E6p4zFa5pMhqULijZEC4auYq6sfbw87uqLNKxbgsHkMhy2WKxxSP3ZS13NXVrfjadiJB/GyWv3k2H3T57jDZkqR7bfH4QjxmlzFbfAw8biG5jY8sJDe3aK397sI6XKwx3dpGVrYCGtqqsAFZm90Sado75L/gQWNDLjx0ws3aI25rMdTtER0HKYCA5HXwBKi1g0dGOdCjgU+/QP/CpoZLkyKr6an8F0CNXcWRhXw02WxRTULLfxWk2Qwok5ywfUfgaGFD6LLT70HTpBfacaxVhg/O5vLx57dOtvvxzf3+T7+4/ddf2T+eZLeOZ28czCbLzMJhMVlrTBTQactiJoFsauUk5UDlNfTglfNBajSupLnBKZmgZcGIxvua0TWIAGoFYkfIGVmqgW5K0wmS6gqbQWoybk5NFdHonZUnmyNdTBTNcWVDfq5OMMtB4nGsho9FrCrHYJRA9gsPCWV4rIrHq36ERfG4miujzVxeCbmXQG8nvrGTTJf56TS9c7TcGUS7w3jUu0CwekMDicvi8SYQ20JyG3+FGekm3G16oSvfsf67izR/7QRvYMmN1DYAybUq7aZqXAGk47DJCymbbeT+XkUZfZUMRm77mr6glVWENXcCK78MuglJz/PYDLCdSrVpWa+1zVHCBipEYrKitJ1K2yo488tYSJRgOVCV50awq2rvtiZUhnwjMlery220FxYtMLSIMUYV6q3lQpxOV/Lxxt3zfidSKeurw5/52PbZPL9/tnz9YPpQaVlX19maKHC7dtHF4Kq9jLunV1FS+m3z5bPMEFR1boWPUy1LQgm63hnnflrDFphNqzVYywo3o2Alb0i7VkWY0RhFmKvPLJY7LtS6KVwNWCuDxaJ4nMNS1Y+VTGY56aSS1XF0fa/PUE0ej4visWTGxeSx08yF7uQxM1ZOXS6v83ghHp5JPF5JMN4dRt3CLfnC5uomAK6jL1tbQr4sxLZZ6zY+4uAdsyb5qrUWSR68BWmud1SPXV0Iq55ghUtRgq+1TVX1Kapax1hweeDccqEJkok9sB41JW8eSaFc0zSbcPRoMb0L0UWT5oBGtZhUFU1HMbolZHtQcE2cqt7jmomT9+lI8sSqAei4bCASWP6v7NcmqtcAhIzacWfqDQy0RZjyQ/D1W2jtXAg2XeS3ltNbD6edmF/Z6j5/Zfhrn70mefPd0+W7R/O3H83IC6sGapPjNUcSdnlkhnG1eCYp/VsdSlf9u/okhBY5q3YCpGBhvxMlGQWaXiYZAaylPsgSwk0gmDWK103tOC47Ns2MuI6AuwDColEglWDMMcpgkWISQScSnVKWSz668aivPJ3G8/RkthKLrFQCSbjwNLkoKJbf+Z0+l49MKBmQ28Wk0+4g3hnGBRxvhMdr1DGDxLcJei8FsS1FbuOjxpsJDG/wBV6fu4Y1xsMNRBnXbUkJ48apY/IqoPnQuhoUo9rObG3HmAvJHr0neMwcH2D31uDOH/uZ/vBsloVd0EjgvILALGHR9H5tT4MT8Q0MCnX5J1D2G0NkTBrKaVdRZbCL/i9RmSpxIrwM1v+JanESDAb0m8usAGr1o/7E0kwcnMzl48/fge1B8tyVwRde3vnij+0+PE/fOZq/+WCaoUNUq2EnDa5mHgkYFaZm9bSvhUaONOMjyEQVuq5Kpktft5HrVVEx3m2WUAjO9Tetblyv1tD9wK2Ep36OG50R+31Ff61JvDjBGwoskto5KFmulVLmYlGqOquLSSdVP+7F8tp2docdebUlHh/NVyjyAo9tMxdz8dgArVy2XRlFV7fiRaqKx28fLHod2BnE2/0o4pzmqz3bic3xeD0bfiIUuYXkNp4C9DbhsZ0brulcXCLqhNDnxGGizNb/DVykGRLAZAydvCvvBfWxoQ3eYGCf3qQTUUIOcGj/ztLMxet6nMz271Q3dHrmSG7cjDmeepQoI1lzcMeFiVE27SwiDI8k9Wqlw1xO8VQNx6JwyyiaeYuuqmqgGQovX3fH1H5Y9wGAcUNySt6kK7l8XzniyTQ9mZ59787ZsJs8s9/7zLOjX3h552iavXs0+/6DmYQBc8bCVTpDYqakD1f1eJtGK8P3BJIT4cR6mCiUYU1TlLJTYGaeqvI9ZGBFOvXFL9TVINAw4e+OGWdl4lqhPz1OpVfA1Rsl3yTzpuQHlakeAFxJchyxOC1lMpVsdYHHfH+rKx+rVEwW6cPZKmIKj6mNhOPsRJC1G8P17fjGDkwW4nye3z9ZbfUjicdbvajp1rMG+erNXJeF3g8CyS0qt/H0ATteD0abfIUZC4tarN8JhgWlL7aR8CGZ4XrY9On4xpohTajsVbJrytWGt4AjlkTvI8G0MGOu9x4ZYTKnZ5KodrTJmjmR+qe/ODENZc48NGNuu7dve8yYFZhwkgjlgA1XDWCxHioVVfq6+E9WZLVLI41KS9rZJZAMrfUqpkQO3aVI0T0mBBsv0vG99K3746KE3P/EteHnX9o5nqZ3TlffO5iMFyVDrhyRWTUjbC8/d2eu0KbHkTsJj9DgGf0cgbpdo0nw0NVSldUmn3WJiNbqmNXYPJIEBWkHM/7NnKwGBBKZHKSG1H7dRA+AlVVnRY5BqGS1wmOuiseSHHeKzmqKx4tVLvH4YLbqcNGPFB5zisduM1d5rEGHDbvxTYzHS3E8Tu8dr3YGCo/7nQs8JILN1ewyhk5PCpJbotzGU85Is7Cm9MXp5TDpxAYeiT67CxLBRqrtgS2EmW4zlXXbdCFQjAsw7DWJag+BiWKXm4TG4Bl4xKf2azIYRGZzGPhjWD5qey8JXlWqsYHWEpFWCmxLl2uIbB2CGdVqrsS01K8rP4zI+RKW48torHrBDkmh8/6tLpV/C9VeiMbqqeS1s2V+6+FEPnqd6Np27/mrg8987sZ4kd87W37v/vRwmlaSW6UDsAZeQcyOTL633LXQDoZWl6yeYiEs2whzUhMI3fxsjRedpVgtI0RdN9AW9kntwv26Ws1LguNmXWaWasHit5sDUPX+XF0ftlL8mEWpkq3WNhIVHl8tlbkWmcTj+7NU4rHkx/1YRFy7lFDxasKPt7qw3UtywSQ5vneyzJFt96LtfjzoXuzptGHK+jEEQB6jV6slym08NrhunqaOdR7wcth76dx1eHKHBWE23LndUJOuQzR4ra1O/XY9L6dp4MY/PWgEfF/SA7xCL9RVrjFo0azz29VPHKDhWH5Suc7cgjZT1HDR9PiYedbKdbg+2Y2WEHNrvAjEPNlZ3hR20ZIuV5sWBWVWVJWxwmwAdBYBrG7jSL+yzlyyjmWa3zma3j2aJTFc2eo9uz/4tc9em6fi7unq7Uez2ydLTfQrJDfJCuHl4/XOkaamrf8jyU6Trwh3hriJPrmnqYblFcOq3Iy2ncIKSlv8R722Aw7Oqo6BnYJGLUuCevWA7l8Egk6MOzNujtRrufgo8FjwXPl/L7hq5ko0RS5sFqPrvVg1Vy+zyXx1Mst6XDVX99TwsUVirPFjrlq3+N4wygQbz/MHZ6s0x5HC42jYizjpw7qUhPWFGWzvTrcGpy+LrC1RbuPDiLgOPEEHBWSNKpeXRGUqOA3rdgINWeU6fzY9Rxg41aAFxcVGirU/PQhqhgQWDBgY8DWUz7JRoBgT8JZAx7PByfyjt8CxQ6uWsyI60OInErA+10v1t5EUmrUNg7OSsc3PWmHKdDehNzCm1xQR8CiqELxUFKmS2GUrEuhUciV/VU0N0ZMr96QZoU4/6H6oVYplS9df3DreGXae2x/88qf2JA+7f7Z673j+/Qdzs9zkem+mfRpMX5VbzHZXLGaS144hCZOSrZsmMduczXVHVXlETjLYenQMqEaHWcAJd6wc0V55PchkJcCNIhvxMy6ry8CoUrddYNh2/AqPBUsLcizXSTFXzVxFf3VFjvuJhE+llDldKDw+mmSSGZf8uDpDo+th9DKL5yNgEozlQ+5/ulSex7ePVP1Y4rFE5bXaXBfQ4k00udaT4Mfmuy1RbuNJwnBNH2uDdK/3jfScBC7+BnuQHFLSDK0AmrQiPMbtQE5IxstxdgjhfKgzi7YurculowUzu5V3Gsaej3ZdQa3LGgNLE3Qbi21rE7N9vMbs2Y42mXs0o/M51ZSqk3ZGJDsG6kpUa2R1sNZmswW52s5pGtJWiCEbCim0+qakyvruDcgroUVWM/Sqri3QUWl79STlOhovj8fLv7x9ut1Pbuz2fvbFrV94efdwkr5zPH/z4XyVC6BN4IyogiE6RpmlBaEu0zK0M9zMqmmRii75wAT5HIQRna48iUl9mulhZbDXB92eACNzbR2Ua834dsypdBZhVuO9PIjQ1smmIQCIWFz5uecFNMvPgAvMeJGsLmWrucbjUrm6G436A/l5TYt89fH/z96V9khyHNeMrOp7rt2laIomaFkfDPmkZcCGrA+GIcOAAcMwYPivyxRF0TTJXS2Xuzuzc/VVVRnOozIzIuvo6jnI1WIazdlhd091VfXx8kW8eO+qmNWxx1U/HuuTeTST+mqwfIsXq/L5m+18LC1Fzv1b4m448XBXkDsnyg+o/A5funQMt2bD3eaPrYnDoq0U3F2OHkKPd7x3k4Zuyu3SonTLlHOzIr3Dxmv3gDIgB/mGuSayAjJbciSukEEoFedo2gk6kqSDkLREni7SXGS2zxBGbng2Is2FgsiPBEsPqiMIyZc+pmsFIPQ98uMU7ymzr5cLUqId8pGavmWebbp2siqNYZQhlVKy6kHUXcfKQRiIom+JqsKzK+MK8vnvLxfT/P2T6V++v/jFT45Or8uvzjafvbheFqrOhODIShsBCplJpzu+OABdVwxqAzIa34DBTiRQ5ACTMZMYRRKuRRIPkU8iQT1sJaIMO1FGU4su/4FFclB+ZCsuKmTb4H/tXF3ZZaLmxwo3djzJ4HGhxtJIo029OpOLWX44N8PHV6viYl0Ua8OPFzmOAx639Y/dXQcTOJjo7x9YbtXVRr26XI9yfUt2PM9cmEQy79T1bbiTE/cgtLi3AIlWO88HDHu47GLD2MAt0Z3t0BHN2w+8sAuIGRHnkfV0I70BSmKHIrqzsBzJbqsIq7lXwDC8CfKpxieh8sD71di1tGkxS4GYvSiCcWb7YfEkqCb7h56TQ/MTgRSYk+00K+oo2DROwuxZvARJQ/CRUuDtq3IPyaoy/NVAtYENGZ8nkaKFEwKs7WGUWZcrzduuvnxxNR1lPzqefvxk/ncfvX+2rL55o/F4eWFcM4UgOUuq+SkgGYnBGgRDWLIQ5Ic39EBEMqIdTo7PqaqXKorMU1HRgCuixxlioO86b1FCgpKQW3EDcnf0GBkSh7OJ3LphY+IfYG0yRQWmzLC1MRJ5UderJ5vanOtwPj5ejGszkNW2WleLXE1zzY9r3K2H6zg/doWF2UjMx9kfHeWrQl1v8GvjBwKHU3k4y2bj7DasRexj1NUPlrcnu+8wMA83GX0g0N0wnBCgLpDsgeTb9Y17YbG9kdy7VuDhv8184t5FAwuPbXLizvEojsc9ZQQSQYHYWC+QcCHRIjkJA0PJc4U1RFNRRZ9LhJgBwaVeQEIUSOKDSMIrQq02fLlDI605Zk5gBAm26EheOz4CRJ7NPEtmvL2yEeToKLK+FCafQtYsOU7L8gMnzpIx/cFcV5vqm5fX+joZySeHRmL9yc/fO1tVT8+3n357fbkpY98gvJVUXZOP6U8uQhFYxnVt9oGpC0dTCq6orVg8bJLSIbzlJ9El0FK/JN5wNHeEJV9xb+xYRYfgmep7yapeGSCfcaIbr2o9uSht/1ivWzIpfLFajvNqksnpSB5bM5Cy0vx4e74uS2POpWY5Go2XWyskeq5oIqcfoxEdnixkUQnNj799UxRquxgbPF5Mskym8qvhw8et4NffSL4/ovyuAvONdXYPl7y7QtwJcm2EDTtr10PXC50smQb4JM/dOyKV7iYOGVCGRlnZdydb7TBbXDNbT0VX5J0/LqIYTgReaT5k4vaQGolEu2ZIqGeo77eaoPBwyDRnKVXnAnUGE9RDjIIoqwc47i5ragiNsa52CAf2CQej8pIOd5XvJdfRS6a0zWys+fswCgzQw/K6UM9Ol8/PVqMRPDkwrpl//bfvna9rPNa/sGQm39MVxJNLxUkokrpUL0digzzUV5DHWdKCMhlgrvsJfFGSkmMqDRNhEsluU0LDiS26nApkQ1AYelKKvxCtG68fZpJAzFZkJUrp8FhZPRcEcfUkl8eLycnBxPHjy3Xx2tSrcZZp7ovRT83/jIPIzldVikdzqa+VEssCz5fV8zeFxvj5RB5MsjCFfHsuMtCuazgk3xJKu4anH5D43YfhgacNdiN2eh8OF3m19WK79cwdjBuTknD7UWDfWpjtBjTI9fAqd9fUtOMijK4g6+kG1RFw6txaGgiEmqI00lULH0ZDmg+BUd/ER5uQ7gk/84zEQwwYRjqrTH21o04biP1HIOSQlj9qJOCNbWZ7aduwMgOruzb/KXvBsmZX5n7pQAbZksHvHC1Z6+fabvH56erbs/U4h0eHk48ez//7k/cuNurZ+ebTF8uzVclDL2lSITIjM/9EcQ64Fi3HYV+MjhyEJ3s4DuYc9OST3MPaY6RebxH9PJk8ptKwJMMYfUGajId7PQFw49dgH5ZsPLxl3TrDhl6hdPrqCtbGmbwWc40zF7ZY82PXP7Z6roDHzOQSfaWa3qjXV4cTOJxkesOrApeaItupJ02OD6dyPs7ybI9hp9YqdM+9XZA8BJXvEI3+sLD5nUfiu5obbsDw/metz8qjM1fpzlhy7wN2TDq367FbZWK7khZbHTdbh6Ga1pfQUW1PPE+gSU2T5nS37QlyKtwcvIZYt205yLZUZlY1xZp8iyQUOUAwJKNQSM9ACIfgBwK8WO4HcbjDdnqsmb3UiOb8rgs7FWTl1qEA0LLYYistG7x4tv7uzXr0tXx0MNZ4/F9/8+Ryo35/vv31t9dvVhX9hmYuWsD8W5Q/KoeaKs6OOSMSIC0EQRcE1F00sGUikIYQxJzxtknlSTA0KtVAM5jI5BogLRHEXkxQdQlqz9ncuHNHsX+vn72qIy4MRdZ7opE4s/XqkazNqzWSuv6x1VcX1+vy9aXRV7sr7R9TJxD6uy1Zy8cLE/G03KIdRC4yCRqSNUuej2XGBIvR2yt8CVKE6IdkMWwiuQcR7zvW6aEd+3aiL32z3Qsb7oFk7KpuiqZH1J6ojLtQucW+kbFi8lXZtks7ppOH1K4bQB+/B0NKYGM3eA5UE/tjXZcoeIGWFwM1bMAtcu14YoIhuGYKyIxxmkSfHi86CPEuVLyyHBEkfSuwJUXYd1nDCC1nh5ik4E3BFy7YWOUhTeIyUKQBIJeuam1tNUt0TCuNhiYlBjZ3ZJBrWygNxvo6/lqeHIw/fDTTeHy9UU/Pt7/5bvn6usQQTOnFUBCSlEn3QWFYAdACEYb+AJIyvh/Oquv3wPcykFgHtxUpskiK/SIq2NB7YEIj8TlsJ2w3LIlq+bR/19HGMzPkirXx+qV2LNzFIdukRfMU+qVw/FjjsesfT3JYTMcakvULtNyUGpLd/LHmx9McM+kXTDxykblmWpX1oU073lZ6I6ZqrSFZM2MDyWM5G4eMyhR6h0By///uW7u+10GmtzPD8Z0hxPsS31YMHpL0kItb4zAOFUrfxYByNxa2jPymIXPQslBoUF/oPl9dtet030BAAshts7ZIB0NZ5gF9WBSyYpvuOrgNh25eIyqAKXWTHOLASgVL6EPgVWZMugeW0im/CRleTgg5Q5CszkLiEZBSNXrJLjBrZPL2oNXjxlx1UkEFAFqNlXYINR9lfiJZ/1sJl28vmPt2nDxCKoQGy49rPP71N+cni/GHj2f/+VdPloV6+mb72cvly6si1KdD1FLEs1rshqS6Dpj4wMSOLNmIYCFLITlKJMjnVynK/xmIiMdBdk5fWUk+aKqRuBzeVYqse8JoGR1Fo+tvJEAuyDLC9Y9LJWRlwDVz9WrbQp7klbUE0SzWhC3qHV5vjH/12bIcy2qaCY3K+mFkIUu4Mnfd0hs8nsHJXB9ZtilxtcXT62J1htORBmOYmZ9ZJvvmnXaS4L2UXMNZ8t3C59tWuP6DQ+LbjwI3Mbg/VYn+ng+EQLxRjXqfdvL+tWuOhdgGvj1SStGRGLH7uBqTmlxN3HGgfJnQUdBmQJqE0rMdwwaLx6QuwXaQhUkQrVtbijMkh0NRnAf2BYCE1tc6SWVOBqDDAgRo2ZnYZkGyOELA1n2mJpQgRKrtMoic5/WfuCayUnYk1gwrA13DhCUaAnONBpu6+PJ8/fJ88+k358eL8Y8fzf7jLx6vCsOPf/ty9eKyCGdWCTaFFvOvIrfHZFILMT1tQCrwdceXrDH88Hckta7CTHy/kz4xRIGVX95ImjTFh8hjkDXGnGnsNOz0Z45ar/mHVQaPY706M/nHJkzCSroqN39sJNbjbG7Z7WpTrTbFq3UJWE1tC3mSswpzs1gdfo4zMZnLE1sOWBVo4hdX1YuLUj+jRWWpUXky2kPe1Q/J4i7ayfcqlv5hsfltRuI79N9oJb5DAFikCUuwG3dvfzphj7u7tL2iWXdu473tLhyibb4oheSOhUJrTxUJJMNgqAfRkYLEbT664hki7icR9ulhYnPNgCRVgRJKgEZdgCqkqBqo6XkGYX6q5UNOtEqAmGiXMRYEGoJ2oKagwM4MJrKvNk8XHlVVzzOZQnrmWHLmqtaVMbl2oCSd/AkbdQugIRR2dvbVxUZff/P0/Ggx+vDR7N///NG6VM/Ot5+/XD+/3LLUh2hyGSedAFmlt446BuZz4vq4dMYpNGVlLYavT4TyTwfANPnA/DXJyJhn6kHJRWVc7rlkqGnX1Q6q2Werz+RTGj+YtLVvb5V2EWBcuioTtphlIithWXh/rryWdOmfj4+mj4/Muud6XVxsymJTan48zcwUsvTzTXEEudFOdj8n+k9yKWbmHv2SrTUqb9Wb66pUqMF4aiAZpqZ2PWjkqQtu95pCHoi49z3F9H1OSb0NSHxXiNuznZ0l6B4AJjB8P7i7Hyr3EGWg5vkgeoXQbR+nnbdjO9Fs2yVoLV/3dGh6xNuYWnCxPQqNVS7F4MMmsZ0IHd+PrSrrVqkSO66GAAS6av8ki4CKnJNSZzC4QMHcpoI4KC0xhGFoM4jEzj7EA4aEZGNDTARxTCjOobsv8iyHTEgbA2U5cmEfafAYSX4liMZsrruzrPD0Yquvnz69OJ6PPng0+7efnWxKw4+/eLV+drGtvTuCRyavNAjmZYYKeYmcLEqCFSrQinE9ayTCsJv7YDNy7ECUvGOssLkhqjfyLgokgXlHdxFBgjU9/CGSGTBBrDQpAIcNKw/P+gQb18zS3KV/34Amx5BtIc8qDYsji8fONfNkMXl0MNHAuVyXq015tiwn0o4gZ5hJpOQ4kXcl1WO9fevYZR6sd8NAcomn12r9ptBPN/NEOc9giE/hTqfMgagsfoiBqO9/+9+Dx+c9Udvb39UPvWlRui+N73u5pIC4w036VrXr3bdD31KkSQl6Pqt7rQyamc3Iq9zQYkTSvnah8Xmtj8Hku5hJ2kCk8Qas9ymIBhugddVPZ70gqZcTZ8fOKgJygk5YM3Cij4Q08xoFX3EkTJkerkGgTGb2e71WWdvBJ6fqQmL+THYM6TmsFJ5ebfX182cXh/PxB4+m//pnx4USmh//7+n667NNaFrHXGdBo46ZPRZy22q24iIWckFELVkbn5HjGkT9VmT0DKmZazj7Klhxca2W29Ww1vE5ie72UB0P9pjktUZilh4XVFY3Xi8F7OLD+nPpBY2UQprwY8wKyGVlJF3OFaSWdOVHczNuvNyWGpIv1qUUlQbjibkqIBRZkKknwSegwktuTbvc7mfbSqwKdbWuXl0a2xaNxybkcWR8SDJ5o6+y1NANBmLSvgNR7wYqv20sefiNN8bd1tvzt+KMDIfW23mGdNWuO27v7jLzKh30nug28SQ/GpZbzOaAsUmMgiMxXwpgo6McZLqCm41wX+iURRNLRGaDSIKc4o4FxA0dxLAzjD6S/nGyD0kEZDTUosyKfLV5oRfRMfHhV2ZkTYZy0mAqj0aKvBYa0zQiC4vHpmhdmj6vCWUEybzVBK3Vx/JMoYyFtb7+1uDx6IOT2T//9EiDjsHj1+uvzrbxpYFoLh1RkJBjxIitMgjQeHqxo700gkmSkKgaU8kqW/lTEvKJg3AsQK+ANByzxnVMe9UVT8OkvQn0ocvCLwcx5GJEUs0+TAaPjZ6r1ldbSZeRWFNXEAvJ2eLYCqRLtdwU15vqdFNqMJ5ZSHZSLKbkIiprSpSJwkuMp1JMzY16NbApzfXsutyWpgA+GVk3kpGZuRoSO7GTTA/MYdyrdLzTmeR7QOW3NtZiOBDuO490s9J01yUXA2Zz7xRpd9yJN65dD0FzGMRQ+5TU0Oct1uNWPfTd2eKf1fzD9uVB2/yxh06ajossC5muJnikBPJ/2ZgsPc8o+vKXYn5ix9FA4r0NrIdtv1gxqdggsQ+T5K+8+glZo9RHU8jETTtha8Ha2rVqIctyUausK+twabwzo+GZ8/VqrecohPPrQl9/9/ziwEQ8zf7pT4/wp+L5RfHl6frL002MhIh6ORCspQ0tVJWYbKAnuGRRBVXdEo5uXejjRyRpPYQJq7AcqYveflCKBhKHcDAnhOcIDekKLxSuyZSZIpp3IOu8YOFCm/AKCR5XBoxD5GIuxcjWqw0k5/J4PjlZCKeyXm7K800psZrlQuPxOFOSF6tpM6IVkq37mGbJoK/gmw6aK2tUPl+qTWksx20D22rKRnoHCO1uw+CdIRP9N94e6u5JnzXwEIavRe6PT9+A2g6H57ul9fnNz8teuwFiDzwV+2LozpQn2HkQuBtNRZe9Bez5rB2Q3+fmkbyD2dc+smSHptaMx1D6VmKb7gzbPiaYdpVZoDM0IqaQlwmQj2AFGkpPEXlyOnpD9452aIH6fihvlRUHdtk+pd7VYTqKeZKkJQH/VwYD9D8ZKt9CrkwRG6yQCRsFkWi86nwtlNBgfLEsv3h+eTDL3z+e/vLjg1/+5PDFpcHj373eALeycn9Kp3glnV7jJhs1wcUwPVyL3tCPk0uyHqq8Tir0u5GSY+r1xrMdmGELxJpz9F9TvgcB/tldCgWEDMmw7gGiavRv3qCQIBPwDo/1CS5tvUKD8abQyyKNykqzUo3KGg5zV7LWuDiqVdaaIq825fW2PF2X48y0kKe5yoDgr6fIYQ2FfCKZ6q4zKWYylK/N/miKvK1wVaiLVaV/MbuRG6I8ysGpzOQ+HtdDApJ7K2o3MbW+Eyvs5jZbi7E76fvAHdgL8G5Gam9DZO8Ej+/AvuNmSA33+UwwmETDTbYW+2GtdzcmlBpPhK3Bxm3ibT4a1Cw980ij+H3HNpdYgmCqr251zaS2Er4liLQNSfeIWU/STRFTS2BycOKkDdTZkRFEaqwJJOPJfddDwNRA+jAxEInf8tgSklyjHu15CzogG2oBrvaeSakxWVmRtTIla5lldhA5fhQlNOMwrAkzioulxuPiyxdX84nB43/46OAf/+TwxVXx1dnm89drVPzd47/IFKOtkaSiN7YkLtOEqqKDXqTTw8IPLAGKSKxpsx+dDDuiInLMpkVv5pOOSIe/w84gizcOY8ciOLRzPVednMHKAOhNSACl/fOsNIPfJgXZG1lbODQseZTLI2fUpSnyttKQbAef1MQGPU2kAgLJIlDk+h2VCruSjEX933QE+hoe5uhyYfxDVFEZIxFpsyCnpoJtQyEtd29RaAxTWYtd+q9bEt87pMsDFxP3Sij37dQOH+q9k6PosIGCRlG6C6pwPyDF+8PaG6FzDIPbZwf3IbjD5I4c13fVtNOgBWiYRzW3VXsGA7Mk7hilQsE1X0IkFLl9GJjSSCToypKG2sk0IkUTEudH/D7aOvDNoAJkjuW02UwwATi7JSAL6RoJuQkzr6ijD2qOyxGpL5n+PVMuGNkbZzpJlz+xDPfD7qnaWrn8v++uFtP8R0fTn/94/ouPD14vqy/PNl+8Wm+quqIr/ZyYr72n1i4KuXc0aYinM8eJy3RYt6CINm8YzbkksGVReG8qagnH471CzJVIxAfE9TMwXSAzaaywwVyy6dbBRTzp56z0eUcDftIao2kMlmYQ2RWugVStjTeIBUu13FSrbXm2Kkdg6tWTTOif0HAFESSEUcQcRoGNjnIrXRY+fkqT5lKZHnNZVW4/NSrrXRrpnbTSsxHnzV1EWQyeSP7BsVkp1VOZv3GB+vupPw+0n7zxoqFnjcXmhndA0p5YCoMBUty/aA5EM6iIn9uOfceOW5HfBDert2B7DbxDEhbSYZnUiJgB18HxdILJ/Ua+SJNEQkJJGRtNHC4xPl1ATOBdTF7DjDpb0j9GXodMsBGIlIqOuNA3CUBqlMkCEvgwseALL4jWX402gO9pBzEaDf2NliAUmEllVWZZYLuVGXlSBhNkPXgbKHVMAiaCujoCeXWl8Xg6zt87nPzs8ezvP1q4yMXPvlstC0WXFx6ioJUck+jlEJXJZo6Jm2bsCPgtKIfiYVo9uGhJSGfNQ3xXBFe2QAtG0+EtjuGMhchk0haJ786keKOIyzhGpy7rl2kwFJ3MrdSn3P61BkVn1KWJ8sh2kd3sk/7lYDY6mo/0gzdFpVny9bZ6vS4ntdAaR7bBLoPiLtSuiWcIXWokLDmRYdtMC6+fq6VqxtpzW9qfW8ObNTYbG5PMcXqwP83vWVb/75DZp53YfIdaqp1fazdooO709L49BHbx2n7Mvk2BuqcZAQA9a6yhLlr3UpT+gcgy7mKlvXy40VeFncy6QykNhG81iteITUfspCYY1u2RYbDqaxom3E6OqU1z83yYr07JqDISSw1WZgZ2r2io25hIiveYkZasE6doaHN3Eizf0X+/x3pHs4kOQBKIOWyko2KEWINoeophY7RMgy+YkSdrk6E0IFeVuclaVZFnaYC6/xyuNuXTbfnsdKk50+OD8R+fzD/55Mmbdfnisvyf75bnqyouIZA1uEMJPPhXRlEVUkswltUQug6+LUBDqDCIq810L8aPSe1c7V8J6ddOIWNKEol+XaIP82MYbDKDTNuuDGKzuZ5drg1RG7lYQCfrvMWmqF26zN94oy6zIrVCa5VZI+vMNpJHlowaYddifLIw21kXpbHZ2pRVWY0dJMtaa50MHzPd9S4kbkZKeGwWTWzW+6xpZGWoszDvGnMUZn3mvMZqkM6c7xg4m2yH00MA8j4YcxeKBzYsWgx8bt4hvnFNeK+Cc78sa18kho46R9PJhD3yX371K/Fwebg8XB4uD5eHy8Plh7j8vwADAKDqT3RTIxlWAAAAAElFTkSuQmCC);background-repeat:no-repeat;height:105px;width:100%;padding:30px 20px">
+<H2 class="pageTitle">Authentication Required</H2>
+</div>
+<form style="padding:0px 20px" action="" method="POST" onsubmit="return SubmitAuthentication()">
+<table border="0">
+<tr><td>User Name:</td><td><input type="text" id="form_un" value="" autocomplete="off"/></td></tr>
+<tr><td>Password:</td><td><input type="password" id="form_pw" value="" autocomplete="off"/></td></tr>
+<tr><td></td><td><input type="submit" value="Login" /></td></tr>
+</table>
+</form>
+<div style="padding:5px 20px">
+Access to glass box agent required authentication.<br />
+Please use the credentials defined during agent installation.
+</div>
+</div>
+</body>
+</html>
+
+测试关联：<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+//String path = request.getContextPath();
+//response.sendRedirect(path+"/s_105/v_1/zcsbsite/sys/index.jhtml");
+request.getRequestDispatcher("/s_105/v_1/zcsbsite/sys/index.jhtml").forward(request,response);
+%>
+
+测试关联：<%@page pageEncoding="UTF-8"%>
+<%@page import="com.yinhai.sysframework.service.AppManager"%>
+<%@page import="com.yinhai.webframework.session.UserSession"%>
+<%
+	//淇濆瓨POSTID锛屼綔涓洪獙璇佹爣璇�
+    String postId=String.valueOf(Math.random());
+    request.getSession(false).setAttribute("_POSTID",postId);			
+    response.addHeader("Set-Cookie", "POSTID="+postId+";Path="+request.getContextPath()+";HttpOnly");
+%>
+<%	
+UserSession us = UserSession.getUserSession(request);
+if(us!=null)us.killUserSession();
+String ctxPath = request.getContextPath();
+ %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<%@ taglib prefix="ta" uri="/ta3" %>
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+	<head>
+		<title><%=AppManager.getSysConfig("companyName") %> 鐢ㄦ埛鐧诲綍</title>
+		<%
+		response.addHeader("__timeout","true");
+		%>
+		<%@ include file="/cms/page/inc.jsp"%>
+		<script type="text/javascript">
+			if(top != window.self){
+				top.location.href="login.jsp";
+			}
+			function refeshCode() {
+				document.getElementById('codeimg').src='<%=ctxPath%>/CaptchaImg?j='+Math.random();
+			}
+		</script>
+		<link rel="stylesheet" type="text/css"  href="<%=basePath %>cms/res/style/login.css" />
+	</head>
+	<body class="no-scrollbar">
+	<div id='pageloading'></div>
+		
+	<div id="login">
+			<!-- login -->
+			<div class="title">
+				<h5>鐧婚檰TA+XCMS鍐呭绠＄悊绯荤粺</h5>
+				<div class="corner tl"></div>
+				<div class="corner tr"></div>
+			</div>
+			<div class="inner">		
+				<div class="form">
+					<div class="fields">
+						<div class="field">
+							<div class="label">
+								<label for="j_username">鐢ㄦ埛鍚�</label>
+							</div>
+							<div class="input">
+								<input type="text" id="j_username" name="j_username" required="true" size="40"  class="focus">
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="j_password">瀵嗙爜:</label>
+							</div>
+							<div class="input">
+								<input type="password" id="j_password" name="j_password" required="true" value="111111" size="40"  class="focus">
+							</div>
+						</div>
+						<div class="field">
+							<div class="label">
+								<label for="checkCode">楠岃瘉鐮�</label>
+							</div>
+							<div class="input">
+								<input type="checkCode" id="checkCode" name="checkCode" size="40"  class="focus">
+							</div>
+							<img id="codeimg" border="0" height="30" width="120" src="<%=ctxPath%>/CaptchaImg" style="margin-left:188px;margin-top:2px;"  onclick="javascript:refeshCode();"/>
+						</div>
+						<div class="buttons">
+							<input type="button"  id="b1"   value="鐧婚檰" class="ui-button ui-widget ui-state-default ui-corner-all" style="cursor: pointer"  onclick="login();">
+						</div>
+					</div>
+					<div class="links">
+						<a href="#;"  onclick="changepass()">淇敼瀵嗙爜</a>
+					</div>
+				</div>
+			
+			</div>
+			<div id="colors-switcher" class="color">
+				<a href="#;" class="blue" title="Blue" color="blue" ></a>
+				<a href="#;" class="green" title="Green" color="green" ></a>
+				<a href="#;" class="brown" title="Brown" color="brown" ></a>
+				<a href="#;" class="purple" title="Purple" color="purple" ></a>
+				<a href="#;" class="red" title="Red" color="red" ></a>
+				<a href="#;" class="greyblue" title="GreyBlue" color="greyblue" ></a>
+			</div>
+		</div>
+	
+		<ta:box id="passInfo" cssStyle="display:none;width:400px;height:200px;padding:10px 10px 0px 0px;">
+	   		<ta:text id="loginId" key="鐧诲綍鍚� required="true" maxLength="15" />
+	   		<ta:text id="oldPass" key="鍘熷瘑鐮� required="true" maxLength="15" type="password"/>
+			<ta:text id="newPass" key="鏂板瘑鐮� required="true" maxLength="15" type="password"/>
+			<ta:text id="rpassword" key="纭瀵嗙爜" required="true" maxLength="15" type="password" validType="compare(this.value, ['=', 'newPass'])"/>
+			<ta:buttonLayout align="center">
+				<ta:button id="saveUserBtn" key="淇濆瓨[S]" hotKey="S" icon="icon-save" onClick="fnSavePass();"/>
+				<ta:button id="closeWinBtn" key="鍏抽棴[X]" hotKey="X" icon="icon-no" onClick="Base.closeWindow('passInfo');"/>
+			</ta:buttonLayout>
+		</ta:box>
+	</body>
+</html>
+<script type="text/javascript">
+	function login(){
+		Base.setDisabled('b1');
+		Base.showMask('body');
+		Base.submit("j_username,j_password,checkCode",
+					    "<%=request.getContextPath()%>/j_spring_security_check?r='+Math.random()",
+		null,null,true,
+		function(data){
+			var indexStyle = $.cookie('indexStyle');
+			var style = "";
+			if(indexStyle&&indexStyle!="default")style += "?indexstyle="+indexStyle;
+			$.cookie('j_username',Base.getValue('j_username'));
+			window.location.href = '<%=request.getContextPath()%>/system/indexAction.do';
+		},function(data){
+		
+		});
+		Base.setEnable('b1');
+	}
+	function reset(){
+		document.getElementById('j_username').value="";
+		document.getElementById('j_password').value="";
+		document.getElementById('checkCode').value="";
+		Base.focus("j_username");
+	}
+	function changepass() {
+		Base.focus("loginId");
+		Base.clearData("passInfo");
+		$("#passInfo").show().window({title:"淇敼瀵嗙爜", modal:true, collapsible:false, minimizable:false});
+	}
+	function fnSavePass() {
+		if (Base.validateForm("passInfo")) {
+			Base.submit("passInfo", "system/userPassAction!changePassword.do", null, null, true, function(){Base.closeWindow("passInfo");});
+		}
+	}
+	$(document).ready(function () {
+		Base.setValue('j_username',$.cookie('j_username'));
+		$("#pageloading").remove();
+		$("body").taLayout();
+		Base.focus("j_username",100);
+	});	
+</script>
+<%@ include file="/ta/incfooter.jsp"%>
+
+测试关联：锘�%@page import="java.util.Date"%>
+<%@page import="java.text.SimpleDateFormat"%>
+<%@page import="com.yinhai.sysframework.util.WebUtil"%>
+<%@page import="com.yinhai.sysframework.iorg.IUser"%>
+<%@page import="com.yinhai.sysframework.config.SysConfig"%>
+<%@page import="com.yinhai.sysframework.service.AppManager"%>
+<%@page language="java" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	//濡傛灉鐢ㄦ埛宸茬粡鐧诲綍锛岀洿鎺ヨ烦鍒伴椤�
+	IUser user = WebUtil.getUserInfo(request);
+	if (user != null && null != user.getUserId()) {
+		response.sendRedirect("indexAction.do");
+		return;
+	}
+	Date now = new Date();
+	SimpleDateFormat formatter = new SimpleDateFormat("yyyy骞碝M鏈坉d鏃�  E");
+
+	request.setAttribute("date", formatter.format(now));
+
+	String ctxPath = request.getContextPath();
+	response.addHeader("__timeout", "true");
+	boolean developMode = SysConfig
+			.getSysconfigToBoolean("developMode");
+	String sameLogin = (String) request.getParameter("samelogin");
+	String param = request.getQueryString();
+	if (param != null) {
+		param = param.replaceAll("'", "");
+		param = param.replaceAll("\"", "&quot;");
+	}
+%>
+<%
+  	String postId=String.valueOf(Math.random());
+    request.getSession(false).setAttribute("_POSTID",postId);			
+    response.addHeader("Set-Cookie", "POSTID="+postId+";Path="+request.getContextPath()+";HttpOnly");
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=8; IE=9; IE=10" />
+<link rel="stylesheet" type="text/css" href="indexue/common/base.css" />
+<link href="indexue/loginresource/css/master.css" rel="stylesheet"
+	type="text/css" />
+<title>婀栧寳鐪佽亴绉颁俊鎭鐞嗙郴缁�/title>
+<%
+	if (AppManager.getSysConfig("developMode").equals("true")){
+%>
+    <!-- 
+	<script type="text/javascript" src="http://118.112.188.108:8808/s/9c3341304f3839f5043e84f56cc7585c-T/zh_CN6kcypx/64016/15/1.4.25/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=zh-CN&collectorId=671b2d72"></script>
+   -->
+<%	    
+	}
+%>
+</head>
+<body>
+	<div class="container">
+		<!-- top start -->
+		<div class="top" id="top">
+			<span class="time">浠婂ぉ鏄�${date}</span> <a
+				onclick="fnSetHome(this.window.location.pathname)" class="home"
+				href="javascript:void(0)">璁句负棣栭〉</a> <a
+				onclick="fnAddFavorite(window.location,document.title)"
+				class="collect" href="javascript:void(0)">鍔犲叆鏀惰棌</a>
+		</div>
+		<!-- top end -->
+		<!-- banner start -->
+		<div class="banner" id="banner">
+			<img class="banner-img" src="indexue/loginresource/images/dl_top.jpg">
+		</div>
+		<!-- banner end -->
+		<!-- main start -->
+		<div class="main" id="main">
+			<div class="loginform">
+				<table width="100%" cellpadding="0" cellspacing="0">
+					<tr>
+						<td id="validate" class="validateInfo">鍏叡鍦烘墍涓嶅缓璁繚瀛樺瘑鐮侊紝浠ラ槻璐﹀彿涓㈠け</td>
+					</tr>
+					<tr>
+						<td class="tdText"><span class="fontCn">鐢ㄦ埛鍚�/span><span
+							class="fontccc">Username</span></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="j_username"
+							onkeyup="usernameKeyup(this)" onkeydown="revertValidate(this)"
+							name="j_username" class="username" border="0" /></td>
+					</tr>
+					<tr>
+						<td class="tdText"><span class="fontCn">瀵嗙爜</span><span
+							class="fontccc">Password</span></td>
+					</tr>
+					<tr>
+						<td><input type="password" id="j_password"
+							onkeyup="passwordKeyup(this)" onkeydown="revertValidate(this)"
+							name="j_password" class="password" border="0" /></td>
+					</tr>
+					<tr>
+						<td class="tdText"><span class="fontCn">楠岃瘉鐮�/span><span
+							class="fontccc">Code</span></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="checkCode"
+							onkeyup="checkCodeKeyup(this)" onkeydown="revertValidate(this)"
+							name="checkCode" class="code" border="0" style="float:left;" />
+							<a href="#"><img id="codeimg"
+								onclick="javascript:refeshCode();" src="CaptchaImg"
+								title="鐐瑰嚮鑾峰彇楠岃瘉鐮� style="float:left;width:95px;height:34px" /></a></td>
+					</tr>
+					<tr>
+						<td><a href="#" onclick="fnOpenModifyPsd()" id="changePass">淇敼瀵嗙爜</a>
+						</td>
+					</tr>
+					<tr>
+						<td><input type="button" id="submit" onclick="login()"
+							class="submit" border="0" value="鐧诲綍" /></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<!-- main end -->
+		<!-- footer start -->
+		<div class="footer" id="footer">
+			鎶�湳鏀寔锛氬洓宸濅箙杩滈摱娴疯蒋浠惰偂浠芥湁闄愬叕鍙�br /> 
+			鑻ラ渶鎵撳嵃锛岃涓嬭浇鎵撳嵃鐜锛�a href="<%=basePath%>zcgl/upload/jre-8u60-windows-i586.exe"><font color='red'>涓嬭浇</font></a>锛夊苟瀹夎锛�
+			瀹夎鍚庤繘琛�a href="#" target="newwin"><font color='red'>璁剧疆</font></a>锛屾柟鑳芥墦鍗般�
+		    <br>
+			Surport:SiChuan Jiuyuan YinHai Software Limited By
+			Share Ltd
+		</div>
+		<!-- footer end -->
+	</div>
+
+	<!-- 閬僵灞俿tart -->
+	<div class="mask" id="mask"></div>
+	<!-- 閬僵灞俥nd -->
+
+	<!-- 瀵嗙爜淇敼妗�start-->
+	<div class="psdmodify" id="psdmodify">
+		<div class="title">
+			瀵嗙爜淇敼<a href="javascript:;" onclick="fnCloseModifyPsd()" class="close"
+				title="鍏抽棴"></a>
+		</div>
+		<form id="psdmodifyform">
+			<table cellpadding="0" cellspacing="0" width="0">
+				<tr>
+					<td class="lable">鐢ㄦ埛鍚�/td>
+					<td><input id="loginId" name="dto['loginId']" required="true"
+						type="text" title="鐢ㄦ埛鍚� onkeyup="loginIdKeyup(this)" /></td>
+				</tr>
+				<tr>
+					<td class="lable">瀵嗙爜</td>
+					<td><input name="dto['oldPass']" type="password" id="oldPass"
+						required="true" title="瀵嗙爜" onkeyup="oldPassKeyup(this)" /></td>
+				</tr>
+				<tr>
+					<td class="lable">鏂板瘑鐮�/td>
+					<td><input type="password" id="newPass" name="dto['newPass']"
+						required="true" title="鏂板瘑鐮� onkeyup="newPassKeyup(this)" /></td>
+				</tr>
+				<tr>
+					<td class="lable">纭瀵嗙爜</td>
+					<td><input type="password" id="rpassword"
+						onkeyup="rpasswordKeyup(this)" name="dto['rpassword']"
+						required="true" title="纭瀵嗙爜" /></td>
+				</tr>
+				<tr>
+					<td class="lable">楠岃瘉鐮�/td>
+					<td><input id="checkCodePass" name="dto['checkCodePass']"
+						onkeyup="checkCodePassKeyup(this)" type="text" class="captcha"
+						title="楠岃瘉鐮� /><img id="codeimgPass"
+						onclick="javascript:refeshCodePass();"
+						src="<%=ctxPath%>/CaptchaImgPass" title="鐪嬩笉娓�鎹竴寮� /></td>
+				</tr>
+				<tr>
+					<td class="lable">&nbsp;</td>
+					<td><input type="button" class="submit" border="0"
+						value="纭淇敼" id="modifyPsd" onclick="fnSavePass()" /></td>
+				</tr>
+				<tr>
+					<td colspan="2" id="errornotice"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<!-- 		<script type="text/javascript" src="http://118.112.188.108:8808/s/7fe82ab90965234e6bfb4a4f20a764ae-T/zh_CN-ropdih/64016/15/1.4.25/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=zh-CN&collectorId=671b2d72"></script> -->
+</body>
+<script type="text/javascript">
+	window.onload = function(){//绛夊緟椤甸潰鍐匘OM銆佸浘鐗囪祫婧愬姞杞藉畬姣曞悗瑙﹀彂鎵ц
+    	document.getElementById("j_username").focus();
+	}
+	if(top != window.self){
+		top.location.href="login.jsp?samelogin=<%=sameLogin%>";
+	}
+	//璐﹀彿keyup浜嬩欢
+	function usernameKeyup(obj){
+		var str=obj.value;
+		if(str!=null||str!=""){
+			if(event.keyCode==13){
+				document.getElementById("j_password").focus();
+			}
+		}	
+	}
+	//瀵嗙爜keyup浜嬩欢
+	function passwordKeyup(obj){
+		var str=obj.value;
+		if(str!=null||str!=""){
+			if(event.keyCode==13){
+				document.getElementById("checkCode").focus();
+			}
+		}	
+	}
+	//楠岃瘉鐮乲eyup浜嬩欢
+	function checkCodeKeyup(obj){
+		var str=obj.value;
+		if(str!=null||str!=""){
+			if(event.keyCode==13){
+				login();
+			}
+		}	
+	}	
+	//淇敼瀵嗙爜椤碉紝鐢ㄦ埛鍚峩eyup浜嬩欢
+	function loginIdKeyup(obj){
+		var str=obj.value;
+		if(str!=null||str!=""){
+			if(event.keyCode==13){
+				document.getElementById("oldPass").focus();
+			}
+		}	
+	}
+	function oldPassKeyup(obj){
+		var str=obj.value;
+		if(str!=null||str!=""){
+			if(event.keyCode==13){
+				document.getElementById("newPass").focus();
+			}
+		}	
+	}
+	function newPassKeyup(obj){
+		var str=obj.value;
+		if(str!=null||str!=""){
+			if(event.keyCode==13){
+				document.getElementById("rpassword").focus();
+			}
+		}
+	}
+	function rpasswordKeyup(obj){
+		var str=obj.value;
+		if(str!=null||str!=""){
+			if(event.keyCode==13){
+				document.getElementById("checkCodePass").focus();
+			}
+		}
+	}
+	function checkCodePassKeyup(obj){
+		var str=obj.value;
+		if(str!=null||str!=""){
+			if(event.keyCode==13){
+				fnSavePass();
+			}
+		}
+	}
+	
+	function login() {
+		var username = j_username.value;
+		var pass = j_password.value;
+		if (username == "" || username == undefined) {
+			validate.innerHTML = "璇疯緭鍏ョ敤鎴峰悕";
+			validate.className = "validateError";
+			j_username.style.border = "1px solid #ef7d1b";
+			document.getElementById("j_username").focus();
+			return;
+		}
+		if (pass == "" || pass == undefined) {
+			validate.innerHTML = "璇疯緭鍏ュ瘑鐮�;
+			validate.className = "validateError";
+			j_password.style.border = "1px solid #ef7d1b";
+			document.getElementById("j_password").focus();
+			return;
+		}
+		submit.disabled = "disabled";
+		submit.value = "鐧诲綍涓�..";
+		//submit.className = submit.className + " disable";
+		var xmlhttp;
+		if (window.XMLHttpRequest) {
+			xmlhttp = new XMLHttpRequest();
+		} else {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		xmlhttp.open("POST", "formLoginCheckAction.do?t=" + Math.random(),true);
+		xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xmlhttp.setRequestHeader("x-requested-with", "XMLHttpRequest");
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				try {
+					var reObj = eval("(" + xmlhttp.responseText + ")");
+					if (reObj.success) {
+						submit.disabled = "disabled";
+						window.location.href = "indexAction.do";
+					} else {
+						validate.innerHTML = reObj.msg;
+						validate.className = "validateError";
+						validate.style.border = "1px solid #ef7d1b";
+						refeshCode();
+					}
+				} catch (error) {
+					validate.innerHTML("鍙戠敓寮傚父锛岃鍒锋柊鍚庨噸璇曪紝鎴栬仈绯荤鐞嗗憳");
+				} finally {
+					enableSubmitButton();
+				}
+
+			} else if (xmlhttp.readyState == 4) {
+				enableSubmitButton();
+				refeshCode();
+			}
+		}
+		xmlhttp.send("j_username=" + username + "&j_password=" + pass+ "&checkCode=" + checkCode.value);
+
+	}
+	function hasClass(obj, cls) {  
+   		return obj.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'));  
+	}  
+	function addClass(obj, cls) {  
+   	 if (!this.hasClass(obj, cls)) obj.className += " " + cls;  
+	}  
+	function removeClass(obj, cls) {  
+    	if (hasClass(obj, cls)) {  
+        	var reg = new RegExp('(\\s|^)' + cls + '(\\s|$)');  
+        obj.className = obj.className.replace(reg, ' ');  
+    	}
+     } 
+	
+	function fnSavePass() {
+		var d = "";
+		var loginId=document.getElementById("loginId").value;
+		var oldPass=document.getElementById("oldPass").value;
+		var newPass=document.getElementById("newPass").value;
+		var rpassword=document.getElementById("rpassword").value;
+		var checkCodePass=document.getElementById("checkCodePass").value;
+		var modifyPsd=document.getElementById("modifyPsd");
+		
+		
+		var errornotice=document.getElementById("errornotice");
+		if(loginId == "" || loginId == null || loginId == undefined){
+			addClass(errornotice,"errornotice");
+			errornotice.innerHTML="鐢ㄦ埛鍚嶄笉鑳戒负绌�;
+			document.getElementById("loginId").focus();			
+			return;
+		}else{
+			removeClass(errornotice,"errornotice");
+			errornotice.innerHTML="";
+		}
+		if(oldPass == "" || oldPass == null || oldPass == undefined){
+			addClass(errornotice,"errornotice");
+			errornotice.innerHTML="瀵嗙爜涓嶈兘涓虹┖";
+			document.getElementById("oldPass").focus();
+			return;
+		}else{
+			removeClass(errornotice,"errornotice");
+			errornotice.innerHTML="";
+		}
+		if(newPass == "" || newPass == null || newPass == undefined){
+			addClass(errornotice,"errornotice");
+			errornotice.innerHTML="鏂板瘑鐮佷笉鑳戒负绌�;
+			document.getElementById("newPass").focus();
+			return;
+		}else{
+			removeClass(errornotice,"errornotice");
+			errornotice.innerHTML="";
+		}
+		<%if (!AppManager.getSysConfig("developMode").equals("true")){%>
+// 		瀵嗙爜澶嶆潅搴﹂獙璇�
+		if(newPass.length<6){
+			addClass(errornotice,"errornotice");
+			errornotice.innerHTML="鏂板瘑鐮佷笉鑳藉皬浜�浣�;
+			document.getElementById("newPass").focus();
+			return;
+		}else{
+			removeClass(errornotice,"errornotice");
+			errornotice.innerHTML="";
+		}
+		
+		 var ls = 0;
+ 		if(newPass.match(/([a-z])+/)){
+      		ls++; 
+  		}
+ 		if(newPass.match(/([0-9])+/)){
+      		ls++; 
+ 		}
+ 		if(newPass.match(/([A-Z])+/)){
+      		ls++; 
+  		}
+  		if(newPass.match(/[^a-zA-Z0-9]+/)){
+        	ls++;
+   		}
+   		if(ls<2){
+   			addClass(errornotice,"errornotice");
+			errornotice.innerHTML="瀵嗙爜澶嶆潅搴︿笉澶燂紝璇烽噸鏂拌缃�;
+			document.getElementById("newPass").focus();
+			return;
+   		}else{
+   			removeClass(errornotice,"errornotice");
+			errornotice.innerHTML="";
+		}
+		<%}%>
+		
+		if(rpassword == "" || rpassword == null || rpassword == undefined){
+			addClass(errornotice,"errornotice");
+			errornotice.innerHTML="纭瀵嗙爜涓嶈兘涓虹┖";
+			document.getElementById("rpassword").focus();			
+			return;
+		}else if(rpassword!= newPass){
+			addClass(errornotice,"errornotice");
+			errornotice.innerHTML="瀵嗙爜蹇呴』涓�嚧";
+			document.getElementById("rpassword").focus();	
+			return;
+		}else{
+			removeClass(errornotice,"errornotice");
+			errornotice.innerHTML="";
+		}
+		if(checkCodePass == "" || checkCodePass == null || checkCodePass == undefined){
+			addClass(errornotice,"errornotice");
+			errornotice.innerHTML="楠岃瘉鐮佷笉鑳戒负绌�;
+			document.getElementById("checkCodePass").focus();	
+			return;
+		}else{
+			removeClass(errornotice,"errornotice");
+			errornotice.innerHTML="";
+		}
+		modifyPsd.disabled = "disabled";
+		modifyPsd.value = "淇敼涓�..";
+		modifyPsd.className = modifyPsd.className + " disable";
+		<%if ("true".equals(SysConfig.getSysConfig("passwordRSA", "false"))) {%>
+		var _oldPass=encryptPwd(document.getElementById("oldPass").value);
+		var _newPass=encryptPwd(document.getElementById("newPass").value);			
+		<%} else {%>
+		var _oldPass=document.getElementById("oldPass").value;
+		var _newPass=document.getElementById("newPass").value;	
+		<%}%>
+		d += "dto['loginId']="+document.getElementById("loginId").value+"&dto['oldPass']="+_oldPass+"&dto['newPass']="+_newPass+"&dto['checkCodePass']="+document.getElementById("checkCodePass").value;
+		var xhr = new XMLHttpRequest();
+		xhr.open("post", "<%=basePath%>system/userPassAction!changePasswordWidthCurrent.do", true);
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		xhr.setRequestHeader("x-requested-with", "XMLHttpRequest");
+		xhr.onreadystatechange=function(){
+			if (xhr.readyState == 4 && xhr.status==200) {
+					var data = eval("(" + xhr.responseText + ")");
+					modifyPsd.disabled = false;
+					modifyPsd.value = "纭淇敼";
+					modifyPsd.className = "submit";
+					if(data.msgBox){
+						alert(data.msgBox.msg);
+						if(data.msgBox.msgType !="error"){
+							fnCloseModifyPsd();
+						}
+					}else{
+						fnCloseModifyPsd();
+					}
+			}
+			if(xhr.readyState==4){
+				refeshCodePass();
+			}
+		};
+		xhr.send(d);
+	}
+	
+// 	function checkRequired($o,val){
+// 		if(val == "" || val == null || val == undefined){
+// 			$("#errornotice").addClass("errornotice").html($o.attr("title")+"涓嶈兘涓虹┖");
+// 			$o.focus();
+// 		}
+// 	}
+	function checkRequired($o,val){
+		if(val==""||val==null||val==undefined){
+			var error=document.getElementById("errornotice");
+			addClass(error, "errornotice");
+			error.innerHTML($o.getAttribute("title")+"涓嶈兘涓虹┖");
+			$o.focus();
+		}
+	}
+
+	function fnOpenModifyPsd() {
+		var tp = windowHeight() - 342 >= 0 ? (windowHeight() - 342) / 2 : 0;
+		var lt = windowWidth() - 402 >= 0 ? (windowWidth() - 402) / 2 : 0;
+		//$('#mask').show();
+		mask.style.display = "block";
+		psdmodify.style.top = tp + "px";
+		psdmodify.style.left = lt + "px";
+		psdmodify.style.display = "block";
+		//$("#psdmodify").css({top:tp,left:lt}).fadeIn();
+// 		$("#loginId").focus();
+		document.getElementById("loginId").focus();
+	}
+
+	function enableSubmitButton() {
+		submit.disabled = false;
+		submit.value = "鐧诲綍";
+		submit.className = submit.className.replace(new RegExp("(\\s|^)disable(\\s|$)"), "");
+	}
+
+	function refeshCode() {
+		document.getElementById("codeimg").src = "CaptchaImg?j="+ Math.random();
+	}
+
+	function revertValidate(input) {
+		input.style.border = "1px solid #ccc";
+	}
+	//鏀惰棌
+	function fnAddFavorite(sURL, sTitle) {
+		sURL = encodeURI(sURL);
+		try {
+			window.external.addFavorite(sURL, sTitle);
+		} catch (e) {
+			try {
+				window.sidebar.addPanel(sTitle, sURL, "");
+			} catch (e) {
+				alert("鎮ㄧ殑娴忚鍣ㄤ笉鏀寔鑷姩鍔犲叆鏀惰棌鍔熻兘锛岃浣跨敤Ctrl+D杩涜娣诲姞锛屾垨鎵嬪姩鍦ㄦ祻瑙堝櫒閲岃繘琛岃缃紒");
+			}
+		}
+	}
+	//璁句负棣栭〉
+	
+	function fnSetHome(obj,url) {
+		if (document.all) {
+			try {
+			console.log(url);
+				document.body.style.behavior = 'url(#default#homepage)';
+				document.body.setHomePage(url);
+			} catch (e) {
+				if (window.netscape) {
+					try {
+						netscape.security.PrivilegeManager
+								.enablePrivilege("UniversalXPConnect");
+					} catch (e) {
+						alert("鎶辨瓑锛屾鎿嶄綔琚祻瑙堝櫒鎷掔粷锛乗n\n璇峰湪娴忚鍣ㄥ湴鍧�爮杈撳叆鈥渁bout:config鈥濆苟鍥炶溅鐒跺悗灏哰signed.applets.codebase_principal_support]璁剧疆涓�true'");
+					}
+				} else {
+					alert("鎶辨瓑锛屾偍鎵�娇鐢ㄧ殑娴忚鍣ㄦ棤娉曞畬鎴愭鎿嶄綔銆俓n\n鎮ㄩ渶瑕佹墜鍔ㄥ皢銆� + url + "銆戣缃负棣栭〉銆�);
+				}
+			}
+		} else {
+			alert("鎮ㄧ殑娴忚鍣ㄤ笉鏀寔鑷姩璁剧疆椤甸潰涓洪椤靛姛鑳斤紝璇锋偍鎵嬪姩鍦ㄦ祻瑙堝櫒閲岃缃椤甸潰涓洪椤碉紒");
+		}
+	}
+	//娴忚鍣ㄨ鍙ｇ殑瀹藉害
+	function windowWidth() {
+		var de = document.documentElement;
+		return self.innerWidth || (de && de.clientWidth)
+				|| document.body.clientWidth
+	}
+	//鍏抽棴淇敼瀵嗙爜绐楀彛
+	function fnCloseModifyPsd() {
+		mask.style.display = "none";
+		psdmodify.style.display = "none";
+		document.getElementById("psdmodifyform").reset();
+	}
+	//娴忚鍣ㄨ鍙ｇ殑楂樺害
+	function windowHeight() {
+		var de = document.documentElement;
+		return self.innerHeight || (de && de.clientHeight)
+				|| document.body.clientHeight;
+	}
+	//淇敼瀵嗙爜锛岄獙璇佺爜
+	function refeshCodePass() {
+		document.getElementById("codeimgPass").src = "<%=ctxPath%>/CaptchaImgPass?j="
+			+ Math.random();
+	}
+</script>
+</html>
+
+下载数据的连接地址
+ http://192.168.10.194:7001/exp.jsp?k1=oracle.jdbc.driver.OracleDriver&k2=jdbc%5C%3Aoracle%5C%3Athin%5C%3A%40192.168.10.220%5C%3A1521%5C%3Ayhdb&k3=zcww&k4=zcww
+servers\Server-2\tmp\_WL_user\zcgl\mtadnf\APP-INF\classes\jdbc.properties
+jdbc.driverClassName=oracle.jdbc.driver.OracleDriver
+jdbc.url=jdbc\:oracle\:thin\:@192.168.1.250\:1521\:orcl
+jdbc.username=zcgl
+jdbc.password=zcgl
+下载数据的连接地址
+ http://192.168.10.194:7001/exp.jsp?k1=oracle.jdbc.driver.OracleDriver&k2=jdbc%5C%3Aoracle%5C%3Athin%5C%3A%40192.168.1.250%5C%3A1521%5C%3Aorcl&k3=zcgl&k4=zcgl
+4、数据库连接文件信息
+cmd.exe /c findstr /S /I /M /c:".jdbc.driver."  *sqlMapconfig*.*
+6、数据库连接文件信息
+cmd.exe /c findstr /S /I /M /c:".jdbc.driver."  spring-datasource.xml

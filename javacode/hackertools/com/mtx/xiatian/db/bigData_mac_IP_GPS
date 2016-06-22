@@ -1,0 +1,67 @@
+drop table if exists gpsinfo;
+
+drop table if exists info;
+
+drop table if exists mac;
+
+drop table if exists psinfo;
+
+/*==============================================================*/
+/* Table: gpsinfo                                               */
+/*==============================================================*/
+create table gpsinfo
+(
+   zbid                 varchar(20) not null,
+   macid                varchar(20),
+   cjrq                 datetime,
+   jwd                  varchar(40),
+   cjdz                 varchar(400),
+   primary key (zbid)
+);
+
+/*==============================================================*/
+/* Table: info                                                  */
+/*==============================================================*/
+create table info
+(
+   zjinfoid             varchar(20) not null,
+   macid                varchar(20),
+   sysinfo              varchar(4000),
+   ip                   varchar(30),
+   zjcjrq               datetime,
+   cptname              varchar(100),
+   primary key (zjinfoid)
+);
+
+/*==============================================================*/
+/* Table: mac                                                   */
+/*==============================================================*/
+create table mac
+(
+   macid                varchar(20) not null,
+   mac                  varchar(30),
+   primary key (macid)
+);
+
+/*==============================================================*/
+/* Table: psinfo                                                */
+/*==============================================================*/
+create table psinfo
+(
+   psid                 varchar(20) not null,
+   zjinfoid             varchar(20),
+   psport               bigint,
+   pstype               varchar(20),
+   psname               varchar(200),
+   psbz                 varchar(4000),
+   primary key (psid)
+);
+
+alter table gpsinfo add constraint FK_R foreign key (macid)
+      references mac (macid) on delete restrict on update restrict;
+
+alter table info add constraint FK_A foreign key (macid)
+      references mac (macid) on delete restrict on update restrict;
+
+alter table psinfo add constraint FK_B foreign key (zjinfoid)
+      references info (zjinfoid) on delete restrict on update restrict;
