@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="javacode/hackertools"/>
+	<classpathentry kind="src" path="javacode/common"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/jdk1.6.0"/>
+	<classpathentry kind="lib" path="lib/WebLogic_EXP.jar"/>
+	<classpathentry kind="lib" path="lib/SafeGene.jar"/>
+	<classpathentry kind="lib" path="lib/sshxcute.jar"/>
+	<classpathentry kind="lib" path="lib/pdfbox-2.0.0-RC3.jar"/>
+	<classpathentry kind="lib" path="lib/pdfbox-app-1.8.11.jar"/>
+	<classpathentry kind="lib" path="lib/reDuhClient.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-4.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-cache-4.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/httpclient-win-4.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/httpcore-4.4.3.jar"/>
+	<classpathentry kind="lib" path="lib/httpmime-4.5.1.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.23-bin.jar"/>
+	<classpathentry kind="lib" path="lib/sqlite-jdbc-3.8.7.jar"/>
+	<classpathentry kind="lib" path="lib/sqljdbc42.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/poi-excelant-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/poi-ooxml-schemas-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/poi-scratchpad-3.14-20160307.jar"/>
+	<classpathentry kind="lib" path="lib/pdfbox-1.8.11.jar"/>
+	<classpathentry kind="lib" path="lib/reflections-0.9.9.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="lib/groovy-all-1.7.5.jar"/>
+	<classpathentry kind="lib" path="lib/org.springframework.beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="lib/system-rules-1.8.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
