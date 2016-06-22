@@ -8,3 +8,5 @@ cd MTX_HackerTools
 # 编译环境
 jdk 1.6
 
+# 作者
+QQ: 3135773
