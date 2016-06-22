@@ -472,7 +472,7 @@ Cookie: ARRAffinity=19f333b2d215b6baa787066c0d18c3af94489c9a048b82529f5af563487a
 		return sb.toString();
 	}
 
-	protected boolean hvLastScan = true;
+	public boolean hvLastScan = true;
 	/**
 	 * 插入一张表
 	 * 
