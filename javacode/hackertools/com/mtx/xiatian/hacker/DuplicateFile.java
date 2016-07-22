@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.TreeMap;
+import java.util.regex.Pattern;
 
 import com.mtx.xiatian.MD5Util;
 
@@ -28,8 +29,15 @@ public class DuplicateFile extends CommonTools
 	}
 	
 	private long nCnt = 1; 
+	
+	/**
+	 * 后缀
+	 */
+	public String szEndWith = "\\.(jpg|png)$", newPath = "/Volumes/other/tools/k/";
+	
 	public void doDir(String szDir)
 	{
+		Pattern p = Pattern.compile(szEndWith, Pattern.DOTALL|Pattern.MULTILINE);
 		File []fs = new File(szDir).listFiles();
 		String szName = null, md5;
 		TreeMap<String, Object> m = new TreeMap<String, Object>(), mQ1; 
@@ -39,7 +47,7 @@ public class DuplicateFile extends CommonTools
 			if(".".equals(szName) || "..".equals(szName))continue;
 			if(f.isDirectory())
 				doDir(szName);
-			else if(!(szName.endsWith(".jpg") || szName.endsWith(".png")))
+			else if(!p.matcher(szName).find())
 				continue;
 			else
 			{
@@ -54,9 +62,9 @@ public class DuplicateFile extends CommonTools
 							&& f.length() == Long.valueOf(String.valueOf(mQ1.get("size")))
 							&& md5.equals(mQ1.get("md5")))
 						continue;
-					f.renameTo(new File("/Volumes/BOOK/pic/k/" + nCnt + szName.substring(szName.lastIndexOf("."))));
-					nCnt++;
 					System.out.println(f.getName() + " != " + mQ1.get("filename"));
+					f.renameTo(new File(newPath + nCnt + szName.substring(szName.lastIndexOf("."))));
+					nCnt++;
 //					System.out.println(f.length() + " != " + Long.valueOf(String.valueOf(mQ1.get("size"))));
 //					System.out.println(md5 + " != " + mQ1.get("md5"));
 				}
@@ -139,6 +147,7 @@ public class DuplicateFile extends CommonTools
 	public static void main(String[] args)
 	{
 		DuplicateFile df = new DuplicateFile();
-		df.doDir("/Volumes/BOOK/pic/照片 图库.photoslibrary/");
+		df.szEndWith = "\\.(TTF|ttf|ttc|TTC)$";
+		df.doDir("/Users/xiatian/Library/Fonts/");
 	}
 }
