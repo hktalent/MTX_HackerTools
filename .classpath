@@ -30,5 +30,8 @@
 	<classpathentry kind="lib" path="lib/org.springframework.beans-3.0.5.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
 	<classpathentry kind="lib" path="lib/system-rules-1.8.0.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-9.3-1103.jdbc3.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-9.4.1209.jar"/>
+	<classpathentry kind="lib" path="lib/postgresql-9.4.1209.jre6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
