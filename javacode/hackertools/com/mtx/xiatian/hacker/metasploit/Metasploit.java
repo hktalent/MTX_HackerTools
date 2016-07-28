@@ -3,8 +3,6 @@ package com.mtx.xiatian.hacker.metasploit;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import com.mtx.xiatian.hacker.CommonTools;
-
 /**
  * <pre>
  * msfd -a 127.0.0.1 -p 2323
@@ -14,14 +12,13 @@ import com.mtx.xiatian.hacker.CommonTools;
  * @author xiatian
  *
  */
-public class Metasploit extends CommonTools
+public class Metasploit extends QueryMSF4
 {
-
-	public void doInit()
-	{
-		String []a = {"nc 127.0.0.1 2323", "workspace gszb"};
-	}
 	
+	public Metasploit()
+	{
+		super();
+	}
 	/**
 	 * @param out 接受命令输出
 	 * @param cmdInput 交互命令输入
