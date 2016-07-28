@@ -1,4 +1,4 @@
-package com.mtx.xiatian.hacker;
+package com.mtx.xiatian.hacker.metasploit;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;

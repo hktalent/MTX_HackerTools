@@ -24,7 +24,7 @@ public class Db2sql
 
 	public static boolean useText = false;
 	
-	public static String path = "./";// "/Volumes/dbdata/sgkzl/MTX私有/QQ/";
+	public static String path = "./data/";// "/Volumes/dbdata/sgkzl/MTX私有/QQ/";
 
 	/**
 	 * 去除后面的数字

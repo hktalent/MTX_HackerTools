@@ -146,7 +146,7 @@ http://192.168.24.19:8080/struts2_01/hello
 //				"http://erp.yinhai.com:8070/QIMS/qims/qiOrgAction";
 //				"http://erp.yinhai.com:8089/yhhr/singleLoginAction.do";// 
 				// "http://192.168.24.19:8080/struts2_01/hello";
-				"http://www.myeclipsecn.com/account/login/url-L2Jicy8/L3F1ZXN0aW9uLzI2"
+				"http://192.168.10.199:8086/dld"
 //		"http://192.168.24.19:8080/Struts2/hello"
 				; // "http://192.168.24:8080/Struts2/hello";
 		final Struts2ScanManager sm = Struts2ScanManager.getInstance();

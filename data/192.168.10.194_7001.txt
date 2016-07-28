@@ -158,10 +158,10 @@ Windows 目录:     C:\Windows
 输入法区域设置:   zh-cn;中文(中国)
 时区:             (UTC+08:00)北京，重庆，香港特别行政区，乌鲁木齐
 物理内存总量:     8,092 MB
-可用的物理内存:   4,569 MB
+可用的物理内存:   4,877 MB
 虚拟内存: 最大值: 16,181 MB
-虚拟内存: 可用:   11,537 MB
-虚拟内存: 使用中: 4,644 MB
+虚拟内存: 可用:   11,803 MB
+虚拟内存: 使用中: 4,378 MB
 页面文件位置:     C:\pagefile.sys
 域:               WORKGROUP
 登录服务器:       \\WIN-MSU6P1JIB37
@@ -309,10 +309,10 @@ Windows 目录:     C:\Windows
 输入法区域设置:   zh-cn;中文(中国)
 时区:             (UTC+08:00)北京，重庆，香港特别行政区，乌鲁木齐
 物理内存总量:     8,092 MB
-可用的物理内存:   4,568 MB
+可用的物理内存:   4,812 MB
 虚拟内存: 最大值: 16,181 MB
-虚拟内存: 可用:   11,531 MB
-虚拟内存: 使用中: 4,650 MB
+虚拟内存: 可用:   11,740 MB
+虚拟内存: 使用中: 4,441 MB
 页面文件位置:     C:\pagefile.sys
 域:               WORKGROUP
 登录服务器:       \\WIN-MSU6P1JIB37
@@ -437,87 +437,83 @@ cmd.exe /c TASKLIST /V
 
 映像名称                       PID 会话名              会话#       内存使用  状态            用户名                                                 CPU 时间 窗口标题                                                                
 ========================= ======== ================ =========== ============ =============== ================================================== ============ ========================================================================
-System Idle Process              0 Services                   0         24 K Unknown         NT AUTHORITY\SYSTEM                                  7083:29:00 暂缺                                                                    
-System                           4 Services                   0        364 K Unknown         暂缺                                                    0:31:30 暂缺                                                                    
-smss.exe                       380 Services                   0      1,168 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
-csrss.exe                      512 Services                   0      7,212 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:27 暂缺                                                                    
+System Idle Process              0 Services                   0         24 K Unknown         NT AUTHORITY\SYSTEM                                  7171:41:16 暂缺                                                                    
+System                           4 Services                   0        364 K Unknown         暂缺                                                    0:31:56 暂缺                                                                    
+smss.exe                       380 Services                   0      1,172 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+csrss.exe                      512 Services                   0      7,324 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:29 暂缺                                                                    
 wininit.exe                    568 Services                   0      5,032 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
 csrss.exe                      576 Console                    1      8,200 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:03 暂缺                                                                    
 winlogon.exe                   616 Console                    1      4,864 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
-services.exe                   664 Services                   0      8,960 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:12 暂缺                                                                    
-lsass.exe                      672 Services                   0     13,304 K Unknown         NT AUTHORITY\SYSTEM                                     0:02:48 暂缺                                                                    
-lsm.exe                        680 Services                   0      6,460 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:02 暂缺                                                                    
-svchost.exe                    772 Services                   0      9,304 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:43 暂缺                                                                    
-svchost.exe                    852 Services                   0      8,564 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:00:48 暂缺                                                                    
+services.exe                   664 Services                   0      9,100 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:13 暂缺                                                                    
+lsass.exe                      672 Services                   0     13,320 K Unknown         NT AUTHORITY\SYSTEM                                     0:02:51 暂缺                                                                    
+lsm.exe                        680 Services                   0      6,448 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:02 暂缺                                                                    
+svchost.exe                    772 Services                   0      9,304 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:45 暂缺                                                                    
+svchost.exe                    852 Services                   0      8,652 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:00:49 暂缺                                                                    
 LogonUI.exe                    936 Console                    1     16,228 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
-svchost.exe                    944 Services                   0     12,364 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:22 暂缺                                                                    
-svchost.exe                    988 Services                   0     48,504 K Unknown         NT AUTHORITY\SYSTEM                                     2:23:31 暂缺                                                                    
+svchost.exe                    944 Services                   0     12,344 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:22 暂缺                                                                    
+svchost.exe                    988 Services                   0     47,744 K Unknown         NT AUTHORITY\SYSTEM                                     2:25:04 暂缺                                                                    
 svchost.exe                    424 Services                   0     14,148 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:36 暂缺                                                                    
-svchost.exe                    528 Services                   0     17,764 K Unknown         NT AUTHORITY\SYSTEM                                     0:03:05 暂缺                                                                    
-svchost.exe                    652 Services                   0     21,472 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:12:30 暂缺                                                                    
-KSafeSvc.exe                  1028 Services                   0      6,268 K Unknown         NT AUTHORITY\SYSTEM                                     0:52:52 暂缺                                                                    
-svchost.exe                   1244 Services                   0     11,412 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:04 暂缺                                                                    
-spoolsv.exe                   1384 Services                   0     14,512 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:19 暂缺                                                                    
-svchost.exe                   1416 Services                   0      9,164 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+svchost.exe                    528 Services                   0     17,852 K Unknown         NT AUTHORITY\SYSTEM                                     0:03:14 暂缺                                                                    
+svchost.exe                    652 Services                   0     21,536 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:12:41 暂缺                                                                    
+KSafeSvc.exe                  1028 Services                   0      6,464 K Unknown         NT AUTHORITY\SYSTEM                                     0:53:37 暂缺                                                                    
+svchost.exe                   1244 Services                   0     11,432 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:04 暂缺                                                                    
+spoolsv.exe                   1384 Services                   0     14,524 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:20 暂缺                                                                    
+svchost.exe                   1416 Services                   0      9,196 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
 mysqld.exe                    1452 Services                   0    109,856 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:28 暂缺                                                                    
 mysqld.exe                    1540 Services                   0     49,708 K Unknown         NT AUTHORITY\SYSTEM                                     0:07:42 暂缺                                                                    
 SMSvcHost.exe                 1596 Services                   0     22,080 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
-beasvc.exe                    1820 Services                   0     56,544 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:44 暂缺                                                                    
+beasvc.exe                    1820 Services                   0     56,872 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:45 暂缺                                                                    
 conhost.exe                   1876 Services                   0      3,908 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:02 暂缺                                                                    
 svchost.exe                   1892 Services                   0      2,832 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
 svchost.exe                   1940 Services                   0     10,204 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
-XenGuestAgent.Exe             2028 Services                   0     82,564 K Unknown         NT AUTHORITY\SYSTEM                                     0:17:11 暂缺                                                                    
-svchost.exe                   2236 Services                   0      9,236 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:01:07 暂缺                                                                    
+XenGuestAgent.Exe             2028 Services                   0     81,688 K Unknown         NT AUTHORITY\SYSTEM                                     0:17:24 暂缺                                                                    
+svchost.exe                   2236 Services                   0      9,104 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:01:08 暂缺                                                                    
 svchost.exe                   2312 Services                   0      5,532 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:00:00 暂缺                                                                    
-WmiPrvSE.exe                  2420 Services                   0      7,960 K Unknown         NT AUTHORITY\SYSTEM                                     1:08:04 暂缺                                                                    
-WmiPrvSE.exe                  2588 Services                   0     14,240 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:23:47 暂缺                                                                    
+WmiPrvSE.exe                  2420 Services                   0      7,980 K Unknown         NT AUTHORITY\SYSTEM                                     1:08:49 暂缺                                                                    
+WmiPrvSE.exe                  2588 Services                   0     14,504 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:24:07 暂缺                                                                    
 VSSVC.exe                     2836 Services                   0      6,732 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
-XenDPriv.exe                  2932 Services                   0     22,868 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+XenDPriv.exe                  2932 Services                   0     22,916 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
 svchost.exe                   2076 Services                   0      5,272 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
 msdtc.exe                      500 Services                   0      7,584 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:00:00 暂缺                                                                    
-sppsvc.exe                    1324 Services                   0     13,492 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:11:15 暂缺                                                                    
-csrss.exe                      592 RDP-Tcp#0                  2     26,896 K Running         NT AUTHORITY\SYSTEM                                     0:00:24 暂缺                                                                    
-winlogon.exe                   392 RDP-Tcp#0                  2      5,892 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
-taskhost.exe                  2080 RDP-Tcp#0                  2      8,496 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:02 Task Host Window                                                        
-rdpclip.exe                   2484 RDP-Tcp#0                  2      8,696 K Running         WIN-MSU6P1JIB37\Administrator                           0:02:16 暂缺                                                                    
-dwm.exe                       3244 RDP-Tcp#0                  2      6,972 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 DWM Notification Window                                                 
-explorer.exe                  3276 RDP-Tcp#0                  2     76,660 K Running         WIN-MSU6P1JIB37\Administrator                           0:09:37 暂缺                                                                    
-FeiQ.exe                      3404 RDP-Tcp#0                  2     15,872 K Running         WIN-MSU6P1JIB37\Administrator                           0:01:49 暂缺                                                                    
-magentproc.exe                3440 RDP-Tcp#0                  2      6,652 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:04 LoadRunner Agent Process                                                
-jusched.exe                   3484 RDP-Tcp#0                  2     13,764 K Not Responding  WIN-MSU6P1JIB37\Administrator                           0:00:01 OleMainThreadWndName                                                    
-jucheck.exe                   9712 RDP-Tcp#0                  2      9,780 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 JavaUpdate SysTray Icon                                                 
-notepad.exe                  11992 RDP-Tcp#0                  2      6,600 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 IBM_Security_AppScan_Glass_Box_Agent_(Java)_安装_03_24_2016_16_52_04.log
-cmd.exe                      14268 Services                   0      3,832 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
-conhost.exe                   9816 Services                   0      2,720 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
-java.exe                     13052 Services                   0    364,096 K Unknown         NT AUTHORITY\SYSTEM                                     0:16:25 暂缺                                                                    
-xigui32.exe                  10248 RDP-Tcp#0                  2      7,056 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:35 Xitami Web Server Properties                                            
-java.exe                     10100 RDP-Tcp#0                  2    227,116 K Running         WIN-MSU6P1JIB37\Administrator                           0:02:12 Tomcat                                                                  
-conhost.exe                  16168 RDP-Tcp#0                  2      4,488 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:03 CicMarshalWnd                                                           
-AppScan.exe                   9212 RDP-Tcp#0                  2    186,384 K Running         WIN-MSU6P1JIB37\Administrator                           0:22:07 未命名 - IBM Security AppScan Standard                                  
-FlashBrowser.exe              4176 RDP-Tcp#0                  2     35,420 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:03 Flash 浏览器 － AppScanFlash                                            
-iexplore.exe                  9396 RDP-Tcp#0                  2     19,352 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:02 YINHAI SOFTWARE用户登录 - Windows Internet Explorer                     
-iexplore.exe                  4192 RDP-Tcp#0                  2     27,968 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:01 SysFader                                                                
-cmd.exe                       8140 RDP-Tcp#0                  2      3,484 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 C:\Windows\system32\cmd.exe                                             
-conhost.exe                   8200 RDP-Tcp#0                  2      5,168 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 CicMarshalWnd                                                           
-java.exe                     14772 RDP-Tcp#0                  2    497,316 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:10:01 暂缺                                                                    
-iexplore.exe                 10748 RDP-Tcp#0                  2     35,044 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:17 SysFader                                                                
-iexplore.exe                 11284 RDP-Tcp#0                  2     54,628 K Running         WIN-MSU6P1JIB37\Administrator                           0:01:54 SysFader                                                                
-java.exe                     10828 RDP-Tcp#0                  2     59,700 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:04 Tomcat                                                                  
-conhost.exe                   8748 RDP-Tcp#0                  2      4,576 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 CicMarshalWnd                                                           
-cmd.exe                      11680 RDP-Tcp#0                  2      3,876 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
-conhost.exe                  10232 RDP-Tcp#0                  2      2,940 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
-java.exe                      7364 RDP-Tcp#0                  2    294,736 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:40 暂缺                                                                    
-cmd.exe                       8352 RDP-Tcp#0                  2      3,184 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 C:\Windows\system32\cmd.exe                                             
-conhost.exe                  15528 RDP-Tcp#0                  2      4,468 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 CicMarshalWnd                                                           
-java.exe                     14844 RDP-Tcp#0                  2     26,308 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
-cmd.exe                       7776 RDP-Tcp#0                  2      3,916 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
-conhost.exe                  14760 RDP-Tcp#0                  2      2,912 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
-java.exe                     13864 RDP-Tcp#0                  2    222,776 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:16 暂缺                                                                    
-WmiPrvSE.exe                  4424 Services                   0      5,836 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
-TrustedInstaller.exe          7564 Services                   0     12,736 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:05 暂缺                                                                    
-cmd.exe                       2664 RDP-Tcp#0                  2      3,644 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
-conhost.exe                   4824 RDP-Tcp#0                  2      2,932 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
-tasklist.exe                  5072 RDP-Tcp#0                  2      6,904 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+sppsvc.exe                    1324 Services                   0     13,452 K Unknown         NT AUTHORITY\NETWORK SERVICE                            0:11:26 暂缺                                                                    
+csrss.exe                      592                            2     26,108 K Running         NT AUTHORITY\SYSTEM                                     0:00:27 暂缺                                                                    
+winlogon.exe                   392                            2      5,892 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:00 暂缺                                                                    
+taskhost.exe                  2080                            2      8,508 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:02 Task Host Window                                                        
+rdpclip.exe                   2484                            2      8,664 K Running         WIN-MSU6P1JIB37\Administrator                           0:02:16 暂缺                                                                    
+dwm.exe                       3244                            2      6,972 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 DWM Notification Window                                                 
+explorer.exe                  3276                            2     77,220 K Running         WIN-MSU6P1JIB37\Administrator                           0:09:58 暂缺                                                                    
+FeiQ.exe                      3404                            2     15,916 K Running         WIN-MSU6P1JIB37\Administrator                           0:01:49 暂缺                                                                    
+magentproc.exe                3440                            2      6,644 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:05 LoadRunner Agent Process                                                
+jusched.exe                   3484                            2     13,764 K Not Responding  WIN-MSU6P1JIB37\Administrator                           0:00:01 OleMainThreadWndName                                                    
+jucheck.exe                   9712                            2      9,780 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 JavaUpdate SysTray Icon                                                 
+notepad.exe                  11992                            2      6,600 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 IBM_Security_AppScan_Glass_Box_Agent_(Java)_安装_03_24_2016_16_52_04.log
+xigui32.exe                  10248                            2      6,988 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:35 Xitami Web Server Properties                                            
+java.exe                     10100                            2    227,116 K Running         WIN-MSU6P1JIB37\Administrator                           0:02:14 Tomcat                                                                  
+conhost.exe                  16168                            2      4,504 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:03 CicMarshalWnd                                                           
+AppScan.exe                   9212                            2    186,592 K Running         WIN-MSU6P1JIB37\Administrator                           0:22:50 未命名 - IBM Security AppScan Standard                                  
+FlashBrowser.exe              4176                            2     35,420 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:03 Flash 浏览器 － AppScanFlash                                            
+cmd.exe                       7584                            2      3,180 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 C:\Windows\system32\cmd.exe                                             
+conhost.exe                  10252                            2      5,212 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:21 CicMarshalWnd                                                           
+java.exe                     14080                            2     29,180 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:04 暂缺                                                                    
+cmd.exe                      11152                            2      3,880 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+conhost.exe                   6920                            2      2,928 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+java.exe                     11544                            2    310,076 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:48 暂缺                                                                    
+java.exe                     13376                            2     61,560 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:09 Tomcat                                                                  
+conhost.exe                  10744                            2      4,704 K Running         WIN-MSU6P1JIB37\Administrator                           0:00:00 CicMarshalWnd                                                           
+cmd.exe                       6048                            2      3,880 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+conhost.exe                   4412                            2      2,900 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+java.exe                      7304                            2    343,156 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:01:11 暂缺                                                                    
+cmd.exe                       9432                            2      3,920 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+cmd.exe                      16820                            2      3,888 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+conhost.exe                  15884                            2      2,920 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+conhost.exe                  14536                            2      2,932 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+java.exe                     10700                            2    225,372 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:23 暂缺                                                                    
+java.exe                      5004                            2    292,004 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:48 暂缺                                                                    
+WmiPrvSE.exe                  4148 Services                   0      5,900 K Unknown         NT AUTHORITY\LOCAL SERVICE                              0:00:00 暂缺                                                                    
+TrustedInstaller.exe         15680 Services                   0     13,284 K Unknown         NT AUTHORITY\SYSTEM                                     0:00:03 暂缺                                                                    
+cmd.exe                       9668                            2      3,640 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+conhost.exe                  16176                            2      2,900 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
+tasklist.exe                 16560                            2      6,868 K Unknown         WIN-MSU6P1JIB37\Administrator                           0:00:00 暂缺                                                                    
 
 16、服务信息
 cmd.exe /c sc query
@@ -1157,69 +1153,82 @@ netstat -ano
   TCP    0.0.0.0:3310           0.0.0.0:0              LISTENING       1540
   TCP    0.0.0.0:3389           0.0.0.0:0              LISTENING       2236
   TCP    0.0.0.0:5003           0.0.0.0:0              LISTENING       3440
-  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       14772
-  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       14772
-  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       14772
-  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       14772
-  TCP    0.0.0.0:8001           0.0.0.0:0              LISTENING       14844
-  TCP    0.0.0.0:8010           0.0.0.0:0              LISTENING       10828
+  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       11544
+  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       11544
+  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       11544
+  TCP    0.0.0.0:7001           0.0.0.0:0              LISTENING       11544
+  TCP    0.0.0.0:8001           0.0.0.0:0              LISTENING       14080
+  TCP    0.0.0.0:8010           0.0.0.0:0              LISTENING       13376
   TCP    0.0.0.0:8029           0.0.0.0:0              LISTENING       10100
-  TCP    0.0.0.0:8081           0.0.0.0:0              LISTENING       10828
+  TCP    0.0.0.0:8081           0.0.0.0:0              LISTENING       13376
   TCP    0.0.0.0:8097           0.0.0.0:0              LISTENING       10100
   TCP    0.0.0.0:30985          0.0.0.0:0              LISTENING       3404
   TCP    0.0.0.0:47001          0.0.0.0:0              LISTENING       4
   TCP    0.0.0.0:50500          0.0.0.0:0              LISTENING       3440
   TCP    0.0.0.0:54345          0.0.0.0:0              LISTENING       3440
   TCP    127.0.0.1:5556         0.0.0.0:0              LISTENING       1820
-  TCP    127.0.0.1:7001         0.0.0.0:0              LISTENING       14772
-  TCP    127.0.0.1:8006         0.0.0.0:0              LISTENING       10828
+  TCP    127.0.0.1:7001         0.0.0.0:0              LISTENING       11544
+  TCP    127.0.0.1:8006         0.0.0.0:0              LISTENING       13376
   TCP    127.0.0.1:8025         0.0.0.0:0              LISTENING       10100
-  TCP    127.0.0.1:54226        127.0.0.1:54227        ESTABLISHED     7364
-  TCP    127.0.0.1:54227        127.0.0.1:54226        ESTABLISHED     7364
-  TCP    127.0.0.1:54452        127.0.0.1:54453        ESTABLISHED     13864
-  TCP    127.0.0.1:54453        127.0.0.1:54452        ESTABLISHED     13864
   TCP    127.0.0.1:54616        0.0.0.0:0              LISTENING       9212
   TCP    127.0.0.1:54621        0.0.0.0:0              LISTENING       9212
+  TCP    127.0.0.1:59319        127.0.0.1:59320        ESTABLISHED     10700
+  TCP    127.0.0.1:59320        127.0.0.1:59319        ESTABLISHED     10700
+  TCP    127.0.0.1:59337        127.0.0.1:59338        ESTABLISHED     5004
+  TCP    127.0.0.1:59338        127.0.0.1:59337        ESTABLISHED     5004
   TCP    192.168.10.194:139     0.0.0.0:0              LISTENING       4
-  TCP    192.168.10.194:3389    192.168.24.12:53758    ESTABLISHED     2236
-  TCP    192.168.10.194:7001    0.0.0.0:0              LISTENING       14772
-  TCP    192.168.10.194:7001    192.168.10.115:53937   TIME_WAIT       0
-  TCP    192.168.10.194:7001    192.168.10.115:53956   FIN_WAIT_2      14772
-  TCP    192.168.10.194:7001    192.168.10.194:35481   ESTABLISHED     14772
-  TCP    192.168.10.194:7001    192.168.10.194:54207   ESTABLISHED     14772
-  TCP    192.168.10.194:7001    192.168.10.194:54447   ESTABLISHED     14772
-  TCP    192.168.10.194:7001    192.168.28.28:57295    ESTABLISHED     14772
-  TCP    192.168.10.194:7101    0.0.0.0:0              LISTENING       13052
-  TCP    192.168.10.194:7101    192.168.10.115:65471   TIME_WAIT       0
-  TCP    192.168.10.194:7101    192.168.10.115:65490   FIN_WAIT_2      13052
-  TCP    192.168.10.194:7101    192.168.10.194:35477   ESTABLISHED     13052
-  TCP    192.168.10.194:7102    0.0.0.0:0              LISTENING       7364
-  TCP    192.168.10.194:7102    192.168.10.115:56910   TIME_WAIT       0
-  TCP    192.168.10.194:7102    192.168.10.115:56929   FIN_WAIT_2      7364
-  TCP    192.168.10.194:7102    192.168.10.194:54232   ESTABLISHED     7364
-  TCP    192.168.10.194:7103    0.0.0.0:0              LISTENING       13864
-  TCP    192.168.10.194:7103    192.168.10.115:25905   TIME_WAIT       0
-  TCP    192.168.10.194:7103    192.168.10.115:25924   FIN_WAIT_2      13864
-  TCP    192.168.10.194:8081    192.168.10.115:23846   FIN_WAIT_2      10828
+  TCP    192.168.10.194:7001    0.0.0.0:0              LISTENING       11544
+  TCP    192.168.10.194:7001    192.168.10.115:42715   FIN_WAIT_2      11544
+  TCP    192.168.10.194:7001    192.168.10.115:42721   FIN_WAIT_2      11544
+  TCP    192.168.10.194:7001    192.168.10.194:59247   ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.10.194:59312   ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.10.194:59314   ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56105    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56106    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56107    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56108    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56109    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56110    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56111    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56112    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56113    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56114    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56115    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56116    ESTABLISHED     11544
+  TCP    192.168.10.194:7001    192.168.28.28:56118    ESTABLISHED     11544
+  TCP    192.168.10.194:7101    0.0.0.0:0              LISTENING       7304
+  TCP    192.168.10.194:7101    192.168.10.115:54251   FIN_WAIT_2      7304
+  TCP    192.168.10.194:7101    192.168.10.115:54256   FIN_WAIT_2      7304
+  TCP    192.168.10.194:7102    0.0.0.0:0              LISTENING       5004
+  TCP    192.168.10.194:7102    192.168.10.115:45693   FIN_WAIT_2      5004
+  TCP    192.168.10.194:7102    192.168.10.115:45696   FIN_WAIT_2      5004
+  TCP    192.168.10.194:7103    0.0.0.0:0              LISTENING       10700
+  TCP    192.168.10.194:7103    192.168.10.115:14689   FIN_WAIT_2      10700
+  TCP    192.168.10.194:7103    192.168.10.115:14693   FIN_WAIT_2      10700
+  TCP    192.168.10.194:8001    192.168.10.115:30594   CLOSE_WAIT      14080
+  TCP    192.168.10.194:8001    192.168.10.115:30599   CLOSE_WAIT      14080
+  TCP    192.168.10.194:8001    192.168.10.115:31583   CLOSE_WAIT      14080
+  TCP    192.168.10.194:8001    192.168.10.115:32528   CLOSE_WAIT      14080
+  TCP    192.168.10.194:8001    192.168.10.115:32529   CLOSE_WAIT      14080
+  TCP    192.168.10.194:8081    192.168.10.115:12601   FIN_WAIT_2      13376
+  TCP    192.168.10.194:8081    192.168.10.115:12611   FIN_WAIT_2      13376
   TCP    192.168.10.194:27568   192.168.12.2:808       CLOSE_WAIT      9712
-  TCP    192.168.10.194:35477   192.168.10.194:7101    ESTABLISHED     14772
-  TCP    192.168.10.194:35481   192.168.10.194:7001    ESTABLISHED     13052
-  TCP    192.168.10.194:51201   192.168.10.217:1521    ESTABLISHED     13052
-  TCP    192.168.10.194:54207   192.168.10.194:7001    ESTABLISHED     7364
-  TCP    192.168.10.194:54210   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54211   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54212   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54213   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54214   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54215   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54216   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54217   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54218   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54219   192.168.10.217:1521    ESTABLISHED     7364
-  TCP    192.168.10.194:54232   192.168.10.194:7102    ESTABLISHED     14772
-  TCP    192.168.10.194:54447   192.168.10.194:7001    ESTABLISHED     13864
-  TCP    192.168.10.194:54449   192.168.10.115:1521    ESTABLISHED     13864
-  TCP    192.168.10.194:54450   192.168.10.115:1521    ESTABLISHED     13864
+  TCP    192.168.10.194:59247   192.168.10.194:7001    ESTABLISHED     7304
+  TCP    192.168.10.194:59253   192.168.10.217:1521    ESTABLISHED     7304
+  TCP    192.168.10.194:59312   192.168.10.194:7001    ESTABLISHED     10700
+  TCP    192.168.10.194:59314   192.168.10.194:7001    ESTABLISHED     5004
+  TCP    192.168.10.194:59316   192.168.10.115:1521    ESTABLISHED     10700
+  TCP    192.168.10.194:59317   192.168.10.115:1521    ESTABLISHED     10700
+  TCP    192.168.10.194:59322   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59323   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59324   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59325   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59326   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59327   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59328   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59329   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59330   192.168.10.217:1521    ESTABLISHED     5004
+  TCP    192.168.10.194:59331   192.168.10.217:1521    ESTABLISHED     5004
   TCP    [::]:80                [::]:0                 LISTENING       4
   TCP    [::]:135               [::]:0                 LISTENING       852
   TCP    [::]:445               [::]:0                 LISTENING       4
@@ -1233,23 +1242,20 @@ netstat -ano
   TCP    [::]:3306              [::]:0                 LISTENING       1452
   TCP    [::]:3310              [::]:0                 LISTENING       1540
   TCP    [::]:3389              [::]:0                 LISTENING       2236
-  TCP    [::]:8001              [::]:0                 LISTENING       14844
-  TCP    [::]:8010              [::]:0                 LISTENING       10828
-  TCP    [::]:8081              [::]:0                 LISTENING       10828
+  TCP    [::]:8001              [::]:0                 LISTENING       14080
+  TCP    [::]:8010              [::]:0                 LISTENING       13376
+  TCP    [::]:8081              [::]:0                 LISTENING       13376
   TCP    [::]:47001             [::]:0                 LISTENING       4
-  TCP    [::1]:7001             [::]:0                 LISTENING       14772
-  TCP    [fe80::100:7f:fffe%19]:7001  [::]:0                 LISTENING       14772
-  TCP    [fe80::5efe:192.168.10.194%15]:7001  [::]:0                 LISTENING       14772
-  TCP    [fe80::2415:6ced:94a3:36f4%11]:7001  [::]:0                 LISTENING       14772
+  TCP    [::1]:7001             [::]:0                 LISTENING       11544
+  TCP    [fe80::100:7f:fffe%19]:7001  [::]:0                 LISTENING       11544
+  TCP    [fe80::5efe:192.168.10.194%15]:7001  [::]:0                 LISTENING       11544
+  TCP    [fe80::2415:6ced:94a3:36f4%11]:7001  [::]:0                 LISTENING       11544
   UDP    0.0.0.0:123            *:*                                    424
   UDP    0.0.0.0:500            *:*                                    988
   UDP    0.0.0.0:2425           *:*                                    3404
   UDP    0.0.0.0:4500           *:*                                    988
   UDP    0.0.0.0:5355           *:*                                    652
-  UDP    127.0.0.1:51515        *:*                                    10748
-  UDP    127.0.0.1:58639        *:*                                    4192
   UDP    127.0.0.1:59915        *:*                                    9212
-  UDP    127.0.0.1:60540        *:*                                    11284
   UDP    192.168.10.194:137     *:*                                    4
   UDP    192.168.10.194:138     *:*                                    4
   UDP    [::]:123               *:*                                    424

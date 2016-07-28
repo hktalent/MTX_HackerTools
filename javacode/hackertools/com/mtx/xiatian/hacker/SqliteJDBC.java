@@ -168,7 +168,7 @@ public class SqliteJDBC extends InfoLog
 		szJdbcUrl = jdbcUrl;
 		szUser = user;
 		szPswd = pswd;
-		String []a = {"oracle", "mysql", "sqlite"};
+		String []a = {"oracle", "mysql", "sqlite","postgresql"};
 		for(String s:a)
 		{
 			if(-1 < jdbcUrl.indexOf("jdbc:" + s + ":"))
@@ -180,7 +180,7 @@ public class SqliteJDBC extends InfoLog
 	{
 		try
 		{
-			String []a = {"oracle.jdbc.driver.OracleDriver", "com.mysql.jdbc.Driver", "org.sqlite.JDBC"};
+			String []a = {"oracle.jdbc.driver.OracleDriver", "com.mysql.jdbc.Driver", "org.sqlite.JDBC", "org.postgresql.Driver"};
 			for(String s:a)
 			{
 				if(-1 < s.indexOf(type))

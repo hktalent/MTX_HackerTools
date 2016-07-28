@@ -54,6 +54,7 @@ public class MyHashMap extends HashMap  implements Serializable{
 	}
 	
 	public static String cacheFileName = "MyHashMap.bin";
+	public static boolean useCache;
 	
 	public static void initMapFile()
 	{
