@@ -5,6 +5,7 @@ import java.io.OutputStream;
 
 /**
  * <pre>
+ * load msfd
  * msfd -a 127.0.0.1 -p 2323
  * nc 127.0.0.1 2323
  * 渗透测试框架

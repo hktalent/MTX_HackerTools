@@ -28,10 +28,12 @@ public class MetasploitRest implements Runnable
 			in = new BufferedInputStream(in);
 			byte[] b = new byte[1024];
 			int i = 0;
-			while (-1 < (i = in.read(b, 0, b.length)))
+			long t = System.currentTimeMillis();
+			while (0 < (i = in.read(b, 0, b.length)))
 			{
 				out.write(b, 0, i);
 			}
+			System.out.println("结束");
 		} catch (Exception e)
 		{
 			e.printStackTrace();

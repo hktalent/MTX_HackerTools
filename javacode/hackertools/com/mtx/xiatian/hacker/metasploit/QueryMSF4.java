@@ -1,6 +1,8 @@
 package com.mtx.xiatian.hacker.metasploit;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 import com.mtx.xiatian.hacker.CommonTools;
@@ -284,21 +286,83 @@ name=URL-https://twitter.com/FuzzySec/status/723254004042612736}
 	{
 		query("select * from " + tb, list);
 	} 
+	
+	/**
+	 * 获取主机系统统计信息
+	 */
+	public void getAllHostVerInfo()
+	{
+		List<TreeMap<String, Object>> list = new ArrayList<TreeMap<String, Object>>()
+		{
+			public boolean add(TreeMap<String, Object> m)
+			{
+				System.out.println(m.get("czxt") + "\t" + m.get("czxtcnt"));
+				return true;
+			}
+		};
+		// state='alive' and 
+		query("select  os_name as czxt,count(1) as czxtcnt from hosts  where os_name!='null'" +
+//				" and os_name!='Unknown'" +
+				" and  workspace_id=2 and text(address) like '192.168.%'  group by os_name order by czxtcnt desc",
+		        list);
+	}
+	
+	/**
+	 * 服务统计
+	 */
+	public void getAllServicesInfo()
+	{
+		List<TreeMap<String, Object>> list = new ArrayList<TreeMap<String, Object>>()
+		{
+			public boolean add(TreeMap<String, Object> m)
+			{
+				System.out.println(m.get("name") + "\t" + m.get("zc"));
+				return true;
+			}
+		};
+		// state='alive' and 
+		query("select k.name, count(1) zc from (select  b.address, a.name from services a, hosts b where b.os_name!='null'" +
+//				" and b.os_name!='Unknown'" +
+				" and text(b.address) like '192.168.%' and b.workspace_id=2 and b.id=a.host_id and b.name!='null' group by b.address, a.name) as k group by k.name order by zc desc", list);
+	}
+	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args)
 	{
-		QueryMSF4 msf = new QueryMSF4();
+		final QueryMSF4 msf = new QueryMSF4();
+		final Map <String,String>m1 = new HashMap<String,String>();
+		
 		List<TreeMap<String, Object>> list = new ArrayList<TreeMap<String, Object>>()
 		{
 			public boolean add(TreeMap<String, Object> m)
 			{
+//				 System.out.println(m.get("name") + "\t" + m.get("z"));
+//				System.out.println(m.get("address"));
 				System.out.println(m);
+				super.add(m);
 				return true;
 			}
 		};
-		msf.query("select * from web_vulns", list);
+//		msf.getAllServicesInfo();
+//		msf.getAllHostVerInfo(); // 192.168.2.1-192.168.10.142
+		// 
+//		msf.query("select  *  from hosts  where state='alive' and text(address) like '192.168.%'  and mac is null", list);
+		
+//		msf.query("select address from hosts where name is null and  os_name='Windows 7'", list);
+//		 msf.query("select  os_name as czxt,count(1) as czxtcnt from hosts  where state='alive' and text(address) like '192.168.%'  group by os_name order by czxtcnt desc", list);
+//		msf.query("select  * from hosts  where state!='alive'", list);
+//		msf.query("select  info,count(1) a from  services where name='mysql' group by info order by a desc", list);
+//		msf.query("select *  from hosts where mac is null", list);
+//		msf.query("select k.name, count(1) zc from (select  b.address, a.name from services a, hosts b where b.os_name!='null' and b.os_name!='Unknown' and text(b.address) like '192.168.%' and b.workspace_id=2 and b.id=a.host_id and b.name!='null' group by b.address, a.name) as k group by k.name order by zc desc", list);
+//		msf.query("select  a.name, count(1) z from services a, hosts b where" +
+//				"  b.os_name!='null' and b.os_name!='Unknown' and text(b.address) like '192.168.%'" +
+//				" and b.workspace_id=2 and b.id=a.host_id and  a.name='msrpc'  " +
+//				" group by a.name order by z", list);
+//		System.out.println(m1.size());
 //		msf.getServices(list, "mysql", "5.5");
+//		msf.getServices(list);
+		System.out.println(list.size());
 	}
 }

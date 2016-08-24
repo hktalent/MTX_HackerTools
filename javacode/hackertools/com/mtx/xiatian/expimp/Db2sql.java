@@ -36,6 +36,7 @@ public class Db2sql
 		return s.replaceAll("\\d*$", "");
 	}
 	
+//	static boolean bStart = false;
 	public static String dumpDB(Properties props)
 	{
 		String driverClassName = props.getProperty("driver.class");
@@ -74,7 +75,8 @@ public class Db2sql
 		ResultSet rs = null;
 		ResultSet primaryKeys = null;
 		ResultSet tableMetaData = null;
-		StringBuffer result = new StringBuffer(), resultTb = new StringBuffer();
+		StringBuffer result = new StringBuffer();
+		StringBuffer resultTb = new StringBuffer();
 		try {
 			//获取查询导出数据库对象的条件
 			String catalog = null;
@@ -120,6 +122,13 @@ public class Db2sql
 					if (tablesname.indexOf(tableName.toUpperCase()) < 0 || exptables.indexOf(tableName) > -1) {
 						continue;
 					}
+//					if("nvt_cves".equalsIgnoreCase(tableName))
+//					{
+//						bStart = true;
+//						continue;
+//					}
+//					if(!bStart)continue;
+					
 					String tableType = rs.getString("TABLE_TYPE");
 					if ("TABLE".equalsIgnoreCase(tableType)) {
 						
@@ -425,11 +434,15 @@ public class Db2sql
 		PreparedStatement stmt = null;
 		long lnCnt = 0;
 		try {
+			bos.flush();
 			// First we output the create table stuff
 			if(dbConn.getClass().getName().toUpperCase().indexOf("SQLSERVER") > -1){
 				stmt = dbConn.prepareStatement("SELECT * FROM " + tableName);
 			}else{
-				stmt = dbConn.prepareStatement("SELECT * FROM " + tableName,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
+				stmt = dbConn.prepareStatement("SELECT * FROM " + tableName
+						// TYPE_SCROLL_INSENSITIVE sqllit不支持
+						// ,ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE
+						);
 			}
 			rs = stmt.executeQuery();
 			ResultSetMetaData metaData = rs.getMetaData();
@@ -443,15 +456,20 @@ public class Db2sql
 			ResultSet rs1 =  stmt.executeQuery();
 			rs1.next();
 			int rowCount = rs1.getInt(1);
-			
-			while (rs.next()) {
+			// 0条
+			if(0 == rowCount)result.delete(0, result.length());
+			while (rs.next()) 
+			{
 				// 有数据就加上表头信息
-				if (0L == lnCnt && 0 < resultTb.length()) {
+				if (0L == lnCnt && 0 < resultTb.length()) 
+				{
 					result.append(resultTb.toString());
 					resultTb.delete(0, resultTb.length());
 				}
 				result.append("INSERT INTO " + tableName + " VALUES (");
 				for (int i = 0; i < columnCount; i++) {
+					bos = InfoLog.writeFileForBuf(outCatalogName, result.toString(), bos);
+					result.delete(0, result.length());
 					if (i > 0) {
 						result.append(", ");
 					}
@@ -460,9 +478,10 @@ public class Db2sql
 						result.append("NULL");
 					} else {
 						ResultSet tableMetaData = null;
+						String columnNmae =null;
 						try{
 							DatabaseMetaData dbMetaData = dbConn.getMetaData();
-							String columnNmae = metaData.getColumnName(i+1);
+							columnNmae = metaData.getColumnName(i+1);
 							tableMetaData = dbMetaData.getColumns(null, null,tableName, columnNmae);
 							tableMetaData.next();
 							String columntype = tableMetaData.getString("TYPE_NAME");
@@ -479,7 +498,11 @@ public class Db2sql
 								outputValue = outputValue.replaceAll("'", "\\'");
 								result.append("'" + outputValue + "'");
 							}
-						}catch (Exception e) {
+							bos = InfoLog.writeFileForBuf(outCatalogName, result.toString(), bos);
+							result.delete(0, result.length());
+						}catch (Throwable e) {
+							System.out.println("tableMetaData = dbMetaData.getColumns(null, null,tableName, columnNmae);");
+							System.out.println(tableName + ": " +columnNmae);
 							e.printStackTrace();
 						} finally {
 							try {
@@ -535,10 +558,13 @@ public class Db2sql
 		{
 //			 main1("oracle.jdbc.driver.OracleDriver",
 //					 "jdbc:oracle:thin:@192.168.24.18:1521:orcl", "yhomsmp", "yhomsmp");
+//			 
+//			 main1("org.postgresql.Driver",
+//					 "jdbc:postgresql://127.0.0.1:5433/msf", "msf",
+//                     "miracle***");
 			 
-			 main1("org.postgresql.Driver",
-					 "jdbc:postgresql://127.0.0.1:5433/msf", "msf",
-                     "miracle***");
+			 main1("org.sqlite.JDBC",
+					 "jdbc:sqlite:/Volumes/dbdata/sgkzl/MTX私有/收集的db/openvas/tasks.db", "tasks", "");
 //			int i = 1;
 //			for( i = 1; i < 12; i++)
 //			{

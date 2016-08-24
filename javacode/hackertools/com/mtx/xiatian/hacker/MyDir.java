@@ -240,13 +240,25 @@ public class MyDir implements Runnable
 	 */
 	public static void main(String[] args)
 	{
-		makeUpdateGitShell("/Users/xiatian/safe/", "/Volumes/BOOK/安全/", "/Volumes/other/project/");
-		// MyDir.tpe.addRunnable(new MyDir(new File("/Users/xiatian/.rvm"), new
-		// File("/Volumes/other/xiatian/.rvm")));
-		// MyDir.tpe.addRunnable(new MyDir(
-		// new File("/Volumes/other/xiatian/.rvm"),
-		// new File("/Users/xiatian/.rvm")
-		// ));
+		// Backup: 10G   Backups.backupdb
+//		System.out.println(new MyDir().getDir(new File("/Volumes/BOOK/Backups.backupdb")) / 1024 / 1024/1024);
+		System.out.println(new MyDir().getDir(new File("/Users/xiatian/.npm")) / 1024 / 1024);
+		
+//		makeUpdateGitShell("/Users/xiatian/safe/", "/Volumes/BOOK/安全/", "/Volumes/other/project/");
+//		 MyDir.tpe.addRunnable(
+//				 new MyDir(
+//						 new File("/Volumes/other/project"),
+//						 new File("/Volumes/data 1/project")
+//						 ));
+//		 MyDir.tpe.addRunnable(
+//				 new MyDir(
+//						 new File("/Volumes/BOOK/安全/Metasploit/Meterpreter-Scripts"),
+//						 new File("/Users/xiatian/.msf4/modules")
+//						 ));
+//		 MyDir.tpe.addRunnable(new MyDir(
+//		 new File("/Volumes/other/xiatian/.rvm"),
+//		 new File("/Users/xiatian/.rvm")
+//		 ));
 		// MyDir.tpe.addRunnable(new MyDir(
 		// new File("/Volumes/other/xiatian/.p2"),
 		// new File("/Users/xiatian/.p2")

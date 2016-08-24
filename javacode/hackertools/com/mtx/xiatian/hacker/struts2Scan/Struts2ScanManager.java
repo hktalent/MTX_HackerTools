@@ -143,10 +143,10 @@ http://192.168.24.19:8080/struts2_01/hello
 		// http://erp.yinhai.com:8089/yhhr/login.jsp
 		String szUrl = 
 //				"http://www.ccyb.gov.cn/zndtLogin";
-//				"http://erp.yinhai.com:8070/QIMS/qims/qiOrgAction";
+				"https://erp.yinhai.com:18443/login.action";
 //				"http://erp.yinhai.com:8089/yhhr/singleLoginAction.do";// 
 				// "http://192.168.24.19:8080/struts2_01/hello";
-				"http://192.168.10.199:8086/dld"
+//				"http://218.16.150.234/"
 //		"http://192.168.24.19:8080/Struts2/hello"
 				; // "http://192.168.24:8080/Struts2/hello";
 		final Struts2ScanManager sm = Struts2ScanManager.getInstance();
@@ -176,10 +176,10 @@ http://192.168.24.19:8080/struts2_01/hello
 //					}
 //				});
 		
-		for (Object []m : list1)
-		{
-			if(null != m && 3 == m.length)
-				System.out.println(m[0] + " = " + m[1] + "\n" + m[2]);
-		}
+//		for (Object []m : list1)
+//		{
+//			if(null != m && 3 == m.length)
+//				System.out.println(m[0] + " = " + m[1] + "\n" + m[2]);
+//		}
 	}
 }

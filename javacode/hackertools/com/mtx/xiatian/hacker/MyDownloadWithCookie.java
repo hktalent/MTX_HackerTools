@@ -1,5 +1,6 @@
 package com.mtx.xiatian.hacker;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -96,6 +97,7 @@ public class MyDownloadWithCookie {
 	        		out.write(b, 0, i);
 	        		l += i;
 	        }
+	        if(null != szFileName)
 	        System.out.println("Ok(" + l + "字节): " + szFileName);
 		}catch(Exception e)
 		{
@@ -107,7 +109,8 @@ public class MyDownloadWithCookie {
 			{
 				try{
 					out.flush();
-					out.close();
+					if(!(out instanceof ByteArrayOutputStream))
+						out.close();
 				}catch(Exception e){e.printStackTrace();}
 			}
 			if(null != isN)

@@ -187,7 +187,7 @@ public class InfoLog
 		OutputStream out = o;
 		try
 		{
-			int lnSize = 1024 * 1024 * 32; // 100M
+			int lnSize = 1024 * 1024 * 2; // 100M
 			if(null == out)
 			{
 				/**

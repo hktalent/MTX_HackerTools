@@ -16,6 +16,7 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpUriRequest;
 
 import com.mtx.safegene.test.common.UrlTestTool;
@@ -103,8 +104,8 @@ public  class CommonTools extends  SqliteJDBC
 	public  byte[] getUrlForByte(String url, String szLocalFileName)
 	{
 		UrlTestTool utt = new UrlTestTool();
-		Map<String, Object> mParams = new HashMap<String, Object>();// 请求参数
-		Map<String, String> headers = new HashMap<String, String>();// 请求头
+//		Map<String, Object> mParams = new HashMap<String, Object>();// 请求参数
+//		Map<String, String> headers = new HashMap<String, String>();// 请求头
 		StringBuffer sbContent = new StringBuffer();
 		OutputStream out = null;
 		try
@@ -115,6 +116,7 @@ public  class CommonTools extends  SqliteJDBC
 			} else
 				out = new ByteArrayOutputStream();
 		
+			// new HttpPost(url)
 			utt.doPost(url, null, null, mParams, headers, sbContent, false, null, null, out);
 		} catch (Throwable e)
 		{
