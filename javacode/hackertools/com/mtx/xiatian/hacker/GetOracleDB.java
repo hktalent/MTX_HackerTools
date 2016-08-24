@@ -53,10 +53,11 @@ public class GetOracleDB extends CommonTools
 //	 */
 	public GetOracleDB(String jdbcUrl, String user, String pswd)
 	{
+		setConnInfo(jdbcUrl, user, pswd);
 		sdb1.setConnInfo(jdbcUrl, user, pswd);
 		szConnInfo = IConst.getString(new String[]
 		{ jdbcUrl, ", ", user, ", ", pswd });
-		md5Path = "javacode/com/mtx/safegene/test/xiatian/db/dbinfo/" + getPatternStr("(\\d*\\.\\d*\\.\\d*\\.\\d*)", jdbcUrl) + "_" + user + "_" + new Base64('X').encode(szConnInfo.getBytes()).replaceAll("[^a-zA-Z0-9]", "") + "_";
+		md5Path = "data/dbinfo/" + getPatternStr("(\\d*\\.\\d*\\.\\d*\\.\\d*)", jdbcUrl) + "_" + user + "_" + new Base64('X').encode(szConnInfo.getBytes()).replaceAll("[^a-zA-Z0-9]", "") + "_";
 		info("当前存储数据路径：", md5Path);
 //		new File(md5Path).mkdirs();
 	}
@@ -74,6 +75,39 @@ public class GetOracleDB extends CommonTools
 	{
 		queryForSelf("select instance_name, host_name, version, startup_time from v$instance", lst);
 	}
+	
+	/**
+	 * 执行一个sql
+	 * @param lst
+	 * @param out
+	 * @param szMsg
+	 * @param sql
+	 */
+	public void doOneSql(final List<Map<String, Object>> lst, OutputStream out, String szMsg, String sql)
+	{
+		if(0 < szMsg.length())
+			log(out, szMsg);
+		log(out, sql);
+		queryForSelf(sql, lst);
+	}
+	
+	/**
+	 * 查看系统表信息
+	 * @param lst
+	 */
+	public void getDBOthers(final List<Map<String, Object>> lst, OutputStream out)
+	{
+		String sSql;
+		for(String s: new String[]{"all_tables", "user_tab_columns", "all_tab_columns", "user_objects", "user_tab_comments", "user_col_comments"})
+		{
+			sSql = "select * from " + s;
+			doOneSql(lst, out, "", sSql);
+		}
+		doOneSql(lst, out, "所有表空间", "selecttablespace_name,sum(bytes)/1024/1024 from dba_data_files  group by tablespace_name");
+		doOneSql(lst, out, "查看未使用表空间大小", "selecttablespace_name,sum(bytes)/1024/1024 from dba_free_space group bytablespace_name");
+	}
+	
+	
 
 	/**
 	 * <pre>
@@ -267,18 +301,29 @@ public class GetOracleDB extends CommonTools
 			log(out, "\n6、获取所有列表字段描述\n");
 			godb.getColComments(lst);
 
-			log(out, "\n7、一些统计\n");
-			TreeMap<String, Object> m = godb.querySQL("select count(1) ac01 from ac01");
-			log(out, "ac01: ", m.get("ac01"),"\n");
-			m = godb.querySQL("select count(1) ab01 from ab01");
-			log(out, "ab01: ", m.get("ab01"),"\n");
+//			log(out, "\n7、一些统计\n");
+//			TreeMap<String, Object> m = godb.querySQL("select count(1) cnt from ac01");
+//			log(out, "ac01: ", m.get("ac01"),"\n");
+//			m = godb.querySQL("select count(1) cnt from ab01");
+//			log(out, "ab01: ", m.get("ab01"),"\n");
 			
 			log(out, "\n\n\n\n=================\n8、获取敏感列表字段描述\n");
 			godb.getSensitiveColComments(lst, null);
 			log(out, "=================\n\n\n\n");
-
+			
+			log(out, "\n8、同义词信息\n");
+			godb.querySQL("select * from dba_synonyms", false, new ArrayList<TreeMap<String, Object>>(){
+                public boolean add(TreeMap<String, Object> m1)
+                {
+					log(out1, m1.toString());
+	                return true;
+                }
+			});
+			log(out, "\n9、系统表信息\n");
+			getDBOthers(lst, out);
 		} catch (Exception e)
 		{
+			System.out.println(a[0] + " " + a[1] + " "+ a[2]);
 			info(e);
 		} finally
 		{
@@ -306,6 +351,7 @@ public class GetOracleDB extends CommonTools
 				f.delete();
 			}
 
+			System.out.println("Ok: " + a[0] + " " + a[1] + " "+ a[2]);
 		}
 	}
 
@@ -337,14 +383,14 @@ public class GetOracleDB extends CommonTools
 	{
 		IConst.g_bDebug = IConst.bMyDebug = false;
 		
-		main1("com.mysql.jdbc.Driver","jdbc:mysql://172.16.28.11:3306/mysql?relaxAutoCommit=true&useUnicode=true&characterEncoding=utf8", "test", "test");
-//		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "csisca", "csisca");
-//		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY15GC99900_1", "jy15gc99900");
-//		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY14GD02100_01", "JY14GD02100_01");
-//		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY14GD02100_03", "JY14GD02100_03");
-//		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY14GD02100_02", "JY14GD02100_02");
-//		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY12CD008_tkbx", "JY12CD008");
-//		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "yhjypt", "yhjypt");
+//		main1("com.mysql.jdbc.Driver","jdbc:mysql://172.16.28.11:3306/mysql?relaxAutoCommit=true&useUnicode=true&characterEncoding=utf8", "test", "test");
+		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "csisca", "csisca");
+		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY15GC99900_1", "jy15gc99900");
+		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY14GD02100_01", "JY14GD02100_01");
+		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY14GD02100_03", "JY14GD02100_03");
+		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY14GD02100_02", "JY14GD02100_02");
+		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "JY12CD008_tkbx", "JY12CD008");
+		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.60:1521:yhdb", "yhjypt", "yhjypt");
 //		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.106:1521:orcl", "scjm2", "scjm2");
 //		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.220:1521:yhdb", "yhjy", "yhjy");
 //		main1("oracle.jdbc.driver.OracleDriver", "jdbc:oracle:thin:@192.168.10.220:1521:yhdb", "jysys", "jysys");
