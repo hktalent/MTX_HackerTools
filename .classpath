@@ -36,5 +36,7 @@
 	<classpathentry kind="lib" path="lib/commons-dbutils-1.5.jar"/>
 	<classpathentry kind="lib" path="lib/commons-dbcp-1.4.jar"/>
 	<classpathentry kind="lib" path="lib/commons-pool-1.6.jar"/>
+	<classpathentry kind="lib" path="lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="lib/classes12.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
