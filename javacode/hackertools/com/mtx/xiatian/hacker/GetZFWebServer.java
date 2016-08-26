@@ -1,6 +1,6 @@
 package com.mtx.xiatian.hacker;
 
-import java.sql.Date;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +9,6 @@ import java.util.TreeMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.mtx.core.common.IConst;
 import com.mtx.safegene.test.common.UrlTestTool;
 
 /**
@@ -41,22 +40,30 @@ public class GetZFWebServer extends CommonTools
 	 * 
 	 * @param url
 	 * @return
+	 * @throws Throwable 
 	 */
-	public static String getUrlText(String url, Map<String, String> headers)
+	public static String getUrlText(String url, Map<String, String> headers) throws Throwable
 	{
 		UrlTestTool utt = new UrlTestTool();// 创建UrlTestTool对象
 		StringBuffer sbContent = new StringBuffer();
 		Map<String, Object> mParams = new HashMap<String, Object>();// 请求参数
+		headers.clear();
 		utt.doPost(url, null, null, mParams, headers, sbContent, false, null, null);
 		return sbContent.toString();
 	}
 	
 	public static String szUrlEd = ".edu.cn";// ".gov.cn";
+	/**
+	 * 需要处理的政府网站
+	 * @param szUrl
+	 * @return
+	 */
 	public static boolean isZfUrl(String szUrl)
 	{
+		return true;
 //		return (szUrl.endsWith(".cn") || szUrl.endsWith("gov.cn") || szUrl.endsWith("org"));
 		// return (szUrl.endsWith(".gov.cn") );
-		return (szUrl.endsWith(szUrlEd) );
+//		return (szUrl.endsWith(szUrlEd) );
 	}
 	
 	/**
@@ -116,7 +123,7 @@ public class GetZFWebServer extends CommonTools
 			return;
 
 		TreeMap<String, Object> mP = new TreeMap<String, Object>();
-		mP.put("cjrq", new Date(System.currentTimeMillis()));
+		mP.put("cjrq", super.getTime());
 		// 0 表示未提取下一层
 		mP.put("getnext", new Integer(0));
 
@@ -128,8 +135,8 @@ public class GetZFWebServer extends CommonTools
 		else
 		{
 			System.err.println("err 插入失败: " + mP.get("url"));
-			update("update zfwebserver set servername='" + mP.get("servername") + "',title='" + 
-				mP.get("title")+ "',devlg='" + mP.get("devlg") + "' where url='" +mP.get("url")  + "'");
+//			update("update zfwebserver set servername='" + mP.get("servername") + "',title='" + 
+//				mP.get("title")+ "',devlg='" + mP.get("devlg") + "' where url='" +mP.get("url")  + "'");
 		}
 	}
 
@@ -147,6 +154,9 @@ public class GetZFWebServer extends CommonTools
 	}
 	
 	/**
+	 * SELECT * FROM mydb.zfwebserver where substr(cjrq, 1, 10) = '2016-08-25' and title is null;
+select * from mydb.zfwebserver where title is null and url like '%>%';
+delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%';
 	 * 处理单个url
 	 * @param url
 	 */
@@ -158,28 +168,40 @@ public class GetZFWebServer extends CommonTools
 		{
 			final Map<String, String> headers = new HashMap<String, String>();// 请求头
 			final String sTxt = GetZFWebServer.getUrlText(url, headers);
-			GetZFWebServer.doPattern(sTxt, "(http:\\/\\/[^\"'\\?\\s#]+)", new ArrayList()
+			final TreeMap<String, Object> mP = new TreeMap<String, Object>();
+            doGetTitle(sTxt, mP, headers);
+            mP.put("cjrq", super.getTime());
+            mP.put("getnext", new Integer(3));
+            String []a = new String[mP.size()];
+            super.update("zfwebserver", "url='" + url + "'", mP, a = mP.keySet().toArray(a));
+            System.out.println("Ok: " + mP.get("title") +  " " +  url);
+			GetZFWebServer.doPattern(sTxt, "(http:\\/\\/[^\"'\\?\\s#><\\n\\r]+)", new ArrayList()
 			{
 				public boolean add(Object s)
 				{
 					String k = String.valueOf(s);
-					if (-1 < k.indexOf(".w3.org") || k.endsWith(".js") || k.endsWith(".jpg") || k.endsWith(".css")
+					if (
+//							-1 < k.indexOf(".w3.org") || 
+							k.endsWith(".js") || k.endsWith(".jpg") || k.endsWith(".css")
 					        || k.endsWith(".cab") || k.endsWith(".png") || k.endsWith(".swf") || k.endsWith(".zip"))
 					{
 						return true;
 					}
-					Map<String, Object> mP = new HashMap<String, Object>();
-					doGetTitle(sTxt, mP, headers);
-					
+					mP.clear();
 					mP.put("url", s);
 					doOneInsert(mP);
 					return true;
 				}
 			});
-		} catch (Exception e)
+		} catch (Throwable e)
 		{
+			if(e instanceof UnknownHostException)
+			{
+				super.delete("delete from zfwebserver where url='" + url + "'");
+				System.out.println("删除： " + url);
+			}
 		}
-		update("update zfwebserver set getnext=1 where getnext=0 and url='" + url + "'");
+//		update("update zfwebserver set getnext=1 where getnext=0 and url='" + url + "'");
 	}
 	
 	/**<pre>
@@ -193,18 +215,24 @@ public class GetZFWebServer extends CommonTools
 	{
 		if(null != sTxt)
 		{
-			String t = getPatternStr("<title>\\s*(.*?)\\s*<\\/title>", sTxt);
+			// <title>12316农业综合信息服务平台</title>
+			String t = getPatternStr("<title|TITLE>\\s*([^<]*?)\\s*<\\/title|TITLE>", sTxt);
 			if(null != t)
 			{
 				t = t.trim();
 //				System.out.println(t);
-				mP.put("title", t);
+				if(0 < t.length() && -1 == t.indexOf("升级维护") && -1 == t.indexOf("建设中"))
+				{
+					mP.put("title", t);
+					if(200 < t.length())
+						System.out.println(t);
+				}
 			}
 		}
 		
 		String szK = "Server";
 		if(headers1.containsKey(szK))
-			mP.put("servername", headers1.get(szK));
+			mP.put("servername", String.valueOf(headers1.get(szK)).trim());
 		if(headers1.containsKey(szK = "X-Powered-By"))
 		{
 			String szBy = headers1.get(szK);
@@ -256,7 +284,11 @@ public class GetZFWebServer extends CommonTools
 			{
 				while (true)
 				{
-					gws.query("select url from zfwebserver where getnext=0 and url like '%.edu.cn'", new ArrayList<TreeMap<String, Object>>()
+					gws.query("select url,title from zfwebserver where  getnext < 2" 
+//							+ " where title is null and getnext != 2" 
+//							+ " and substr(cjrq, 1, 10) != '2016-08-25'" 
+//							+ " where getnext=0 and url like '%.edu.cn'"
+							, new ArrayList<TreeMap<String, Object>>()
 					{
 						public boolean add(TreeMap<String, Object> data)
 						{
@@ -275,6 +307,34 @@ public class GetZFWebServer extends CommonTools
 				}
 			}
 		}
+//				,
+//				new Runnable()
+//		{
+//			public void run()
+//			{
+//				while (true)
+//				{
+//					// getnext = 0 and
+//					gws.query("select url,title from zfwebserver where getnext = 3 and title is null and  substr(cjrq, 1, 10) = '2016-08-26'" 
+//							, new ArrayList<TreeMap<String, Object>>()
+//					{
+//						public boolean add(TreeMap<String, Object> data)
+//						{
+//							String url1 = String.valueOf(data.get("url"));
+//							gws.doOneUrl(url1, true);
+//							return true;
+//						}
+//					});
+//					try
+//					{
+//						Thread.sleep(222);
+//					} catch (InterruptedException e)
+//					{
+//						e.printStackTrace();
+//					}
+//				}
+//			}
+//		}
 				);
 	}
 

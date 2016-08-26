@@ -11,7 +11,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.zip.GZIPInputStream;
 
 import javax.net.ssl.SSLContext;
 
@@ -47,28 +49,60 @@ public class UrlTestTool
 		httpclient = new DefaultHttpClient();
 	}
 
+	Pattern pCharset = Pattern.compile("content=\"text/html;\\s*charset=([^\"]+)\"", Pattern.DOTALL);
+	Pattern pCharset1 = Pattern.compile("<meta\\s*charset=\"([^\"]+)\">", Pattern.DOTALL);
+	
+	/**
+	 * 从文件内容获取字符集
+	 * @param s
+	 * @param szDft
+	 * @return
+	 */
+	public String getCharSetFromHtml(String s, String szDft)
+	{
+		Matcher m = pCharset.matcher(s);
+		if(m.find())
+		{
+			return m.group(1);
+		}else if((m = pCharset1.matcher(s)).find())
+			return m.group(1);
+		return szDft;
+	}
+	
 	/**
 	 * 获取返回结果
 	 * 
 	 * @param httpresponse
 	 * @return
 	 */
-	public void getResponse(HttpResponse httpresponse, StringBuffer sb, OutputStream out1)
+	public void getResponse(HttpResponse httpresponse, StringBuffer sb, OutputStream out1, String charset, Map<String, String> header)
 	{
 		try
 		{
 			if (null == httpresponse || null == httpresponse.getEntity())
 				return;
-			OutputStream out = null == out1 ? new ByteArrayOutputStream() : out1;
+			ByteArrayOutputStream bo = new ByteArrayOutputStream();
+			OutputStream out = null == out1 ? bo : out1;
 			byte[] a = new byte[4096];
 			InputStream in = httpresponse.getEntity().getContent();
+			if("gzip".equalsIgnoreCase(header.get("Content-Encoding")))
+			{
+				in = new GZIPInputStream(in);
+			}
 			int i = 0;
 			while (-1 < (i = in.read(a, 0, 4096)))
 				out.write(a, 0, i);
-			in.close();
+			in.close();out.flush();
 			out.close();
-			if(null == out1)
-				sb.append(new String(((ByteArrayOutputStream) out).toByteArray(),"UTF-8"));
+			if(null == out1 && 0 < bo.size())
+			{
+				// 修正字符集
+				String szCtt = new String(bo.toByteArray(),  charset);
+				String szC = getCharSetFromHtml(szCtt, charset).trim();
+				if(!szC.equals(charset))
+					szCtt = new String(bo.toByteArray(),  szC);
+				sb.append(szCtt);
+			}
 			
 			// // 取出响应内容
 			// BufferedReader in = new BufferedReader(new InputStreamReader(
@@ -217,12 +251,30 @@ public class UrlTestTool
 	 * @param bMultipart  
 	 * @param p
 	 * @param sbProcess 存储header等信息的容器,用于在报告中显示
+	 * @throws Throwable 
 	 */
 	public void doPost(String url, String key, String value, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent,
-	        boolean bMultipart, HttpUriRequest p, StringBuffer sbProcess)
+	        boolean bMultipart, HttpUriRequest p, StringBuffer sbProcess) throws Throwable
 	{
 		doPost(url,  key,  value,  map,  headers,  sbContent,
 		         bMultipart,  p,  sbProcess, null);
+	}
+	
+	/**
+	 * 字符集修正
+	 * @param s
+	 * @return
+	 */
+	public String checkCharset(String s, String szCharset)
+	{
+		String a[] = {"gb2312", "utf8", "UNICODE","ANSI","ASCII","us-ascii", "ISO-8859-1","gbk", "utf-8"};
+		s = s.toLowerCase().trim();
+		for(String k:a)
+		{
+			if(s.equals(k.toLowerCase()))return k;
+		}
+//		System.out.println(szCharset);
+		return a[a.length - 1];
 	}
 
 	/**
@@ -237,15 +289,18 @@ public class UrlTestTool
 	 * @param p           request
 	 * @param sbProcess   临时存储Map或header的数据
 	 * @param out1
+	 * @throws Throwable 
 	 */
 	public void doPost(String url, String key, String value, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent,
-	        boolean bMultipart, HttpUriRequest p, StringBuffer sbProcess, OutputStream out1)
+	        boolean bMultipart, HttpUriRequest p, StringBuffer sbProcess, OutputStream out1) throws Throwable
 	{
 //		url = getUrl(url);
 //		System.out.println(url);
 		if (null == headers.get("User-Agent"))
 			headers.put("User-Agent",
 			        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36");
+		// 不压缩：但是服务器还是压缩了
+		headers.put("Accept-Encoding", "none");
 		HttpUriRequest post = null;
 		try
 		{
@@ -359,7 +414,11 @@ public class UrlTestTool
 			if (null != sbContent)
 			{
 				sbContent.delete(0, sbContent.length());
-				getResponse(httpresponse, sbContent, out1);
+				String szCharset = headers.get("Content-Type");
+				if(null != szCharset)
+					szCharset = checkCharset(szCharset.trim().replaceAll(".*?charset=", ""),  szCharset);
+				else szCharset = "UTF-8";
+				getResponse(httpresponse, sbContent, out1, szCharset, headers);
 			}
 			if (null != sbContent && 0 < sbContent.length())
 			{
@@ -375,6 +434,7 @@ public class UrlTestTool
 			e1.printStackTrace();
 			doReport("测试url(" + url + ")发生异常：\n", sbProcess);
 			doReport(e1, sbProcess);
+			throw e1;
 			// doPost(url, key, value, map, headers, sbContent,
 			// bMultipart, p, sbProcess);
 			// if (null != e1 && null != e1.getMessage() && -1 ==
@@ -400,9 +460,10 @@ public class UrlTestTool
 	 * @param headers
 	 * @param sbContent
 	 * @param bMultipart
+	 * @throws Throwable 
 	 */
 	public void doPost(String url, String key, String value, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent,
-	        boolean bMultipart)
+	        boolean bMultipart) throws Throwable
 	{
 		doPost(url, null, null, map, headers, sbContent, bMultipart, null, null);
 	}
@@ -418,7 +479,7 @@ public class UrlTestTool
 	 * @param headers
 	 * @param sbContent
 	 */
-	public void doPost(String url, String key, String value, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent)
+	public void doPost(String url, String key, String value, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent) throws Throwable
 	{
 		doPost(url, key, value, map, headers, sbContent, false, null, null);
 	}
@@ -432,7 +493,7 @@ public class UrlTestTool
 	 * @param sbContent
 	 * @param posts
 	 */
-	public void doPost(String url, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent, HttpUriRequest posts)
+	public void doPost(String url, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent, HttpUriRequest posts) throws Throwable
 	{
 		doPost(url, null, null, map, headers, sbContent, true, posts, null);
 	}
@@ -445,7 +506,7 @@ public class UrlTestTool
 	 * @param headers
 	 * @param sbContent
 	 */
-	public void loginTa3(String url, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent, StringBuffer sbProcess)
+	public void loginTa3(String url, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent, StringBuffer sbProcess) throws Throwable
 	{
 		// utt.doPost(url + "/j_spring_security_check", "r", Math.random()+"",
 		// map, headers, sbContent);

@@ -333,11 +333,15 @@ name=URL-https://twitter.com/FuzzySec/status/723254004042612736}
 	public void doWeblogicFxlh()
 	{
 		final MTX_AttackWeblogic ma = new MTX_AttackWeblogic();
+//		final String szIps = "192.168.10.196,192.168.10.138,192.168.10.133,192.168.10.188";
 		List<TreeMap<String, Object>> list = new ArrayList<TreeMap<String, Object>>()
 				{
 					public boolean add(TreeMap<String, Object> m)
 					{
-						ma.connSvr(String.valueOf(m.get("address")), String.valueOf(m.get("port")), null, null);
+						String ip = String.valueOf(m.get("address"));
+//						if(-1 < szIps.indexOf(ip))
+						if(ip.startsWith("192."))
+							ma.connSvr(ip, String.valueOf(m.get("port")), null, null);
 						return true;
 					}
 				};

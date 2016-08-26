@@ -56,8 +56,9 @@ jdbc.username=qix1
 jdbc.password=qix1
 	 * </pre>
 	 * @param url
+	 * @throws Throwable 
 	 */
-	private void doJdbcInfo(String url)
+	private void doJdbcInfo(String url) throws Throwable
 	{
 		headers.clear();
 		initHead(url);
@@ -99,8 +100,9 @@ jdbc.password=qix1
 	 * 处理一个文件或者目录
 	 * @param szUrl
 	 * @param szA
+	 * @throws Throwable 
 	 */
-	public  boolean doOneFile(String szUrl, String szA)
+	public  boolean doOneFile(String szUrl, String szA) throws Throwable
 	{
 		if(szA.endsWith(".java"))return true;
 		// 目录深度遍历
@@ -183,8 +185,9 @@ jdbc.password=qix1
 	/**
 	 * 获取一个url的内容
 	 * @param szUrl
+	 * @throws Throwable 
 	 */
-	public void  doGetUrl(String szUrl)
+	public void  doGetUrl(String szUrl) throws Throwable
 	{
 		sbContent.delete(0, sbContent.length());
 		doPost(szUrl);
@@ -211,8 +214,9 @@ jdbc.password=qix1
 	/**
 	 * url数据获取，数据存入：sbContent
 	 * @param url
+	 * @throws Throwable 
 	 */
-	public void doPost(String url)
+	public void doPost(String url) throws Throwable
 	{
 		String szL = url.toLowerCase();
 		if(-1 < szL.indexOf("/web-inf/")
@@ -255,7 +259,7 @@ jdbc.password=qix1
 	 * 起点 sxjyA1513
 	 * http://118.112.188.108:8090/svn/
 	 */
-	public void doStart()
+	public void doStart() throws Throwable
 	{
 		String url = "http://192.168.10.70:8090/svn/";
 		doPost(url);
@@ -270,7 +274,7 @@ jdbc.password=qix1
 	 * @param sbContent
 	 * @param urlBase
 	 */
-	public  void doAList(StringBuffer sbContent, String urlBase)
+	public  void doAList(StringBuffer sbContent, String urlBase) throws Throwable
 	{
 		Matcher m = pA.matcher(sbContent.toString());
 		int n = 0, j = 0;
@@ -301,7 +305,7 @@ jdbc.password=qix1
 	 * @param sbContent
 	 * @param urlBase
 	 */
-	public  void doListProject(StringBuffer sbContent, String urlBase)
+	public  void doListProject(StringBuffer sbContent, String urlBase) throws Throwable
 	{
 		Matcher m = pA.matcher(sbContent.toString());
 		String szU;
@@ -336,13 +340,20 @@ jdbc.password=qix1
 	
 	/**
 	 * @param args
+	 * @throws Throwable 
 	 */
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
 		CheckSvnStruts2 css = new CheckSvnStruts2();
 		css.useMysql();
 //		css.delete("delete  from svnInfo where type='commonsCollections'");
-		css.doStart();
+		try
+        {
+	        css.doStart();
+        } catch (Throwable e)
+        {
+	        e.printStackTrace();
+        }
 		css.update("update svnInfo set ver='' where ver='collections'");
 		String s1 = MyQDataInfo.getFile(new File("/Users/xiatian/project/sfTester/javacode/com/mtx/safegene/test/xiatian/hacker/projectInfo.txt"));
 		String []a = s1.trim().split("\\n"), x;

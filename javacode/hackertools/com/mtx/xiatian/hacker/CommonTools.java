@@ -51,7 +51,13 @@ public  class CommonTools extends  SqliteJDBC
 		headers.put("Referer","http://www.msxindl.com/tools/ip/ip_num.asp");
 		headers.put("User-Agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36");
 
-		utt.doPost(url, null, null, mParams, headers, sbContent, false, null, null);
+		try
+        {
+	        utt.doPost(url, null, null, mParams, headers, sbContent, false, null, null);
+        } catch (Throwable e)
+        {
+	        e.printStackTrace();
+        }
 		url = sbContent.toString();
 		return url;
 	}
@@ -413,11 +419,11 @@ Cookie: ARRAffinity=19f333b2d215b6baa787066c0d18c3af94489c9a048b82529f5af563487a
 	 */
 	public  int update(final String tableName, final String where, TreeMap<String, Object> m1, String[] aFild)
 	{
-		List<TreeMap<String, Object>> lst01 = queryForList(server + " where " + where);
+		List<TreeMap<String, Object>> lst01 = queryForList(tableName + " where " + where);
 		if (null != lst01 && 0 < lst01.size())
 		{
 			// 更新存活时间: lastScan
-			StringBuffer bf = new StringBuffer("update " + server + " set  ");
+			StringBuffer bf = new StringBuffer("update " + tableName + " set  ");
 			int i = 0;
 			for (String s : aFild)
 			{
@@ -459,12 +465,13 @@ Cookie: ARRAffinity=19f333b2d215b6baa787066c0d18c3af94489c9a048b82529f5af563487a
 	 */
 	private  String parseParameter(String szParm, TreeMap<String, Object> m1)
 	{
+		if(null == m1 || 0 == m1.size())return szParm;
 		StringBuffer sb = new StringBuffer();
 		Pattern p = Pattern.compile("\\{([^\\}]*)\\}", Pattern.MULTILINE | Pattern.DOTALL);
 		Matcher m = p.matcher(szParm);
 		while (m.find())
 		{
-			if(null == m1.get(m.group(1)))
+			if(null == m.group(1) || null == m1.get(m.group(1)))
 			{
 				info("请检查参数：", szParm, " 中 ", m.group(1), "不存在了");
 			}

