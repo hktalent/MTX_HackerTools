@@ -57,7 +57,8 @@ public class GetOracleDB extends CommonTools
 		sdb1.setConnInfo(jdbcUrl, user, pswd);
 		szConnInfo = IConst.getString(new String[]
 		{ jdbcUrl, ", ", user, ", ", pswd });
-		md5Path = "data/dbinfo/" + getPatternStr("(\\d*\\.\\d*\\.\\d*\\.\\d*)", jdbcUrl) + "_" + user + "_" + new Base64('X').encode(szConnInfo.getBytes()).replaceAll("[^a-zA-Z0-9]", "") + "_";
+		String ip = jdbcUrl.replaceAll("(^.*?\\//)|(:.*?$)", "") + "_";
+		md5Path = "/Volumes/dbdata/sgkzl/MTX私有/mysql/dbinfo/" + ip + user;
 		info("当前存储数据路径：", md5Path);
 //		new File(md5Path).mkdirs();
 	}

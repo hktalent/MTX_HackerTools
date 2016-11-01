@@ -8,6 +8,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.mtx.xiatian.evolvedata.MyQDataInfo;
 import com.mtx.xiatian.evolvedata.MyThreadPoolExecutor;
 /**
  * <pre>
@@ -235,6 +236,69 @@ public class MyDir implements Runnable
 			e.printStackTrace();
 		}
 	}
+	
+	public static void fixGitDirName(String sDir)
+	{
+		File []fs = new File(sDir).listFiles();
+		String s;
+		int n;
+		String s1 = "url = ", s3 = "//";
+		for(File f:fs)
+		{
+			if(f.isDirectory())
+			{
+				s = f.getAbsolutePath();
+				if(new File(s + "/.git").isDirectory())
+				{
+					String rst = MyQDataInfo.getFile(new File(s + "/.git/config"));
+					n = rst.indexOf(s1);
+					if(-1 < n)
+						rst = rst.substring(n + s1.length());
+					n = rst.indexOf(s3);
+					if(-1 < n)
+						rst = rst.substring(n + s3.length());
+					n = rst.indexOf('/');
+					if(-1 < n)
+						rst = rst.substring(n + 1).trim();
+					n = rst.indexOf('\n');
+					if(-1 < n)
+						rst = rst.substring(0, n).trim();
+					rst = rst.replaceAll("\\.git", "").replaceAll("\\/", "_");
+//					if(-1 < rst.indexOf('\n'))
+					if(!f.getName().endsWith(rst))
+					{
+						String szNew = s.substring(0, s.lastIndexOf('/') + 1) + rst;
+						File nF = new File(szNew);
+						if(nF.exists())
+						{
+							System.out.println("rm -rf " + szNew);
+						}
+						else
+						{
+//							System.out.println(s + " >> " + szNew);
+							f.renameTo(nF);
+						}
+					}
+//					/Volumes/BOOK/安全/project/reverse-shell_routersploit
+//					/Volumes/BOOK/安全/project/python_dht/m4n3dw0lf_PytheM
+//					/Volumes/BOOK/安全/project/python_dht/bmuller_kademlia
+//					/Volumes/BOOK/安全/project/python_dht/Tribler_tribler
+//					/Volumes/BOOK/安全/project/python_dht/Fuck-You-GFW_p2pspider
+//					/Volumes/BOOK/安全/project/python_dht/CISOfy_lynis
+					// git reset --hard HEAD~1;
+//					System.out.println("echo 更新" + s +";cd " + s + ";git pull");
+				}
+				else
+				{
+					String sK = f.getName();
+					if(".".endsWith(sK) || "..".equals(sK))continue;
+					fixGitDirName(s);
+				}
+				
+			}
+		}
+	}
+	
 	/**
 	 * @param args
 	 */
@@ -242,14 +306,16 @@ public class MyDir implements Runnable
 	{
 		// Backup: 10G   Backups.backupdb
 //		System.out.println(new MyDir().getDir(new File("/Volumes/BOOK/Backups.backupdb")) / 1024 / 1024/1024);
-		System.out.println(new MyDir().getDir(new File("/Users/xiatian/.npm")) / 1024 / 1024);
+//		System.out.println(new MyDir().getDir(new File("/Users/xiatian/.npm")) / 1024 / 1024);
 		
 //		makeUpdateGitShell("/Users/xiatian/safe/", "/Volumes/BOOK/安全/", "/Volumes/other/project/");
 //		 MyDir.tpe.addRunnable(
 //				 new MyDir(
-//						 new File("/Volumes/other/project"),
-//						 new File("/Volumes/data 1/project")
+//						 new File("/Users/xiatian/Downloads/metasploit-framework-4.12.14/"),
+//						 new File("/Users/xiatian/safe/metasploit-framework/")
 //						 ));
+		 fixGitDirName("/Volumes/BOOK/安全/project");
+		fixGitDirName("/Users/xiatian/safe");
 //		 MyDir.tpe.addRunnable(
 //				 new MyDir(
 //						 new File("/Volumes/BOOK/安全/Metasploit/Meterpreter-Scripts"),

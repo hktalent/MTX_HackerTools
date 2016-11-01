@@ -37,6 +37,7 @@ import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.params.CoreConnectionPNames;
 
 public class UrlTestTool
 {
@@ -294,13 +295,48 @@ public class UrlTestTool
 	public void doPost(String url, String key, String value, Map<String, Object> map, Map<String, String> headers, StringBuffer sbContent,
 	        boolean bMultipart, HttpUriRequest p, StringBuffer sbProcess, OutputStream out1) throws Throwable
 	{
+//		CookieSpecProvider easySpecProvider = new CookieSpecProvider() {  
+//		    public CookieSpec create(HttpContext context) {  
+//		  
+//		        return new BrowserCompatSpec() {  
+//		            @Override  
+//		            public void validate(Cookie cookie, CookieOrigin origin)  
+//		                    throws MalformedCookieException {  
+//		                // Oh, I am easy  
+//		            }  
+//		        };  
+//		    }  
+//		  
+//		};  
+//		Registry<CookieSpecProvider> reg = RegistryBuilder.<CookieSpecProvider>create()  
+//		        .register(CookieSpecs.BEST_MATCH,  
+//		            new BestMatchSpecFactory())  
+//		        .register(CookieSpecs.BROWSER_COMPATIBILITY,  
+//		            new BrowserCompatSpecFactory())  
+//		        .register("mySpec", easySpecProvider)  
+//		        .build();  
+//		  
+//		RequestConfig requestConfig = RequestConfig.custom()  
+//		        .setCookieSpec("mySpec")  
+//		        .build();  
+//		CloseableHttpClient httpclient = HttpClients.custom()  
+//		        .setDefaultCookieSpecRegistry(reg)  
+//		        .setDefaultRequestConfig(requestConfig)  
+//		        .build();  
 //		url = getUrl(url);
 //		System.out.println(url);
 		if (null == headers.get("User-Agent"))
 			headers.put("User-Agent",
 			        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36");
+		
+		headers.put("Connection", "none");
+		headers.put("DNT", "1");
+		headers.put("Referer", url);
+		headers.put("Accept-Language", "zh-CN,zh;q=0.8,en-US;q=0.6");
+		headers.put("Cache-Control", "max-age=0");
+		headers.put("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
 		// 不压缩：但是服务器还是压缩了
-		headers.put("Accept-Encoding", "none");
+//		headers.put("Accept-Encoding", "none");
 		HttpUriRequest post = null;
 		try
 		{
@@ -369,6 +405,10 @@ public class UrlTestTool
 				}
 			}
 			doReport(post.getAllHeaders(), sbProcess);
+			// 链接超时
+			httpclient.getParams().setParameter(CoreConnectionPNames.CONNECTION_TIMEOUT, 5000);   
+			// 读取超时
+			httpclient.getParams().setParameter(CoreConnectionPNames.SO_TIMEOUT, 5000);
 			httpresponse = httpclient.execute(post);
 
 			doReport("\n\n提交的参数：\n", sbProcess);

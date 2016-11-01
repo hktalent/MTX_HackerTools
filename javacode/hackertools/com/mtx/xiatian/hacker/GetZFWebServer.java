@@ -60,8 +60,8 @@ public class GetZFWebServer extends CommonTools
 	 */
 	public static boolean isZfUrl(String szUrl)
 	{
-		return true;
-//		return (szUrl.endsWith(".cn") || szUrl.endsWith("gov.cn") || szUrl.endsWith("org"));
+//		return true;
+		return (szUrl.endsWith(".cn") || szUrl.endsWith("gov.cn") || szUrl.endsWith("org"));
 		// return (szUrl.endsWith(".gov.cn") );
 //		return (szUrl.endsWith(szUrlEd) );
 	}
@@ -169,7 +169,7 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 			final Map<String, String> headers = new HashMap<String, String>();// 请求头
 			final String sTxt = GetZFWebServer.getUrlText(url, headers);
 			final TreeMap<String, Object> mP = new TreeMap<String, Object>();
-            doGetTitle(sTxt, mP, headers);
+            doGetTitle(sTxt, mP, headers, url);
             mP.put("cjrq", super.getTime());
             mP.put("getnext", new Integer(3));
             String []a = new String[mP.size()];
@@ -181,7 +181,7 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 				{
 					String k = String.valueOf(s);
 					if (
-//							-1 < k.indexOf(".w3.org") || 
+							-1 < k.indexOf(".w3.org") || 
 							k.endsWith(".js") || k.endsWith(".jpg") || k.endsWith(".css")
 					        || k.endsWith(".cab") || k.endsWith(".png") || k.endsWith(".swf") || k.endsWith(".zip"))
 					{
@@ -200,6 +200,10 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 				super.delete("delete from zfwebserver where url='" + url + "'");
 				System.out.println("删除： " + url);
 			}
+			else 
+			{
+				super.update("update  zfwebserver set getnext=4 where url='" + url + "'");
+			}
 		}
 //		update("update zfwebserver set getnext=1 where getnext=0 and url='" + url + "'");
 	}
@@ -211,7 +215,7 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 	 * 3、
 	 * </pre>
 	 */
-	public void doGetTitle(String sTxt, Map<String, Object> mP, Map<String, String> headers1)
+	public void doGetTitle(String sTxt, Map<String, Object> mP, Map<String, String> headers1, String url)
 	{
 		if(null != sTxt)
 		{
@@ -227,6 +231,10 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 					if(200 < t.length())
 						System.out.println(t);
 				}
+			}
+			else
+			{
+				System.out.println(sTxt);
 			}
 		}
 		
@@ -250,7 +258,7 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 		final GetZFWebServer gws = new GetZFWebServer();
 		gws.useMysql();
 		gws.hvLastScan = false;
-//		gws.doOneUrl("http://www.chengdu.gov.cn/", false);
+//		gws.doOneUrl("http://www.chenghua.gov.cn/", false);
 //		if(true)
 //		{
 //			gws.query("select url from zfwebserver ", new ArrayList<TreeMap<String, Object>>()
@@ -269,7 +277,7 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 		
 		// "http://www.gov.cn/"
 		// "http://www.chengdu.gov.cn/organization.shtml"
-		MyExecutors mec = new MyExecutors();
+		final MyExecutors mec = new MyExecutors();
 		mec.add(
 //				new Runnable()
 //				{
@@ -282,9 +290,9 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 		{
 			public void run()
 			{
-				while (true)
+//				while (true)
 				{
-					gws.query("select url,title from zfwebserver where  getnext < 2" 
+					gws.query("select url,title from zfwebserver where title is null and  getnext >= 2" 
 //							+ " where title is null and getnext != 2" 
 //							+ " and substr(cjrq, 1, 10) != '2016-08-25'" 
 //							+ " where getnext=0 and url like '%.edu.cn'"
@@ -292,8 +300,17 @@ delete from mydb.zfwebserver where title is null and url like '%満鏋勭紪鍒%
 					{
 						public boolean add(TreeMap<String, Object> data)
 						{
-							String url1 = String.valueOf(data.get("url"));
-							gws.doOneUrl(url1, true);
+							final String url1 = String.valueOf(data.get("url"));
+//							mec.add(
+//									new Runnable()
+//									{
+//										public void run()
+//										{
+							System.out.println(url1);
+											gws.doOneUrl(url1, true);
+//										}}
+//									);
+//							
 							return true;
 						}
 					});

@@ -272,6 +272,7 @@ Cookie: ARRAffinity=19f333b2d215b6baa787066c0d18c3af94489c9a048b82529f5af563487a
 	                                 { "中国广州白云国际机场(1楼南出发)", "23.3853587783,113.3040208151" },
 	                                 { "中国广州教育路7天酒店", "123" },
 	                                 { "豪生大酒店", "1236" },
+	                                 { "东苑小区", "234242424" },
 	                                 
 	                                 };
 
@@ -512,7 +513,7 @@ Cookie: ARRAffinity=19f333b2d215b6baa787066c0d18c3af94489c9a048b82529f5af563487a
 						return null;
 					}
 				}
-				if(hvLastScan)
+				if(hvLastScan && null != m1)
 					m1.put("lastScan", getTime());
 				return m1;
 			}

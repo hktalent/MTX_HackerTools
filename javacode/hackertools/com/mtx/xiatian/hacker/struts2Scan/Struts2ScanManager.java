@@ -143,7 +143,8 @@ http://192.168.24.19:8080/struts2_01/hello
 		// http://erp.yinhai.com:8089/yhhr/login.jsp
 		String szUrl = 
 //				"http://www.ccyb.gov.cn/zndtLogin";
-				"https://erp.yinhai.com:18443/login.action";
+//				"http://222.184.27.3:8001/content/admin/loginAction.do";
+		"http://219.159.250.144/gxglwx/userAccountAction!register.do";
 //				"http://erp.yinhai.com:8089/yhhr/singleLoginAction.do";// 
 				// "http://192.168.24.19:8080/struts2_01/hello";
 //				"http://218.16.150.234/"

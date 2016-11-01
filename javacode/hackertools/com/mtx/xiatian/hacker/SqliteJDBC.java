@@ -26,7 +26,7 @@ import com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException;
 public class SqliteJDBC extends InfoLog
 {
 
-	public static String path = "javacode/com/mtx/safegene/test/xiatian/db/";
+	public static String path = "javacode/hackertools/com/mtx/safegene/test/xiatian/db/";
 	public SqliteJDBC()
 	{
 		init("sqlite");

@@ -215,7 +215,8 @@ public class GetWifiInfo extends CommonTools
 //						 "5"
 //						"8"
 //						"9"
-						"0"
+//						"0"
+						"10"
 						};
 				gwi.doGetWiFi(Integer.parseInt(a[0]));}
 		});

