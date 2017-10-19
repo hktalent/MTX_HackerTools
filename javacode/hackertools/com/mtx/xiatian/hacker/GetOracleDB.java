@@ -435,8 +435,8 @@ public class GetOracleDB extends CommonTools
 		
 		/*http://118.112.188.109/nethall/
 houliang(侯亮) 14:24:38
-www.yinhai.com
-mail.yinhai.com*/
+www.xxx.com
+mail.xxx.com*/
 	}
 
 }

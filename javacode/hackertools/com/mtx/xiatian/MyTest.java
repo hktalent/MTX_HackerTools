@@ -129,14 +129,14 @@ public class MyTest {
 	
 	/**
 	 * 获取域名的ip
-	 * Map m = getIp("erp.yinhai.com");
+	 * Map m = getIp("erp.xxx.com");
 		System.out.println(m.get("IP"));
 		System.out.println(m.get("IPNum"));
 		System.out.println(m.get("IPDZ"));
-	 * http://ip.chinaz.com/?IP=erp.yinhai.com
+	 * http://ip.chinaz.com/?IP=erp.xxx.com
 <span class="info3" >您的IP:[<strong class="red">118.112.188.111</strong>] 来自:<strong>四川省成都市 电信</strong> 操作系统:<strong>Unknown</strong><span id="resolution" style=" margin-left:5px;"></span> 语言:<strong>zh-CN</strong><br /> 浏览器:<strong>Chrome</strong> Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36
         </span>请输入IP或域名：
-            <input id="address" isget="false" type="text" value="erp.yinhai.com" autocomplete="off" url="true" class="input" size="40" title="多个查询用,或|隔开"/>
+            <input id="address" isget="false" type="text" value="erp.xxx.com" autocomplete="off" url="true" class="input" size="40" title="多个查询用,或|隔开"/>
             <input id="submit1" name="button" isget="false" type="submit" class="but" value="查 询" />
 		    <span id="status" class="info1">
                                                 <strong class="red">查询结果[1]: 118.112.188.108 ==>> 1987099756 ==>> 四川省成都市 电信</strong><br />
@@ -516,7 +516,7 @@ nikto -C all  -T 0123456789abgx  -h 118.112.188.108 -p 8082 -o result.txt
 		doGetAllInfo();
 //		doUrlPortSafe("http://gx.si.gov.cn:8005/gxsi");
 		// 获取域名对应的ip地址
-//		Map m = getIp("erp.yinhai.com");
+//		Map m = getIp("erp.xxx.com");
 //		System.out.println(m.get("YouIP"));
 //		System.out.println(m.get("IP"));
 //		System.out.println(m.get("IPNum"));
@@ -529,7 +529,7 @@ nikto -C all  -T 0123456789abgx  -h 118.112.188.108 -p 8082 -o result.txt
 //			System.out.println(s.toString());
 		
 		// 获取web容器信息
-//		System.out.println(getWebServerInfo("http://erp.yinhai.com:8082/login.aspx"));
+//		System.out.println(getWebServerInfo("http://erp.xxx.com:8082/login.aspx"));
 
 //		System.out.println(getWebServerSysInfo("192.168.8.178"));
 		// http://192.168.8.37:9090/QIMS/qims/qiOrgAction!saveUser.do?id=9969&name=%E6%9D%A8%E6%8C%AF%E5%8D%8E&departManager=2&available=1

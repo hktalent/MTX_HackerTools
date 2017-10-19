@@ -21,15 +21,15 @@ public class MyDownloadWithCookie {
 	// "./doc/"
 	public static String path = "/Users/xiatian/Library/Mobile Documents/com~apple~CloudDocs/公司知识库文档/";
 
-//	GET http://erp.yinhai.com:8085/zlwdgl/webfrm_zlwd_wjxz.aspx?wjbh=31 HTTP/1.1
-//		Host: erp.yinhai.com:8085
+//	GET http://erp.xxx.com:8085/zlwdgl/webfrm_zlwd_wjxz.aspx?wjbh=31 HTTP/1.1
+//		Host: erp.xxx.com:8085
 //		Proxy-Connection: keep-alive
 //		Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 //		User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94 Safari/537.36
 //		DNT: 1
 //		Accept-Encoding: gzip,deflate,sdch
 //		Accept-Language: zh-CN,zh;q=0.8,en-US;q=0.6
-//		Cookie: ASP.NET_SessionId=nejwtnicx4bk5y45gzabcuff; yinhai.ygyzm=obwv7qZYOTc=; yinhai.yzm=A68D0605227830FB7CD32236CDED4425
+//		Cookie: ASP.NET_SessionId=nejwtnicx4bk5y45gzabcuff; xxx.ygyzm=obwv7qZYOTc=; xxx.yzm=A68D0605227830FB7CD32236CDED4425
 ///////////////////////////////////	
 //	HTTP/1.1 200 OK
 //	Cache-Control: private
@@ -154,7 +154,7 @@ public class MyDownloadWithCookie {
     public static void downloadAllDoc(String szCookie)
     {
     	    for(int i = 0; i < 30000; i++)
-    	    		getUrlStr("http://erp.yinhai.com:8085/zlwdgl/webfrm_zlwd_wjxz.aspx?wjbh=" + i, szCookie, null, null);
+    	    		getUrlStr("http://erp.xxx.com:8085/zlwdgl/webfrm_zlwd_wjxz.aspx?wjbh=" + i, szCookie, null, null);
     }
     
 	/**
@@ -166,11 +166,11 @@ public class MyDownloadWithCookie {
 	public static void main(String[] args) throws Exception 
 	{
 		System.setProperty("java.net.useSystemProxies", "true");
-		// http://erp.yinhai.com:8085/zlwdgl/WebFrm_cxwj.aspx
-		// http://erp.yinhai.com:8085/zlwdgl/webfrm_zlwd_wjxz.aspx?wjbh=31
+		// http://erp.xxx.com:8085/zlwdgl/WebFrm_cxwj.aspx
+		// http://erp.xxx.com:8085/zlwdgl/webfrm_zlwd_wjxz.aspx?wjbh=31
 //		OutputStream out = null;// new FileOutputStream(new File("./q.doc"));
-//		getUrlStr("http://erp.yinhai.com:8085/zlwdgl/webfrm_zlwd_wjxz.aspx?wjbh=31", "ASP.NET_SessionId=nejwtnicx4bk5y45gzabcuff; yinhai.ygyzm=obwv7qZYOTc=; yinhai.yzm=A68D0605227830FB7CD32236CDED4425", out);
-		downloadAllDoc("ASP.NET_SessionId=4jjezq3j1qsrpt45shcobu55; sid=5erjbk7n5gf1qcflf8gjvvvee7; yinhai.yzm=2643B5C9650071CEC5C6B314EFE1A1C1");
+//		getUrlStr("http://erp.xxx.com:8085/zlwdgl/webfrm_zlwd_wjxz.aspx?wjbh=31", "ASP.NET_SessionId=nejwtnicx4bk5y45gzabcuff; xxx.ygyzm=obwv7qZYOTc=; xxx.yzm=A68D0605227830FB7CD32236CDED4425", out);
+		downloadAllDoc("ASP.NET_SessionId=4jjezq3j1qsrpt45shcobu55; sid=5erjbk7n5gf1qcflf8gjvvvee7; xxx.yzm=2643B5C9650071CEC5C6B314EFE1A1C1");
 		
 //		System.out.println(java.net.URLDecoder.decode("%257BDefault.aspx%253Fzsbh%253D208%2526wjbh%253D208%2526zlwj%253Dy%2526id%253D%255B*%252C0%255D%252C6%257D&Scale=0.9&ZoomTransition=easeOut&ZoomTime=0.5&ZoomInterval=0.2&FitPageOnLoad=true&FitWidthOnLoad=true&ProgressiveLoading=true&MinZoomSize=0.2&MaxZoomSize=5&InitViewMode=Portrait&ViewModeToolsVisible=true&ZoomToolsVisible=true&NavToolsVisible=true&CursorToolsVisible=true&SearchToolsVisible=true&localeChain=zh_CN", "UTF-8"));
 	}

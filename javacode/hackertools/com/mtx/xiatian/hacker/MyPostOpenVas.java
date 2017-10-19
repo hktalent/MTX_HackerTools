@@ -19,7 +19,7 @@ package com.mtx.xiatian.hacker;
  * event_data:target_hosts=192.168.10.211
  * event_data:auto_start=2
  * event_data:start_timezone=Asia/Hong_Kong
- * event_data:alert_email=xiatian@yinhai.com
+ * event_data:alert_email=xiatian@xxx.com
  * @author xiatian
  *
  */

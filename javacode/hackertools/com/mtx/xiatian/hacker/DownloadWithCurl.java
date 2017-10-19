@@ -280,7 +280,7 @@ connection = close
 	{
 		new DownloadWithCurl().getUrlStr("http://osx.metasploit.com/metasploitframework-latest.pkg", 20);
 //		new DownloadWithCurl().getUrlStr("http://baike.baidu.com/view/342424241.htm", 1);
-//		new DownloadWithCurl().getUrlStr("http://erp.yinhai.com:8082/login.aspx", 1);
+//		new DownloadWithCurl().getUrlStr("http://erp.xxx.com:8082/login.aspx", 1);
 	}
 
 }

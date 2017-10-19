@@ -262,14 +262,14 @@ public class RemoutSSH extends CommonTools
 	{
 		Result rst = null;
 		String szPswd = "Z2zoO01I|l6b9QGS5*"; // Z2zoO01I|l6b9QGS5123 
-//		szPswd = "Yinhai!@#$";  
+//		szPswd = "xxx!@#$";  
 		String [][] a = {
 //				{"192.168.10.115", "root", "Goolge+_)=-0", szPswd},
 //				{"192.168.10.123", "root", "Goolge+_)=-0", szPswd},
-//				{"192.168.10.184", "root", "Yinhai!@#$", szPswd},
+//				{"192.168.10.184", "root", "xxx!@#$", szPswd},
 //				{"192.168.10.216", "root", "Goolge+_)=-0", szPswd},
 				{"192.168.10.217", "root", 
-					 "Yinhai!@#$",
+					 "xxx!@#$",
 //					"Z2zoO01I|l6b9QGS5*", 
 					szPswd},
 		};

@@ -229,7 +229,7 @@ jdbc.password=qix1
 				|| -1 < szL.indexOf("/src/org/")
 				
 				|| -1 < szL.indexOf("/fckeditor/")
-//				|| -1 < szL.indexOf("/com/yinhai/")
+//				|| -1 < szL.indexOf("/com/xxx/")
 				
 				|| -1 < szL.indexOf(".document/")
 				|| -1 < szL.indexOf(".test/")

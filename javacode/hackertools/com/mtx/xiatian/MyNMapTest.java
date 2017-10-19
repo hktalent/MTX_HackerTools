@@ -145,16 +145,16 @@ public class MyNMapTest
 	}
 
 	/**
-	 * 获取域名的ip Map m = getIp("erp.yinhai.com"); System.out.println(m.get("IP"));
+	 * 获取域名的ip Map m = getIp("erp.xxx.com"); System.out.println(m.get("IP"));
 	 * System.out.println(m.get("IPNum")); System.out.println(m.get("IPDZ"));
-	 * http://ip.chinaz.com/?IP=erp.yinhai.com <span class="info3"
+	 * http://ip.chinaz.com/?IP=erp.xxx.com <span class="info3"
 	 * >您的IP:[<strong class="red">118.112.188.111</strong>] 来自:<strong>四川省成都市
 	 * 电信</strong> 操作系统:<strong>Unknown</strong><span id="resolution"
 	 * style=" margin-left:5px;"></span> 语言:<strong>zh-CN</strong><br />
 	 * 浏览器:<strong>Chrome</strong> Mozilla/5.0 (Macintosh; Intel Mac OS X
 	 * 10_10_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2062.94
 	 * Safari/537.36 </span>请输入IP或域名： <input id="address" isget="false"
-	 * type="text" value="erp.yinhai.com" autocomplete="off" url="true"
+	 * type="text" value="erp.xxx.com" autocomplete="off" url="true"
 	 * class="input" size="40" title="多个查询用,或|隔开"/> <input id="submit1"
 	 * name="button" isget="false" type="submit" class="but" value="查 询" />
 	 * <span id="status" class="info1"> <strong class="red">查询结果[1]:
@@ -647,7 +647,7 @@ public class MyNMapTest
 //		doGetAllInfo();
 		// doUrlPortSafe("http://gx.si.gov.cn:8005/gxsi");
 		// 获取域名对应的ip地址
-		// Map m = getIp("erp.yinhai.com");
+		// Map m = getIp("erp.xxx.com");
 		// System.out.println(m.get("YouIP"));
 		// System.out.println(m.get("IP"));
 		// System.out.println(m.get("IPNum"));
@@ -660,7 +660,7 @@ public class MyNMapTest
 		// System.out.println(s.toString());
 
 		// 获取web容器信息
-		// System.out.println(getWebServerInfo("http://erp.yinhai.com:8082/login.aspx"));
+		// System.out.println(getWebServerInfo("http://erp.xxx.com:8082/login.aspx"));
 
 		// System.out.println(getWebServerSysInfo("192.168.8.178"));
 		// http://192.168.8.37:9090/QIMS/qims/qiOrgAction!saveUser.do?id=9969&name=%E6%9D%A8%E6%8C%AF%E5%8D%8E&departManager=2&available=1
@@ -690,12 +690,12 @@ Network Distance: 2 hops
 Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
 
 Host script results:
-|_nbstat: NetBIOS name: YINHAI-PC, NetBIOS user: <unknown>, NetBIOS MAC: ba:eb:b7:a9:51:6b (unknown)
+|_nbstat: NetBIOS name: xxx-PC, NetBIOS user: <unknown>, NetBIOS MAC: ba:eb:b7:a9:51:6b (unknown)
 | smb-os-discovery: 
 |   OS: Windows 7 Ultimate 7601 Service Pack 1 (Windows 7 Ultimate 6.1)
 |   OS CPE: cpe:/o:microsoft:windows_7::sp1
-|   Computer name: yinhai-PC
-|   NetBIOS computer name: YINHAI-PC
+|   Computer name: xxx-PC
+|   NetBIOS computer name: xxx-PC
 |   Workgroup: WORKGROUP
 |_  System time: 2015-12-18T13:16:59+08:00
 | smb-security-mode: 
