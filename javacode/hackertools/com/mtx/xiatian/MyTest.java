@@ -139,7 +139,7 @@ public class MyTest {
             <input id="address" isget="false" type="text" value="erp.xxx.com" autocomplete="off" url="true" class="input" size="40" title="多个查询用,或|隔开"/>
             <input id="submit1" name="button" isget="false" type="submit" class="but" value="查 询" />
 		    <span id="status" class="info1">
-                                                <strong class="red">查询结果[1]: 118.112.188.108 ==>> 1987099756 ==>> 四川省成都市 电信</strong><br />
+                                                <strong class="red">查询结果[1]: xxxx ==>> 1987099756 ==>> 四川省成都市 电信</strong><br />
                 
                  上面三项依次显示的是 : 获取的IP地址 ==>> 数字地址 ==>> IP的物理位置<br />
                
@@ -191,7 +191,7 @@ public class MyTest {
 	
 	/**
 	 * 查询给定的ip地址的所有域名
-	 * http://www.sameip.org/118.112.188.108
+	 * http://www.sameip.org/xxxx
 	 * @param ip
 	 * @return
 	 */
@@ -507,8 +507,8 @@ public class MyTest {
 2、webinfo=web容器信息
 我会吧这些信息传给你的url
 
-nikto -h 118.112.188.108 -p 8070 -c /QIMS
-nikto -C all  -T 0123456789abgx  -h 118.112.188.108 -p 8082 -o result.txt
+nikto -h xxx -p 8070 -c /QIMS
+nikto -C all  -T 0123456789abgx  -h xxx -p 8082 -o result.txt
 	 * @param args
 	 */
 	public static void main(String[] args) {
