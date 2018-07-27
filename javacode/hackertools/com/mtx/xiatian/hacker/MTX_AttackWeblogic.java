@@ -692,8 +692,8 @@ public class MTX_AttackWeblogic extends DoNmapResult
 						// 跳过内网
 //						|| ip.startsWith("192.168.")
 //						|| !ip.startsWith("222.161.58.189")// 222.161.58.189, 222.168.24.169
-//						|| !(ip.equals("118.112.188.109") || ip.equals("125.71.203.198") || ip.equals("118.112.188.108"))
-//						 || ("5222".equals(m.get("port")) && ip.equals("118.112.188.108"))
+//						|| !(ip.equals("118.112.188.109") || ip.equals("125.71.203.198") || ip.equals("xxxx"))
+//						 || ("5222".equals(m.get("port")) && ip.equals("xxxx"))
 //						 || 
 //						|| (8000L == (java.lang.Long)m.get("port") && ip.equals("10.163.26.122"))
 //						 || !(
