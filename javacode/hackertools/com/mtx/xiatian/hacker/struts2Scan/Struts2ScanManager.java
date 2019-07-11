@@ -140,16 +140,9 @@ http://192.168.24.19:8080/struts2_01/hello
 	public static void main(String[] args)
 	{
 		final List<Object[]> list1 = new ArrayList<Object[]>();
-		// http://erp.xxx.com:8089/yhhr/login.jsp
+		
 		String szUrl = 
-//				"http://www.ccyb.gov.cn/zndtLogin";
-//				"http://222.184.27.3:8001/content/admin/loginAction.do";
-		"http://219.159.250.144/gxglwx/userAccountAction!register.do";
-//				"http://erp.xxx.com:8089/yhhr/singleLoginAction.do";// 
-				// "http://192.168.24.19:8080/struts2_01/hello";
-//				"http://218.16.150.234/"
-//		"http://192.168.24.19:8080/Struts2/hello"
-				; // "http://192.168.24:8080/Struts2/hello";
+
 		final Struts2ScanManager sm = Struts2ScanManager.getInstance();
 		
 		sm.
